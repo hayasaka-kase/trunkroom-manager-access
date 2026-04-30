@@ -8,9 +8,9 @@ Public Sub ExportAllModules()
     Dim extension As String
     Dim fso As Object
     
-    ' 1. 出力先フォルダの設定（デスクトップに「Trunkroom-Manager-Access」フォルダを作成）
+    ' 1. 出力先フォルダの設定
     Set fso = CreateObject("Scripting.FileSystemObject")
-    exportPath = CreateObject("WScript.Shell").SpecialFolders("Desktop") & "\Trunkroom-Manager-Access\"
+    exportPath = CreateObject("WScript.Shell").ExpandEnvironmentStrings("%USERPROFILE%") & "\git\trunkroom-manager-access\modules\"
     
     If Not fso.FolderExists(exportPath) Then
         fso.CreateFolder exportPath
