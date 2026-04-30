@@ -15419,17 +15419,17 @@ End Sub
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Private Sub cmd_ページ確認_Click()
     
-    Dim URL As String
+    Dim url As String
     
     On Error GoTo Exception
     
-    URL = GenYardPage.GetYardPageUrl(pstrBumoCD, Me.cmb_ヤードコード.VALUE)
-    If URL = "" Then
+    url = GenYardPage.GetYardPageUrl(pstrBumoCD, Me.cmb_ヤードコード.VALUE)
+    If url = "" Then
           MsgBox "ヤードページは生成されていません。先にページ生成を行って下さい。" _
                   , vbInformation + vbOKOnly, strMsg_kaku
           Exit Sub
     End If
-    Me.cmd_ページ確認.HyperlinkAddress = URL 'これだけでURL開けます
+    Me.cmd_ページ確認.HyperlinkAddress = url 'これだけでURL開けます
   
     Exit Sub
 Exception:

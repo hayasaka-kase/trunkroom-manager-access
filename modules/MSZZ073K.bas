@@ -545,10 +545,10 @@ Retry:
         If strShopId <> "" Then
             .setRequestHeader "SHOPID", strShopId
         End If
-        .SEND strXml
+        .send strXml
         strResponseXml = .responseText
         strResultStatus = Nz(.getResponseHeader("Result-status"))
-        If .STATUS = 502 Or .STATUS = 504 Then
+        If .Status = 502 Or .Status = 504 Then
             'Check Retry Count
             If lngRetryCount = lngRetryRunCnt Then
                 'err

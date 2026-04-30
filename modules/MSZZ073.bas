@@ -575,7 +575,7 @@ Private Function XmlHttpGet(ByVal strUrl As String, _
 '            .setRequestHeader "SHOP_ID", strShopId                             'DELETE 2018/01/13 K.ISHIZAKA
             .setRequestHeader "SHOPID", strShopId                               'INSERT 2018/01/13 K.ISHIZAKA
         End If
-        .SEND strXml
+        .send strXml
     
         strResponseXml = .responseText
         

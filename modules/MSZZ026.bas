@@ -99,7 +99,7 @@ Public Function XmlHttpGet(ByVal strUrl As String) As String
     
     Set xmlHttp = CreateObject("Microsoft.XMLHTTP")
     Call xmlHttp.Open("GET", strUrl, False)
-    Call xmlHttp.SEND(Null)
+    Call xmlHttp.send(Null)
     XmlHttpGet = xmlHttp.responseText
 Exit Function
     

@@ -574,7 +574,7 @@ Public Function GenerateYardPageEx(aBumonCode As String, _
     Dim index           As Integer  '情報配列の添字
     
 '< start > パンくず対応 2009/01/29 - EGL UK
-    Dim URL             As String   '
+    Dim url             As String   '
     Dim STATES          As String   '
 '< end > パンくず対応 2009/01/29 - EGL UK
     
@@ -592,7 +592,7 @@ Public Function GenerateYardPageEx(aBumonCode As String, _
     On Error GoTo Exception
     
 '< start > パンくず対応 2009/01/29 - EGL UK
-    Call GetBreadCrumb(aYARD_WP_INF.ADDRESS, URL, STATES)
+    Call GetBreadCrumb(aYARD_WP_INF.ADDRESS, url, STATES)
 '< end > パンくず対応 2009/01/29 - EGL UK
     
     
@@ -695,7 +695,7 @@ Public Function GenerateYardPageEx(aBumonCode As String, _
             End If
 
 '< start > パンくず対応 2009/01/29 - EGL UK
-            textLine = Replace$(textLine, "{state_url}", URL)                   'URL
+            textLine = Replace$(textLine, "{state_url}", url)                   'URL
             textLine = Replace$(textLine, "{state_name}", STATES)               '都県
 
 '< end > パンくず対応 2009/01/29 - EGL UK
@@ -1321,7 +1321,7 @@ Public Function GetYardPageUrl(aBumonCode As String, _
                     
     Dim basePath        As String
     Dim sourcePath      As String
-    Dim URL             As String
+    Dim url             As String
                     
     On Error GoTo Exception
     
@@ -1333,13 +1333,13 @@ Public Function GetYardPageUrl(aBumonCode As String, _
     'ヤード名確定
     sourcePath = sourcePath & Replace(basePath, "/", "\")
     If aBumonCode = P_トランク部門 Then
-         URL = sourcePath & Format$(CLng(aYardCode), "00000") & ".htm"
+         url = sourcePath & Format$(CLng(aYardCode), "00000") & ".htm"
     Else
-         URL = sourcePath & aYardCode & ".htm"
+         url = sourcePath & aYardCode & ".htm"
     End If
-    If Dir$(URL) = "" Then Exit Function
+    If Dir$(url) = "" Then Exit Function
     
-    GetYardPageUrl = URL
+    GetYardPageUrl = url
    
     Exit Function
 Exception:

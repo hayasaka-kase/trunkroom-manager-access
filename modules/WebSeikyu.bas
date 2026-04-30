@@ -1226,7 +1226,7 @@ Public Function Fnc_BulkCapture(pKind As Integer, pstrFile As String, ByRef pCap
 
     objHttp.setRequestHeader C_HED_CONT, C_HED_CONT_MULTI & " boundary=" + getBoundy(adBTypeContent)
     objHttp.setRequestHeader C_HED_TOK, Get_APItoken()
-    objHttp.SEND sendParameter
+    objHttp.send sendParameter
     
     strRes = objHttp.responseText
     '-----------------------------------------
@@ -1242,7 +1242,7 @@ Public Function Fnc_BulkCapture(pKind As Integer, pstrFile As String, ByRef pCap
     'ログ用メッセージ作成
     strMsg = Fnc_GetRes(JSONobj, vMsgPam)
     
-    If objHttp.STATUS <> C_RES_OK Then
+    If objHttp.Status <> C_RES_OK Then
         If C_LOG = 1 Then
             Call MSZZ003_M00(GetProgId(), "9", "一括取込エラー " & strKind & " " & strMsg)
         End If
@@ -1333,12 +1333,12 @@ Public Function Fnc_BulkStatus(pKind As Integer, pCapID As Integer) As Integer
     objHttp.setRequestHeader C_HED_TOK, Get_APItoken()
     objHttp.setRequestHeader "Cache-Control", "no-cache"
 
-    objHttp.SEND
+    objHttp.send
 
-    If objHttp.STATUS <> C_RES_OK Then
+    If objHttp.Status <> C_RES_OK Then
         If C_LOG = 1 Then
             Call MSZZ003_M00(GetProgId(), "9", "一括取込状況取得エラー " & strKind & _
-                                " STATUS:" & objHttp.STATUS)
+                                " STATUS:" & objHttp.Status)
         End If
         GoTo ErrorHandler
     End If
