@@ -1218,6 +1218,9 @@ Private tax_to As String          '2019/08/08 M.HONDA INS
 Private strプランCd                     As String   '2020/09/28 EGL add
 
 Private pvONLET_ACCEI                   As String   '2021/06/02 EGL add
+
+' 顔認証連携エラーメッセージ保持用
+Private mstrFaceAuthError               As String
 '==============================================================================*
 '   定数宣言
 '
@@ -7542,7 +7545,7 @@ End Function
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Function GetOtherCargDataSql(UserCode As String, RCPTNO As String) As String
+Private Function GetOtherCargDataSql(userCode As String, RCPTNO As String) As String
 
     Dim strSQL      As String
     Dim today       As String
@@ -7552,7 +7555,7 @@ Private Function GetOtherCargDataSql(UserCode As String, RCPTNO As String) As St
     strSQL = "          select COUNT(*) CNT "
     strSQL = strSQL & " from   CARG_FILE, "
     strSQL = strSQL & " RCPT_TRAN"
-    strSQL = strSQL & " where  CARG_UCODE = " & UserCode
+    strSQL = strSQL & " where  CARG_UCODE = " & userCode
     strSQL = strSQL & " and    CARG_ACPTNO = RCPT_CARG_ACPTNO "
     strSQL = strSQL & " and    RCPT_NO <> '" & RCPTNO & "'"
     strSQL = strSQL & " and    CARG_HOSYO_CD IN ('970031') "
@@ -14426,6 +14429,7 @@ Public Function fncDataSave(intMode As Integer, blnConfirm As Boolean, Optional 
     '完了ボタンによる更新の場合は完了処理を行う
     If intSaveMode = P_SAVEMODE_完了 Then
         '完了処理
+        mstrFaceAuthError = "" ' エラーメッセージ初期化
         Call fncComplete(dbSQLServer, strUserID, strACPTNO, lngReqNo)
 ' ***** Start 2017/07/31 ad d by ysuzuki
 '   ElseIf blnネット予約 = False Then
@@ -14511,6 +14515,14 @@ Public Function fncDataSave(intMode As Integer, blnConfirm As Boolean, Optional 
     'コミット
         objWs.CommitTrans
     Set objWs = Nothing
+    
+        ' 顔認証連携でエラーが発生していた場合は画面表示
+    If mstrFaceAuthError <> "" Then
+        MsgBox "顔認証システムの連携でエラーが発生しました。" & vbCrLf & _
+               "お手数ですが、管理者へ連絡してください。" & vbCrLf & vbCrLf & _
+               "【エラー内容】" & vbCrLf & mstrFaceAuthError, vbExclamation, "顔認証連携エラー"
+        mstrFaceAuthError = ""
+    End If
     
     blnUpdate = True
     
@@ -16250,6 +16262,16 @@ On Error GoTo ErrorHandler
 'del 2021/08/04 EGL                   End If
         End If
 '↑ INSERT 2014/06/20 MIYAMOTO
+
+        ' 部屋移動API連携（3ステップフロー：存在確認 -> 登録/有効化 -> 移動）
+        ' 移動理由区分が 01:自社理由、02:顧客理由、03:未使用移動 の場合に実行
+        If txtMoveKbn = P_MOVEKBN_自社理由 Or _
+           txtMoveKbn = P_MOVEKBN_顧客理由 Or _
+           txtMoveKbn = P_MOVEKBN_未使用移動 Then
+            
+            mstrFaceAuthError = PerformFaceAuthTransferFlow(txtMotoYcode, txtMotoCno, txtContainerYcode, txtContainerCno, cmbUserCode)
+        End If
+        
         Call CreateOldMoveMemo(txtMoveKbn, _
                                txtMoveKbnName, _
                                txtContainerYcode, _
@@ -20602,5 +20624,164 @@ ErrorHandler:
         Call Err.Raise(Err.Number, "fncInsertKouzMast" & vbRightAllow & Err.Source, Err.Description, Err.HelpFile, Err.HelpContext)
     End If
 End Sub
+
+
+'==============================================================================*
+'        MODULE_NAME      : PerformFaceAuthTransferFlow
+'        機能             : 顔認証システムの部屋移動一連のフローを実行
+'        IN               : 移動元ヤード, 移動元部屋, 移動先ヤード, 移動先部屋, お客様番号
+'        OUT              : エラーメッセージ（成功時は空文字）
+'==============================================================================*
+Private Function PerformFaceAuthTransferFlow(sourceYard As String, sourceRoom As String, destYard As String, destRoom As String, userCode As String) As String
+    Dim strError As String
+    Dim blnExists As Boolean
+    Dim blnSuccess As Boolean
+    
+    On Error GoTo ErrHandler
+    
+    ' 1. 存在確認 (GET /check)
+    blnExists = CallRoomCheckAPI(destYard, destRoom, strError)
+    If strError <> "" Then
+        PerformFaceAuthTransferFlow = "存在確認失敗: " & strError
+        Exit Function
+    End If
+    
+    If Not blnExists Then
+        ' 2-A. 存在しない場合：新規登録 (POST /rooms)
+        blnSuccess = CallRoomRegisterAPI(destYard, destRoom, userCode, strError)
+    Else
+        ' 2-B. 存在する場合：有効化・更新 (PUT /rooms)
+        blnSuccess = CallRoomUpdateAPI(destYard, destRoom, userCode, strError)
+    End If
+    
+    If Not blnSuccess Then
+        PerformFaceAuthTransferFlow = "部屋登録/更新失敗: " & strError
+        Exit Function
+    End If
+    
+    ' 3. 移動実行 (POST /transfer)
+    blnSuccess = CallRoomTransferAPI_New(sourceYard, sourceRoom, destYard, destRoom, userCode, strError)
+    If Not blnSuccess Then
+        PerformFaceAuthTransferFlow = "部屋移動実行失敗: " & strError
+        Exit Function
+    End If
+    
+    PerformFaceAuthTransferFlow = "" ' 成功
+    Exit Function
+
+ErrHandler:
+    PerformFaceAuthTransferFlow = "フロー実行エラー: " & Err.Description
+End Function
+
+'--- 各種API呼び出し子関数 ---
+
+Private Function CallRoomCheckAPI(yardCode As String, roomCode As String, ByRef strErr As String) As Boolean
+    Dim res As Variant
+    Dim regEx As Object
+    
+    res = SendFaceAuthRequest("GET", "/api/v1/external/system/rooms/check?yard_code=" & yardCode & "&room_code=" & roomCode)
+    
+    If VarType(res) = vbString Then
+        ' 正規表現で "exists": true を検索 (スペースの有無を許容)
+        Set regEx = CreateObject("VBScript.RegExp")
+        regEx.Global = True
+        regEx.IgnoreCase = True
+        regEx.Pattern = """exists""\s*:\s*true"
+        
+        CallRoomCheckAPI = regEx.test(res)
+        Set regEx = Nothing
+    Else
+        strErr = "HTTP Status " & res
+        CallRoomCheckAPI = False
+    End If
+End Function
+
+Private Function CallRoomRegisterAPI(yardCode As String, roomCode As String, userCode As String, ByRef strErr As String) As Boolean
+    Dim body As String
+    Dim res As Variant
+    
+    body = "{""yard_code"":""" & yardCode & """,""room_code"":""" & roomCode & """,""user_code"":""" & userCode & """}"
+    res = SendFaceAuthRequest("POST", "/api/v1/external/system/rooms", body)
+    
+    If VarType(res) = vbString Then
+        CallRoomRegisterAPI = True
+    Else
+        strErr = "HTTP Status " & res
+        CallRoomRegisterAPI = False
+    End If
+End Function
+
+Private Function CallRoomUpdateAPI(yardCode As String, roomCode As String, userCode As String, ByRef strErr As String) As Boolean
+    Dim body As String
+    Dim res As Variant
+    
+    ' お客様番号の更新と有効化(is_active: true)
+    body = "{""yard_code"":""" & yardCode & """,""room_code"":""" & roomCode & """,""user_code"":""" & userCode & """,""is_active"":true}"
+    res = SendFaceAuthRequest("PUT", "/api/v1/external/system/rooms", body)
+    
+    If VarType(res) = vbString Then
+        CallRoomUpdateAPI = True
+    Else
+        strErr = "HTTP Status " & res
+        CallRoomUpdateAPI = False
+    End If
+End Function
+
+Private Function CallRoomTransferAPI_New(sourceYard As String, sourceRoom As String, destYard As String, destRoom As String, destUser As String, ByRef strErr As String) As Boolean
+    Dim body As String
+    Dim res As Variant
+    
+    body = "{" & _
+           """source_yard_code"":""" & sourceYard & """," & _
+           """source_room_code"":""" & sourceRoom & """," & _
+           """dest_yard_code"":""" & destYard & """," & _
+           """dest_room_code"":""" & destRoom & """," & _
+           """dest_user_code"":""" & destUser & """" & _
+           "}"
+    res = SendFaceAuthRequest("POST", "/api/v1/external/system/transfer", body)
+    
+    If VarType(res) = vbString Then
+        CallRoomTransferAPI_New = True
+    Else
+        strErr = "HTTP Status " & res
+        CallRoomTransferAPI_New = False
+    End If
+End Function
+
+'--- 共通送信処理 ---
+
+Private Function SendFaceAuthRequest(method As String, path As String, Optional body As String = "") As Variant
+    Dim req As Object
+    Dim url As String
+    
+    On Error GoTo ErrHandler
+    
+    url = "https://dev-facekey-admin.kase3535.com" & path
+    
+    ' ServerXMLHTTPを使用してタイムアウトを設定
+    Set req = CreateObject("MSXML2.ServerXMLHTTP.6.0")
+    ' setTimeouts(resolve, connect, send, receive) - ミリ秒指定
+    req.setTimeouts 2000, 2000, 2000, 2000
+    
+    req.Open method, url, False
+    req.setRequestHeader "Content-Type", "application/json"
+    req.setRequestHeader "x-api-key", "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
+    
+    req.send body
+    
+    If req.Status >= 200 And req.Status < 300 Then
+        SendFaceAuthRequest = req.responseText
+    Else
+        SendFaceAuthRequest = req.Status ' エラー時はステータスコードを返す
+    End If
+    
+    Set req = Nothing
+    Exit Function
+
+ErrHandler:
+    SendFaceAuthRequest = "Error: " & Err.Description
+    Set req = Nothing
+End Function
+
 '****************************  ended of program ********************************
 
