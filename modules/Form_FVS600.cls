@@ -2327,6 +2327,12 @@ Private Sub cmb_コンテナ番号_AfterUpdate()
 ' 2019/04/23 ADD TAKENOUCHI End
 ' 2023/05/02 M.HODNA
 
+    If Nz(Me.cmb_ヤードコード, "") <> "" And Nz(vCode, "") <> "" Then
+        Me.txt_FaceAuth.VALUE = GetFaceAuthStatus(CStr(Me.cmb_ヤードコード), CStr(vCode))
+    Else
+        Me.txt_FaceAuth.VALUE = ""
+    End If
+
 
 ' 2006/03/04 ADD T.SUZUKI Start
     If pintOpenMode = 3 Then
@@ -7364,6 +7370,7 @@ Private Sub CLR_RTN()
         .txt_預り保証金 = 0
 
         .txt_契約備考 = Null
+        .txt_FaceAuth = Null
         
         
         .txt_RCPT_BIKE_NUMBER = Null
@@ -14740,4 +14747,66 @@ End Function
 
 '↑ADD 2019/04/23 Y_SUZUKI EGL
 '****************************  ended of program ********************************
+
+'==============================================================================*
+'        MODULE_NAME      : 顔認証ステータス取得
+'        MODULE_ID        : GetFaceAuthStatus
+'        CREATE_DATE      : 2026/04/28
+'        処理内容         : APIを叩いて顔認証の登録状態を返す
+'==============================================================================*
+Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As String
+    Dim req As Object
+    Dim url As String
+    Dim resText As String
+    Dim regEx As Object
+    
+    On Error GoTo ErrHandler
+    
+    GetFaceAuthStatus = "" ' 初期値
+    
+    ' API URLの組み立て
+    url = "https://dev-facekey-admin.kase3535.com/api/v1/external/system/rooms/detail?yard_code=" & yardCode & "&room_code=" & roomCode
+    
+    ' HTTPリクエスト送信 (遅延バインディング)
+    Set req = CreateObject("MSXML2.XMLHTTP")
+    req.Open "GET", url, False
+    req.setRequestHeader "Content-Type", "application/json"
+    
+    ' APIキーをヘッダーにセット（※API側の仕様に合わせてヘッダー名は調整してください）
+    req.setRequestHeader "x-api-key", "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
+    
+    req.send
+    
+    ' レスポンスの確認
+    If req.Status = 200 Then
+        resText = req.responseText
+        
+        ' 正規表現で "has_face": true を検索
+        Set regEx = CreateObject("VBScript.RegExp")
+        regEx.Global = True
+        regEx.IgnoreCase = True
+        regEx.Pattern = """has_face""\s*:\s*true"
+        
+        ' 1つでも true が見つかった場合、登録済みと判定
+        If regEx.test(resText) Then
+            GetFaceAuthStatus = "登録済み"
+        Else
+            GetFaceAuthStatus = "未登録"
+        End If
+    Else
+        ' 部屋情報がない、APIエラーなどの場合
+        GetFaceAuthStatus = "未登録"
+    End If
+    
+    Set req = Nothing
+    Set regEx = Nothing
+    Exit Function
+
+ErrHandler:
+    ' 通信エラー等のハンドリング
+    GetFaceAuthStatus = "取得エラー"
+    Set req = Nothing
+    Set regEx = Nothing
+End Function
+
 
