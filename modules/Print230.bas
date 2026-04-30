@@ -1,49 +1,49 @@
 Attribute VB_Name = "Print230"
 '****************************  strat or program ********************************
 '**********************************************
-'   ƒ†[ƒU–¼@@@@F@(Š”)‰Á£‘qŒÉ
-'   ƒVƒXƒeƒ€–¼@@@F@ƒRƒ“ƒeƒiŠÇ—ƒVƒXƒeƒ€
+'   ãƒ¦ãƒ¼ã‚¶åã€€ã€€ã€€ã€€ï¼šã€€(æ ª)åŠ ç€¬å€‰åº«
+'   ã‚·ã‚¹ãƒ†ãƒ åã€€ã€€ã€€ï¼šã€€ã‚³ãƒ³ãƒ†ãƒŠç®¡ç†ã‚·ã‚¹ãƒ†ãƒ 
 '**********************************************
-'   ƒvƒƒOƒ‰ƒ€–¼@@F@ƒ„[ƒh”p~ˆÚ“®“Í‚¯
-'   ƒvƒƒOƒ‰ƒ€‚h‚c@F@Print230
-'   ì@¬@“ú@@@F  2007/07/21
-'   ì@¬@Ò@@@F  ƒC[ƒOƒ‹ƒ\ƒtƒg —é–Ø
-'   Ver             F  0.0
-'   ”õl            F
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ åã€€ã€€ï¼šã€€ãƒ¤ãƒ¼ãƒ‰å»ƒæ­¢ç§»å‹•å±Šã‘
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼©ï¼¤ã€€ï¼šã€€Print230
+'   ä½œã€€æˆã€€æ—¥ã€€ã€€ã€€ï¼š  2007/07/21
+'   ä½œã€€æˆã€€è€…ã€€ã€€ã€€ï¼š  ã‚¤ãƒ¼ã‚°ãƒ«ã‚½ãƒ•ãƒˆ éˆ´æœ¨
+'   Ver             ï¼š  0.0
+'   å‚™è€ƒ            ï¼š
 '
 '   UPDATE          :   2009/12/08
 '   UPDATER         :   M.RYU
 '   Ver             :   0.1
-'   •ÏX“à—e        :   ƒ[ƒNƒe[ƒuƒ‹‚ğì¬‚·‚é‚Æ‚«A•ÛØ‰ïĞ–¼Ì‚ğDB‚©‚çæ“¾
-'                       RKS230ƒŒƒ|[ƒgAy˜A‘Ñ•ÛØ¿•‰–@lz—“‚É•ÛØ‰ïĞ–¼‚ğ³‚µ‚­•\¦
+'   å¤‰æ›´å†…å®¹        :   ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ä½œæˆã™ã‚‹ã¨ãã€ä¿è¨¼ä¼šç¤¾åç§°ã‚’DBã‹ã‚‰å–å¾—
+'                       RKS230ãƒ¬ãƒãƒ¼ãƒˆã€ã€é€£å¸¯ä¿è¨¼è«‹è² æ³•äººã€‘æ¬„ã«ä¿è¨¼ä¼šç¤¾åã‚’æ­£ã—ãè¡¨ç¤º
 '**********************************************
 Option Compare Database
 Option Explicit
 
 '==============================================================================*
-'   ’è”éŒ¾
+'   å®šæ•°å®£è¨€
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 
-'ˆ—ƒ‚[ƒh
-Public Const P230_MODE_PREVIEW              As Integer = 1  'ˆóüƒvƒŒƒrƒ…[‚ğ•\¦
-Public Const P230_MODE_EXCEL                As Integer = 2  'Excel‚Éo—Í
-Public Const P230_MODE_PRINT                As Integer = 3  'ƒvƒŒƒrƒ…[‚ğ•\¦‚µ‚È‚¢‚Åˆóü
+'å‡¦ç†ãƒ¢ãƒ¼ãƒ‰
+Public Const P230_MODE_PREVIEW              As Integer = 1  'å°åˆ·ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’è¡¨ç¤º
+Public Const P230_MODE_EXCEL                As Integer = 2  'Excelã«å‡ºåŠ›
+Public Const P230_MODE_PRINT                As Integer = 3  'ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ã‚’è¡¨ç¤ºã—ãªã„ã§å°åˆ·
 
-'ƒ[ƒNƒe[ƒuƒ‹–¼
+'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«å
 Private Const P_WORK_TABLE                  As String = "RKS230_W01"
 
-'ƒŒƒ|[ƒg–¼
+'ãƒ¬ãƒãƒ¼ãƒˆå
 Private Const P_REPORT                      As String = "RKS230"
 
-'‰ïĞŠÖ˜Aî•ñ
+'ä¼šç¤¾é–¢é€£æƒ…å ±
 Private strCONT_ADDR_1                      As String
 Private strCONT_ADDR_2                      As String
 Private strCONT_TEL_NO                      As String
 Private strCONT_FAX_NO                      As String
 
 '***************************************
-' ƒeƒXƒgƒvƒ
+' ãƒ†ã‚¹ãƒˆãƒ—ãƒ­
 '***************************************
 Sub a00Test_fncPrintMaintenanceRequest()
 
@@ -58,21 +58,21 @@ End Function
 
 '==============================================================================*
 '
-'       MODULE_NAME     : ƒ„[ƒh”p~ˆÚ“®“Í‚¯o—Í
+'       MODULE_NAME     : ãƒ¤ãƒ¼ãƒ‰å»ƒæ­¢ç§»å‹•å±Šã‘å‡ºåŠ›
 '       MODULE_ID       : PrintUserMoveList
 '       CREATE_DATE     : 2007/07/21
 '                       :
-'       PARAM           : intMode          - 1=ˆóüƒvƒŒƒrƒ…[ 2=Excelo—Í 3=ˆóüi’è”éŒ¾‚ ‚èj
-'                       : strYardCodeFrom  - ƒ„[ƒhƒR[ƒh
-'                       : strYardCodeTo    - ƒ„[ƒhƒR[ƒh
-'                       : strRoom          - •”‰®”Ô†iÈ—ª‰Âj
-'                       : strUserCode      - ƒ†[ƒU[ƒR[ƒhiÈ—ª‰Âj
-'                       : str•Ûá‹æ•ª      - iÈ—ª‰Âj
+'       PARAM           : intMode          - 1=å°åˆ·ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ 2=Excelå‡ºåŠ› 3=å°åˆ·ï¼ˆå®šæ•°å®£è¨€ã‚ã‚Šï¼‰
+'                       : strYardCodeFrom  - ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
+'                       : strYardCodeTo    - ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
+'                       : strRoom          - éƒ¨å±‹ç•ªå·ï¼ˆçœç•¥å¯ï¼‰
+'                       : strUserCode      - ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚³ãƒ¼ãƒ‰ï¼ˆçœç•¥å¯ï¼‰
+'                       : strä¿éšœåŒºåˆ†      - ï¼ˆçœç•¥å¯ï¼‰
 '                       :
 '       NOTE            :
 '                       :
-'       RETURN          : ³í(True) ŠY“–ƒf[ƒ^–³‚µ(False)
-'                       : •s³I—¹‚Í—áŠO‚ğ”­¶B
+'       RETURN          : æ­£å¸¸(True) è©²å½“ãƒ‡ãƒ¼ã‚¿ç„¡ã—(False)
+'                       : ä¸æ­£çµ‚äº†æ™‚ã¯ä¾‹å¤–ã‚’ç™ºç”Ÿã€‚
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -81,7 +81,7 @@ Public Function PrintUserMoveList(intMode As Integer, _
                                   strYardCodeTo As String, _
                                   Optional strRoom As String = "", _
                                   Optional strUserCode As String = "", _
-                                  Optional str•Ûá‹æ•ª As String = "" _
+                                  Optional strä¿éšœåŒºåˆ† As String = "" _
                                   ) As Boolean
 
     Dim rsGetData       As Object
@@ -94,36 +94,36 @@ On Error GoTo ErrorHandler
 
     PrintUserMoveList = False
 
-    'DBÚ‘±
+    'DBæ¥ç¶š
     Call subConnectServer(adoDbConnection)
 
-    'ƒf[ƒ^ŒŸõ
-    If Not fncGetData(adoDbConnection, rsGetData, strYardCodeFrom, strYardCodeTo, strRoom, strUserCode, str•Ûá‹æ•ª) Then
-        'ŠY“–ƒf[ƒ^–³‚µ
+    'ãƒ‡ãƒ¼ã‚¿æ¤œç´¢
+    If Not fncGetData(adoDbConnection, rsGetData, strYardCodeFrom, strYardCodeTo, strRoom, strUserCode, strä¿éšœåŒºåˆ†) Then
+        'è©²å½“ãƒ‡ãƒ¼ã‚¿ç„¡ã—
         GoTo ExitRtn
     End If
 
-    'ƒ[ƒNƒe[ƒuƒ‹ì¬
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     Call subMakeWork(adoDbConnection, rsGetData, intMode)
 
-    'DBØ’f
+    'DBåˆ‡æ–­
     If Not rsGetData Is Nothing Then rsGetData.Close: Set rsGetData = Nothing
     If Not adoDbConnection Is Nothing Then adoDbConnection.Close: Set adoDbConnection = Nothing
 
-    'o—Í
+    'å‡ºåŠ›
     Select Case intMode
         Case P230_MODE_PREVIEW:
-            'ƒŒƒ|[ƒgƒvƒŒƒrƒ…[
+            'ãƒ¬ãƒãƒ¼ãƒˆãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼
             doCmd.OpenReport P_REPORT, acViewPreview
 
         Case P230_MODE_EXCEL:
-            'EXCELƒtƒ@ƒCƒ‹o—Í
+            'EXCELãƒ•ã‚¡ã‚¤ãƒ«å‡ºåŠ›
             On Error Resume Next
             doCmd.OutputTo acOutputTable, P_WORK_TABLE, acFormatXLS, , True
             On Error GoTo ErrorHandler
 
         Case P230_MODE_PRINT:
-            'ƒŒƒ|[ƒgˆóü
+            'ãƒ¬ãƒãƒ¼ãƒˆå°åˆ·
             On Error Resume Next
             doCmd.OpenReport P_REPORT
             On Error GoTo ErrorHandler
@@ -147,19 +147,19 @@ End Function
 
 '==============================================================================*
 '
-'       MODULE_NAME     : ƒf[ƒ^ŒŸõ
+'       MODULE_NAME     : ãƒ‡ãƒ¼ã‚¿æ¤œç´¢
 '       MODULE_ID       : fncGetData
 '       CREATE_DATE     : 2007/07/21
 '                       :
-'       PARAM           : aConnection        - ƒf[ƒ^ƒx[ƒXƒIƒuƒWƒFƒNƒg
-'                       : rsGetData          - ŒŸõŒ‹‰Ê‚ğŠi”[‚·‚éƒŒƒR[ƒhƒZƒbƒg
-'                       : strYardCodeFrom    - ƒ„[ƒhƒR[ƒhFrom
-'                       : strYardCodeTo      - ƒ„[ƒhƒR[ƒhTo
-'                       : strRoom            - •”‰®”Ô†
-'                       : strUserCode        - ƒ†[ƒU[ƒR[ƒh
-'                       : str•Ûá‹æ•ª
+'       PARAM           : aConnection        - ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+'                       : rsGetData          - æ¤œç´¢çµæœã‚’æ ¼ç´ã™ã‚‹ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚»ãƒƒãƒˆ
+'                       : strYardCodeFrom    - ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰From
+'                       : strYardCodeTo      - ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰To
+'                       : strRoom            - éƒ¨å±‹ç•ªå·
+'                       : strUserCode        - ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚³ãƒ¼ãƒ‰
+'                       : strä¿éšœåŒºåˆ†
 '                       :
-'       RETURN          : ³í(True) ŠY“–ƒf[ƒ^–³‚µ(False)
+'       RETURN          : æ­£å¸¸(True) è©²å½“ãƒ‡ãƒ¼ã‚¿ç„¡ã—(False)
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -169,7 +169,7 @@ Private Function fncGetData(aConnection As Object, _
                             strYardCodeTo As String, _
                             strRoom As String, _
                             strUserCode As String, _
-                            str•Ûá‹æ•ª As String _
+                            strä¿éšœåŒºåˆ† As String _
                             ) As Boolean
 
     Dim strSQL      As String
@@ -179,28 +179,28 @@ On Error GoTo ErrorHandler
 
     fncGetData = False
 
-    'ƒRƒ“ƒgƒ[ƒ‹ƒ}ƒXƒ^ƒf[ƒ^æ“¾
+    'ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ãƒã‚¹ã‚¿ãƒ‡ãƒ¼ã‚¿å–å¾—
     strSQL = "SELECT CONT_ADDR_1, CONT_ADDR_2, CONT_TEL_NO, CONT_FAX_NO FROM CONT_MAST "
     Set rsData = MSZZ025.ADODB_Recordset(strSQL, aConnection)
     If rsData.EOF = False Then
-        strCONT_ADDR_1 = Nz(rsData.Fields("CONT_ADDR_1"), "") ' ‰ïĞZŠ1
-        strCONT_ADDR_2 = Nz(rsData.Fields("CONT_ADDR_2"), "")  ' ‰ïĞZŠ2
-        strCONT_TEL_NO = Nz(rsData.Fields("CONT_TEL_NO"), "")  ' ‰ïĞ“d˜b”Ô†
-        strCONT_FAX_NO = Nz(rsData.Fields("CONT_FAX_NO"), "")  ' ‰ïĞFAX”Ô†
-        ' ZŠ‚Q‚ª–¢“ü—Í‚È‚ç‚ÎZŠ‚P‚ğZŠ‚Q‚ÉˆÚ“®‚µ‹l‚ß‚½‚æ‚¤‚É‚İ‚¹‚é‚Ìƒ_
+        strCONT_ADDR_1 = Nz(rsData.Fields("CONT_ADDR_1"), "") ' ä¼šç¤¾ä½æ‰€1
+        strCONT_ADDR_2 = Nz(rsData.Fields("CONT_ADDR_2"), "")  ' ä¼šç¤¾ä½æ‰€2
+        strCONT_TEL_NO = Nz(rsData.Fields("CONT_TEL_NO"), "")  ' ä¼šç¤¾é›»è©±ç•ªå·
+        strCONT_FAX_NO = Nz(rsData.Fields("CONT_FAX_NO"), "")  ' ä¼šç¤¾FAXç•ªå·
+        ' ä½æ‰€ï¼’ãŒæœªå…¥åŠ›ãªã‚‰ã°ä½æ‰€ï¼‘ã‚’ä½æ‰€ï¼’ã«ç§»å‹•ã—è©°ã‚ãŸã‚ˆã†ã«ã¿ã›ã‚‹ã®ãƒ€
         If strCONT_ADDR_2 = "" Then
             strCONT_ADDR_2 = strCONT_ADDR_1
             strCONT_ADDR_1 = ""
         End If
     End If
 
-    'ƒƒCƒ“SQL•¶ì¬
-    strSQL = fncMakeGetDataSql(strYardCodeFrom, strYardCodeTo, strRoom, strUserCode, str•Ûá‹æ•ª)
+    'ãƒ¡ã‚¤ãƒ³SQLæ–‡ä½œæˆ
+    strSQL = fncMakeGetDataSql(strYardCodeFrom, strYardCodeTo, strRoom, strUserCode, strä¿éšœåŒºåˆ†)
 
-    ' ƒŒƒR[ƒhƒZƒbƒgì¬
+    ' ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚»ãƒƒãƒˆä½œæˆ
     Set rsGetData = MSZZ025.ADODB_Recordset(strSQL, aConnection)
 
-    'ƒf[ƒ^‚ª‘¶İ‚µ‚È‚¢ê‡False‚ğ•Ô‹p
+    'ãƒ‡ãƒ¼ã‚¿ãŒå­˜åœ¨ã—ãªã„å ´åˆFalseã‚’è¿”å´
     fncGetData = Not rsGetData.EOF
 
     Exit Function
@@ -211,17 +211,17 @@ End Function
 
 '==============================================================================*
 '
-'       MODULE_NAME     : SQL•¶ì¬
+'       MODULE_NAME     : SQLæ–‡ä½œæˆ
 '       MODULE_ID       : fncMakeGetDataSql
 '       CREATE_DATE     : 2007/02/12
 '                       :
-'       PARAM           : strYardCodeFrom    - ƒ„[ƒhƒR[ƒhFrom
-'                       : strYardCodeTo      - ƒ„[ƒhƒR[ƒhTo
-'                       : strRoom            - •”‰®”Ô†
-'                       : strUserCode        - ƒ†[ƒU[ƒR[ƒh
-'                       : str•Ûá‹æ•ª
+'       PARAM           : strYardCodeFrom    - ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰From
+'                       : strYardCodeTo      - ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰To
+'                       : strRoom            - éƒ¨å±‹ç•ªå·
+'                       : strUserCode        - ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚³ãƒ¼ãƒ‰
+'                       : strä¿éšœåŒºåˆ†
 '                       :
-'       RETURN          : SQL•¶
+'       RETURN          : SQLæ–‡
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -229,10 +229,10 @@ Private Function fncMakeGetDataSql(strYardCodeFrom As String, _
                                    strYardCodeTo As String, _
                                    strRoom As String, _
                                    strUserCode As String, _
-                                   str•Ûá‹æ•ª As String _
+                                   strä¿éšœåŒºåˆ† As String _
                                   ) As String
 
-    '----20091110----M.RYU----add--------<s>--'KASE_DB–¼‘O‚ğæ“¾
+    '----20091110----M.RYU----add--------<s>--'KASE_DBåå‰ã‚’å–å¾—
     Dim strKASEDBN As String
     strKASEDBN = DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB='ODBC_DATABASE_NAME'")
     strKASEDBN = strKASEDBN & ".dbo."
@@ -244,8 +244,8 @@ Private Function fncMakeGetDataSql(strYardCodeFrom As String, _
     strSQL = " SELECT * " & Chr(13)
     strSQL = strSQL & " FROM " & Chr(13)
 
-    ' •ÏX‘Oƒf[ƒ^æ“¾SQL
-    ' ySELECT‹åz
+    ' å¤‰æ›´å‰ãƒ‡ãƒ¼ã‚¿å–å¾—SQL
+    ' ã€SELECTå¥ã€‘
     strSQL = strSQL & " ( " & Chr(13)
     strSQL = strSQL & " SELECT  CNTA_MAST.CNTA_USAGE  AS CNTA_USAGE_B " & Chr(13)
     strSQL = strSQL & "        ,NAME_MAST.NAME_NAME   AS NAME_NAME_B " & Chr(13)
@@ -275,29 +275,29 @@ Private Function fncMakeGetDataSql(strYardCodeFrom As String, _
     
     
     '---------------20091201-----------ryu---------update----------------********-----------------------<s>
-    '=============================•ÛØ‰ïĞ–¼•\¦‚ÌC³====================================================
-''    strSQL = strSQL & "   FROM (((( CARG_FILE INNER JOIN YARD_MAST ON CARG_FILE.CARG_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ƒ„[ƒhƒ}ƒXƒ^
+    '=============================ä¿è¨¼ä¼šç¤¾åè¡¨ç¤ºã®ä¿®æ­£====================================================
+''    strSQL = strSQL & "   FROM (((( CARG_FILE INNER JOIN YARD_MAST ON CARG_FILE.CARG_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿
 ''    strSQL = strSQL & "   INNER JOIN CNTA_MAST ON ( CARG_FILE.CARG_YCODE = CNTA_MAST.CNTA_CODE ) " & Chr(13)
-''    strSQL = strSQL & "                       AND ( CARG_FILE.CARG_NO    = CNTA_MAST.CNTA_NO ) ) " & Chr(13)                    ' ƒRƒ“ƒeƒiƒ}ƒXƒ^
-''    strSQL = strSQL & "   INNER JOIN USER_MAST ON CARG_FILE.CARG_UCODE   = USER_MAST.USER_CODE ) " & Chr(13)                    ' ƒ†[ƒU[ƒ}ƒXƒ^
+''    strSQL = strSQL & "                       AND ( CARG_FILE.CARG_NO    = CNTA_MAST.CNTA_NO ) ) " & Chr(13)                    ' ã‚³ãƒ³ãƒ†ãƒŠãƒã‚¹ã‚¿
+''    strSQL = strSQL & "   INNER JOIN USER_MAST ON CARG_FILE.CARG_UCODE   = USER_MAST.USER_CODE ) " & Chr(13)                    ' ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒã‚¹ã‚¿
 ''    strSQL = strSQL & "    LEFT JOIN RCPT_TRAN ON CARG_FILE.CARG_UKNO    = RCPT_TRAN.RCPT_NO ) " & Chr(13)                      ' RCPT_TRAN
 ''    strSQL = strSQL & "   INNER JOIN NAME_MAST ON CNTA_MAST.CNTA_USAGE   = NAME_MAST.NAME_CODE " & Chr(13)                      ' NAME_MAST
         
-    strSQL = strSQL & "        ,T_HOSYO.HOSYO_NM   AS HOSYO_NM_B                                    " & Chr(13)    '•ÛØ‰ïĞ–¼Ì---add--
+    strSQL = strSQL & "        ,T_HOSYO.HOSYO_NM   AS HOSYO_NM_B                                    " & Chr(13)    'ä¿è¨¼ä¼šç¤¾åç§°---add--
     
-    strSQL = strSQL & "   FROM ((((( CARG_FILE INNER JOIN YARD_MAST ON CARG_FILE.CARG_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ƒ„[ƒhƒ}ƒXƒ^
+    strSQL = strSQL & "   FROM ((((( CARG_FILE INNER JOIN YARD_MAST ON CARG_FILE.CARG_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿
     strSQL = strSQL & "   INNER JOIN CNTA_MAST ON ( CARG_FILE.CARG_YCODE = CNTA_MAST.CNTA_CODE )    " & Chr(13)
-    strSQL = strSQL & "                       AND ( CARG_FILE.CARG_NO    = CNTA_MAST.CNTA_NO ) )    " & Chr(13)                  ' ƒRƒ“ƒeƒiƒ}ƒXƒ^
-    strSQL = strSQL & "   INNER JOIN USER_MAST ON CARG_FILE.CARG_UCODE   = USER_MAST.USER_CODE )    " & Chr(13)                  ' ƒ†[ƒU[ƒ}ƒXƒ^
+    strSQL = strSQL & "                       AND ( CARG_FILE.CARG_NO    = CNTA_MAST.CNTA_NO ) )    " & Chr(13)                  ' ã‚³ãƒ³ãƒ†ãƒŠãƒã‚¹ã‚¿
+    strSQL = strSQL & "   INNER JOIN USER_MAST ON CARG_FILE.CARG_UCODE   = USER_MAST.USER_CODE )    " & Chr(13)                  ' ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒã‚¹ã‚¿
     strSQL = strSQL & "    LEFT JOIN RCPT_TRAN ON CARG_FILE.CARG_UKNO    = RCPT_TRAN.RCPT_NO )      " & Chr(13)                  ' RCPT_TRAN
     strSQL = strSQL & "   INNER JOIN NAME_MAST ON CNTA_MAST.CNTA_USAGE   = NAME_MAST.NAME_CODE      " & Chr(13)                  ' NAME_MAST
     
     strSQL = strSQL & "   ) LEFT JOIN                                                                                          " & Chr(13)
     strSQL = strSQL & "     (SELECT SHIR_MAST.SHIRM_SHIRC AS HOSYO_CD,                                                           " & Chr(13)
-    strSQL = strSQL & "         (CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒNƒŒƒfƒ“ƒX%' THEN 'Š”®‰ïĞƒNƒŒƒfƒ“ƒX'                    " & Chr(13)
-    strSQL = strSQL & "         ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒpƒ‹ƒ}%' THEN 'Š”®‰ïĞƒpƒ‹ƒ}'                        " & Chr(13)
-    strSQL = strSQL & "         ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒA[ƒ‹ƒGƒ€ƒgƒ‰ƒX%' THEN 'ƒA[ƒ‹ƒGƒ€ƒgƒ‰ƒXƒgŠ”®‰ïĞ'  " & Chr(13)
-    strSQL = strSQL & "         ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒŠƒvƒ‰ƒX%' THEN 'Š”®‰ïĞƒŠƒvƒ‰ƒX'                    " & Chr(13)
+    strSQL = strSQL & "         (CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ã‚¯ãƒ¬ãƒ‡ãƒ³ã‚¹%' THEN 'æ ªå¼ä¼šç¤¾ã‚¯ãƒ¬ãƒ‡ãƒ³ã‚¹'                    " & Chr(13)
+    strSQL = strSQL & "         ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ãƒ‘ãƒ«ãƒ%' THEN 'æ ªå¼ä¼šç¤¾ãƒ‘ãƒ«ãƒ'                        " & Chr(13)
+    strSQL = strSQL & "         ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ã‚¢ãƒ¼ãƒ«ã‚¨ãƒ ãƒˆãƒ©ã‚¹%' THEN 'ã‚¢ãƒ¼ãƒ«ã‚¨ãƒ ãƒˆãƒ©ã‚¹ãƒˆæ ªå¼ä¼šç¤¾'  " & Chr(13)
+    strSQL = strSQL & "         ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ãƒªãƒ—ãƒ©ã‚¹%' THEN 'æ ªå¼ä¼šç¤¾ãƒªãƒ—ãƒ©ã‚¹'                    " & Chr(13)
     strSQL = strSQL & "         ELSE SHIR_MAST.SHIRM_SHIRN END END END END) AS HOSYO_NM                                           " & Chr(13)
     strSQL = strSQL & "     FROM " & strKASEDBN & "SHIR_MAST                                                                      " & Chr(13)
     strSQL = strSQL & "     INNER JOIN CONT_MAST ON CONT_MAST.CONT_BUMOC = SHIR_MAST.SHIRM_BUMOC  " & Chr(13)
@@ -307,24 +307,24 @@ Private Function fncMakeGetDataSql(strYardCodeFrom As String, _
     
     strSQL = strSQL & " WHERE CARG_FILE.CARG_AGRE <> 9 AND NAME_MAST.NAME_ID = '086' " & Chr(13)
 
-    'Where‹åì¬
-    'ƒ„[ƒhƒR[ƒh‚Ì”ÍˆÍğŒ
+    'Whereå¥ä½œæˆ
+    'ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ã®ç¯„å›²æ¡ä»¶
     strSQL = strSQL & fncMakeBetween("CARG_FILE.CARG_YCODE", strYardCodeFrom, strYardCodeTo)
 
-    'ƒRƒ“ƒeƒi”Ô†‚ÌğŒw’è
+    'ã‚³ãƒ³ãƒ†ãƒŠç•ªå·ã®æ¡ä»¶æŒ‡å®š
     If Nz(strRoom, "") <> "" Then
         strSQL = strSQL & " AND CARG_FILE.CARG_NO = " & strRoom
     End If
 
-    'ƒ†[ƒU[ƒR[ƒh‚ÌğŒw’è
+    'ãƒ¦ãƒ¼ã‚¶ãƒ¼ã‚³ãƒ¼ãƒ‰ã®æ¡ä»¶æŒ‡å®š
     If Nz(strUserCode, "") <> "" Then
         strSQL = strSQL & " AND CARG_FILE.CARG_UCODE = " & strUserCode
     End If
 
-    strSQL = strSQL & " ) Before " & Chr(13)  ' •ÏX‘O
+    strSQL = strSQL & " ) Before " & Chr(13)  ' å¤‰æ›´å‰
 
-    ' •ÏXŒãƒf[ƒ^æ“¾SQL
-    ' ySELECT‹åz
+    ' å¤‰æ›´å¾Œãƒ‡ãƒ¼ã‚¿å–å¾—SQL
+    ' ã€SELECTå¥ã€‘
     strSQL = strSQL & " , " & Chr(13)
     strSQL = strSQL & " ( " & Chr(13)
     strSQL = strSQL & " SELECT  CNTA_MAST.CNTA_USAGE  AS CNTA_USAGE_A " & Chr(13)
@@ -352,30 +352,30 @@ Private Function fncMakeGetDataSql(strYardCodeFrom As String, _
     strSQL = strSQL & "        ,YOUK_TRAN.YOUKT_MOTO_ACPTNO AS YOUKT_MOTO_ACPTNO_A " & Chr(13)
     
     '---------------20091201-----------ryu---------update----------------********-----------------------<s>
-    '=============================•ÛØ‰ïĞ–¼•\¦‚ÌC³====================================================
-''    strSQL = strSQL & "   FROM (((( RCPT_TRAN INNER JOIN YARD_MAST ON RCPT_TRAN.RCPT_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ƒ„[ƒhƒ}ƒXƒ^
+    '=============================ä¿è¨¼ä¼šç¤¾åè¡¨ç¤ºã®ä¿®æ­£====================================================
+''    strSQL = strSQL & "   FROM (((( RCPT_TRAN INNER JOIN YARD_MAST ON RCPT_TRAN.RCPT_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿
 ''    strSQL = strSQL & "   INNER JOIN CNTA_MAST ON ( RCPT_TRAN.RCPT_YCODE = CNTA_MAST.CNTA_CODE ) " & Chr(13)
-''    strSQL = strSQL & "                       AND ( RCPT_TRAN.RCPT_CNO   = CNTA_MAST.CNTA_NO ) ) " & Chr(13)                    ' ƒRƒ“ƒeƒiƒ}ƒXƒ^
-''    strSQL = strSQL & "   INNER JOIN USER_MAST ON RCPT_TRAN.RCPT_UCODE   = USER_MAST.USER_CODE ) " & Chr(13)                    ' ƒ†[ƒU[ƒ}ƒXƒ^
-''    strSQL = strSQL & "   INNER JOIN YOUK_TRAN ON RCPT_TRAN.RCPT_NO      = YOUK_TRAN.YOUKT_UKNO ) " & Chr(13)                   ' —\–ñó•tƒgƒ‰ƒ“
+''    strSQL = strSQL & "                       AND ( RCPT_TRAN.RCPT_CNO   = CNTA_MAST.CNTA_NO ) ) " & Chr(13)                    ' ã‚³ãƒ³ãƒ†ãƒŠãƒã‚¹ã‚¿
+''    strSQL = strSQL & "   INNER JOIN USER_MAST ON RCPT_TRAN.RCPT_UCODE   = USER_MAST.USER_CODE ) " & Chr(13)                    ' ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒã‚¹ã‚¿
+''    strSQL = strSQL & "   INNER JOIN YOUK_TRAN ON RCPT_TRAN.RCPT_NO      = YOUK_TRAN.YOUKT_UKNO ) " & Chr(13)                   ' äºˆç´„å—ä»˜ãƒˆãƒ©ãƒ³
 ''    strSQL = strSQL & "   INNER JOIN NAME_MAST ON CNTA_MAST.CNTA_USAGE   = NAME_MAST.NAME_CODE " & Chr(13)                      ' NAME_MAST
 ''    strSQL = strSQL & " WHERE NAME_MAST.NAME_ID = '086' " & Chr(13)
     
-    strSQL = strSQL & "        ,T_HOSYO.HOSYO_NM   AS HOSYO_NM_A                                    " & Chr(13)    '•ÛØ‰ïĞ–¼Ì---add--
+    strSQL = strSQL & "        ,T_HOSYO.HOSYO_NM   AS HOSYO_NM_A                                    " & Chr(13)    'ä¿è¨¼ä¼šç¤¾åç§°---add--
     
-    strSQL = strSQL & "   FROM ((((( RCPT_TRAN INNER JOIN YARD_MAST ON RCPT_TRAN.RCPT_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ƒ„[ƒhƒ}ƒXƒ^
+    strSQL = strSQL & "   FROM ((((( RCPT_TRAN INNER JOIN YARD_MAST ON RCPT_TRAN.RCPT_YCODE = YARD_MAST.YARD_CODE ) " & Chr(13)  ' ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿
     strSQL = strSQL & "   INNER JOIN CNTA_MAST ON ( RCPT_TRAN.RCPT_YCODE = CNTA_MAST.CNTA_CODE )    " & Chr(13)
-    strSQL = strSQL & "                       AND ( RCPT_TRAN.RCPT_CNO   = CNTA_MAST.CNTA_NO ) )    " & Chr(13)                  ' ƒRƒ“ƒeƒiƒ}ƒXƒ^
-    strSQL = strSQL & "   INNER JOIN USER_MAST ON RCPT_TRAN.RCPT_UCODE   = USER_MAST.USER_CODE )    " & Chr(13)                  ' ƒ†[ƒU[ƒ}ƒXƒ^
-    strSQL = strSQL & "   INNER JOIN YOUK_TRAN ON RCPT_TRAN.RCPT_NO      = YOUK_TRAN.YOUKT_UKNO )   " & Chr(13)                  ' —\–ñó•tƒgƒ‰ƒ“
+    strSQL = strSQL & "                       AND ( RCPT_TRAN.RCPT_CNO   = CNTA_MAST.CNTA_NO ) )    " & Chr(13)                  ' ã‚³ãƒ³ãƒ†ãƒŠãƒã‚¹ã‚¿
+    strSQL = strSQL & "   INNER JOIN USER_MAST ON RCPT_TRAN.RCPT_UCODE   = USER_MAST.USER_CODE )    " & Chr(13)                  ' ãƒ¦ãƒ¼ã‚¶ãƒ¼ãƒã‚¹ã‚¿
+    strSQL = strSQL & "   INNER JOIN YOUK_TRAN ON RCPT_TRAN.RCPT_NO      = YOUK_TRAN.YOUKT_UKNO )   " & Chr(13)                  ' äºˆç´„å—ä»˜ãƒˆãƒ©ãƒ³
     strSQL = strSQL & "   INNER JOIN NAME_MAST ON CNTA_MAST.CNTA_USAGE   = NAME_MAST.NAME_CODE      " & Chr(13)                  ' NAME_MAST
     
     strSQL = strSQL & "   ) LEFT JOIN (                                                                                         " & Chr(13)
     strSQL = strSQL & "     SELECT SHIR_MAST.SHIRM_SHIRC AS HOSYO_CD,                                                           " & Chr(13)
-    strSQL = strSQL & "     (CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒNƒŒƒfƒ“ƒX%' THEN 'Š”®‰ïĞ@ƒNƒŒƒfƒ“ƒX'                    " & Chr(13)
-    strSQL = strSQL & "     ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒpƒ‹ƒ}%' THEN 'Š”®‰ïĞ@ƒpƒ‹ƒ}'                        " & Chr(13)
-    strSQL = strSQL & "     ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒA[ƒ‹ƒGƒ€ƒgƒ‰ƒX%' THEN 'ƒA[ƒ‹ƒGƒ€ƒgƒ‰ƒXƒg@Š”®‰ïĞ'  " & Chr(13)
-    strSQL = strSQL & "     ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ƒŠƒvƒ‰ƒX%' THEN 'Š”®‰ïĞ@ƒŠƒvƒ‰ƒX'                    " & Chr(13)
+    strSQL = strSQL & "     (CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ã‚¯ãƒ¬ãƒ‡ãƒ³ã‚¹%' THEN 'æ ªå¼ä¼šç¤¾ã€€ã‚¯ãƒ¬ãƒ‡ãƒ³ã‚¹'                    " & Chr(13)
+    strSQL = strSQL & "     ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ãƒ‘ãƒ«ãƒ%' THEN 'æ ªå¼ä¼šç¤¾ã€€ãƒ‘ãƒ«ãƒ'                        " & Chr(13)
+    strSQL = strSQL & "     ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ã‚¢ãƒ¼ãƒ«ã‚¨ãƒ ãƒˆãƒ©ã‚¹%' THEN 'ã‚¢ãƒ¼ãƒ«ã‚¨ãƒ ãƒˆãƒ©ã‚¹ãƒˆã€€æ ªå¼ä¼šç¤¾'  " & Chr(13)
+    strSQL = strSQL & "     ELSE CASE WHEN SHIR_MAST.SHIRM_SHIRN LIKE '%ãƒªãƒ—ãƒ©ã‚¹%' THEN 'æ ªå¼ä¼šç¤¾ã€€ãƒªãƒ—ãƒ©ã‚¹'                    " & Chr(13)
     strSQL = strSQL & "     ELSE SHIR_MAST.SHIRM_SHIRN END END END END) AS HOSYO_NM                                             " & Chr(13)
     strSQL = strSQL & "     FROM " & strKASEDBN & "SHIR_MAST                                                                    " & Chr(13)
     strSQL = strSQL & "     INNER JOIN CONT_MAST ON CONT_MAST.CONT_BUMOC = SHIR_MAST.SHIRM_BUMOC  " & Chr(13)
@@ -385,13 +385,13 @@ Private Function fncMakeGetDataSql(strYardCodeFrom As String, _
     
     strSQL = strSQL & " WHERE NAME_MAST.NAME_ID = '086' " & Chr(13)
     
-     '•Ûá‹æ•ª‚ÌğŒw’è
-    If Nz(str•Ûá‹æ•ª, "") <> "" Then
-        strSQL = strSQL & " AND RCPT_TRAN.RCPT_HOSYICD  = " & str•Ûá‹æ•ª & Chr(13)
+     'ä¿éšœåŒºåˆ†ã®æ¡ä»¶æŒ‡å®š
+    If Nz(strä¿éšœåŒºåˆ†, "") <> "" Then
+        strSQL = strSQL & " AND RCPT_TRAN.RCPT_HOSYICD  = " & strä¿éšœåŒºåˆ† & Chr(13)
     End If
     
-    strSQL = strSQL & " ) After " & Chr(13)  ' •ÏXŒã
-    strSQL = strSQL & " WHERE Before.CARG_ACPTNO_B = After.YOUKT_MOTO_ACPTNO_A "  ' •ÏX‘O‚Æ•ÏXŒã‚ÌŒ‹‡ğŒ
+    strSQL = strSQL & " ) After " & Chr(13)  ' å¤‰æ›´å¾Œ
+    strSQL = strSQL & " WHERE Before.CARG_ACPTNO_B = After.YOUKT_MOTO_ACPTNO_A "  ' å¤‰æ›´å‰ã¨å¤‰æ›´å¾Œã®çµåˆæ¡ä»¶
 
     fncMakeGetDataSql = strSQL
 
@@ -400,11 +400,11 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :fncMakeBetween
-'        ‹@”\             :”ÍˆÍğŒì¬
-'        IN               :‘æˆêˆø”|‘ÎÛƒe[ƒuƒ‹‚ÌƒJƒ‰ƒ€–¼
-'                         :‘æ“ñˆø”|”ÍˆÍğŒ’lFROM
-'                         :‘æOˆø”|”ÍˆÍğŒ’lTO
-'        OUT              :ğŒ•¶
+'        æ©Ÿèƒ½             :ç¯„å›²æ¡ä»¶ä½œæˆ
+'        IN               :ç¬¬ä¸€å¼•æ•°ï¼å¯¾è±¡ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚«ãƒ©ãƒ å
+'                         :ç¬¬äºŒå¼•æ•°ï¼ç¯„å›²æ¡ä»¶å€¤FROM
+'                         :ç¬¬ä¸‰å¼•æ•°ï¼ç¯„å›²æ¡ä»¶å€¤TO
+'        OUT              :æ¡ä»¶æ–‡
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -415,19 +415,19 @@ Private Function fncMakeBetween(strColName As String, strfrom As String, strTo A
     strTemp = ""
     
     If strfrom <> "" And strTo <> "" Then
-        '‹¤‚É‹ó”’‚Å‚Í‚È‚¢ê‡A
+        'å…±ã«ç©ºç™½ã§ã¯ãªã„å ´åˆã€
         If strfrom = strTo Then
-            'FROM‚ÆTO‚ª“¯ˆê‚Ìê‡Aˆê’vğŒ
+            'FROMã¨TOãŒåŒä¸€ã®å ´åˆã€ä¸€è‡´æ¡ä»¶
             strTemp = " AND " & strColName & " = '" & strfrom & "' "
         Else
-            'FROM‚ÆTO‚ªˆÙ‚È‚éê‡ABETWEENğŒ
+            'FROMã¨TOãŒç•°ãªã‚‹å ´åˆã€BETWEENæ¡ä»¶
             strTemp = " AND " & strColName & " BETWEEN '" & strfrom & "' AND '" & strTo & "' "
         End If
     ElseIf strfrom <> "" Then
-        'FROM‚Ì‚İ‚Ìê‡A‚»‚êˆÈã‚Å‚ ‚é‚±‚Æ‚ªğŒ
+        'FROMã®ã¿ã®å ´åˆã€ãã‚Œä»¥ä¸Šã§ã‚ã‚‹ã“ã¨ãŒæ¡ä»¶
         strTemp = " AND " & strColName & " >= '" & strfrom & "' "
     ElseIf strTo <> "" Then
-        'TO‚Ì‚İ‚Ìê‡A‚»‚êˆÈ‰º‚Å‚ ‚é‚±‚Æ‚ªğŒ
+        'TOã®ã¿ã®å ´åˆã€ãã‚Œä»¥ä¸‹ã§ã‚ã‚‹ã“ã¨ãŒæ¡ä»¶
         strTemp = " AND " & strColName & " <= '" & strTo & "' "
     End If
     
@@ -438,9 +438,9 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :subMakeWork
-'        ‹@”\             :ƒ[ƒNƒe[ƒuƒ‹ƒf[ƒ^’Ç‰Á
-'        IN               :rsSource    - ŒŸõŒ‹‰Ê‚ªŠi”[‚³‚ê‚½ƒŒƒR[ƒhƒZƒbƒg
-'                         :intMode     - 1=ˆóüƒvƒŒƒrƒ…[ 2=Excelo—Í 3=ˆóüi’è”éŒ¾‚ ‚èj
+'        æ©Ÿèƒ½             :ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ãƒ‡ãƒ¼ã‚¿è¿½åŠ 
+'        IN               :rsSource    - æ¤œç´¢çµæœãŒæ ¼ç´ã•ã‚ŒãŸãƒ¬ã‚³ãƒ¼ãƒ‰ã‚»ãƒƒãƒˆ
+'                         :intMode     - 1=å°åˆ·ãƒ—ãƒ¬ãƒ“ãƒ¥ãƒ¼ 2=Excelå‡ºåŠ› 3=å°åˆ·ï¼ˆå®šæ•°å®£è¨€ã‚ã‚Šï¼‰
 '        OUT              :
 '
 '==============================================================================*
@@ -458,83 +458,83 @@ On Error GoTo ErrorHandler
 
     Set dbAccess = CurrentDb
 
-    'ƒ[ƒNƒe[ƒuƒ‹ƒNƒŠƒA
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã‚¯ãƒªã‚¢
     Call subClearWork(dbAccess, P_WORK_TABLE)
 
-    'ƒ[ƒNƒe[ƒuƒ‹‚ÌƒŒƒR[ƒhƒZƒbƒg
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã®ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚»ãƒƒãƒˆ
     Set rsDestination = dbAccess.OpenRecordset(P_WORK_TABLE, dbOpenDynaset, dbAppendOnly)
 
-    'ƒf[ƒ^’Ç‰Á
+    'ãƒ‡ãƒ¼ã‚¿è¿½åŠ 
     With rsSource
         While Not .EOF
 
             ' AddNew
             rsDestination.AddNew
 
-            ' *** •ÏX‘O *** (21€–Ú)
-            rsDestination.Fields("•ÏX‘O¤•i") = .Fields("NAME_NAME_B")
-            rsDestination.Fields("•ÏX‘O•¨Œ") = Format(.Fields("CARG_YCODE_B"), "000000")   ' ƒ„[ƒhƒR[ƒh
-            rsDestination.Fields("•ÏX‘O•¨Œ–¼Ì") = .Fields("YARD_NAME_B")
-            rsDestination.Fields("•ÏX‘Og—p•¨Œ") = Format(.Fields("CARG_NO_B"), "000000")  ' ƒRƒ“ƒeƒi”Ô†
-            rsDestination.Fields("•ÏX‘O•¨ŒZŠ") = .Fields("YARD_ADDR_1_B") & .Fields("YARD_ADDR_2_B")
+            ' *** å¤‰æ›´å‰ *** (21é …ç›®)
+            rsDestination.Fields("å¤‰æ›´å‰å•†å“") = .Fields("NAME_NAME_B")
+            rsDestination.Fields("å¤‰æ›´å‰ç‰©ä»¶") = Format(.Fields("CARG_YCODE_B"), "000000")   ' ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
+            rsDestination.Fields("å¤‰æ›´å‰ç‰©ä»¶åç§°") = .Fields("YARD_NAME_B")
+            rsDestination.Fields("å¤‰æ›´å‰ä½¿ç”¨ç‰©ä»¶") = Format(.Fields("CARG_NO_B"), "000000")  ' ã‚³ãƒ³ãƒ†ãƒŠç•ªå·
+            rsDestination.Fields("å¤‰æ›´å‰ç‰©ä»¶ä½æ‰€") = .Fields("YARD_ADDR_1_B") & .Fields("YARD_ADDR_2_B")
 
             If Nz(.Fields("RCPT_RENTKG_B"), "") <> "" Then
-                rsDestination.Fields("•ÏX‘OŒŠzg—p—¿E’À—¿") = "\" & Format(.Fields("RCPT_RENTKG_B"), "#,##0")
-                rsDestination.Fields("•ÏX‘O‘¼ŒŠz—¿") = "\" & Format(Nz(.Fields("RCPT_EZAPPI_B"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI1_B"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI2_B"), 0), "#,##0")
+                rsDestination.Fields("å¤‰æ›´å‰æœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™") = "\" & Format(.Fields("RCPT_RENTKG_B"), "#,##0")
+                rsDestination.Fields("å¤‰æ›´å‰ä»–æœˆé¡æ–™") = "\" & Format(Nz(.Fields("RCPT_EZAPPI_B"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI1_B"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI2_B"), 0), "#,##0")
             Else
-                rsDestination.Fields("•ÏX‘OŒŠzg—p—¿E’À—¿") = "\" & Format(Nz(.Fields("CARG_RENTKG_B"), 0) + Nz(.Fields("CARG_SYOZEI_B"), 0), "#,##0")
-                rsDestination.Fields("•ÏX‘O‘¼ŒŠz—¿") = "\0"
+                rsDestination.Fields("å¤‰æ›´å‰æœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™") = "\" & Format(Nz(.Fields("CARG_RENTKG_B"), 0) + Nz(.Fields("CARG_SYOZEI_B"), 0), "#,##0")
+                rsDestination.Fields("å¤‰æ›´å‰ä»–æœˆé¡æ–™") = "\0"
             End If
 
-            rsDestination.Fields("•ÏX‘OŒ_–ñ”Ô†") = .Fields("CARG_ACPTNO_B")
-            rsDestination.Fields("•ÏX‘OŒÚ‹qNo") = Format(.Fields("CARG_UCODE_B"), "000000")  ' ŒÚ‹qƒR[ƒh
-            rsDestination.Fields("•ÏX‘OŒ_–ñÒ–¼") = .Fields("USER_NAME_B")
-            rsDestination.Fields("•ÏX‘O–@l‘ã•\Ò–¼") = .Fields("USER_TANM_B")
-            rsDestination.Fields("•ÏX‘O—X•Ö”Ô†") = .Fields("USER_YUBINO_B")
-            rsDestination.Fields("•ÏX‘OZŠ1") = .Fields("USER_ADR_1_B") & .Fields("USER_ADR_2_B")
-            rsDestination.Fields("•ÏX‘OZŠ2") = .Fields("USER_ADR_3_B")
-            rsDestination.Fields("•ÏX‘O“d˜b”Ô†") = .Fields("USER_TEL_B")
-            rsDestination.Fields("•ÏX‘OFAX”Ô†") = .Fields("USER_FAX_B")
-            rsDestination.Fields("•ÏX‘OŒg‘Ñ”Ô†") = .Fields("USER_KEITAI_B")
+            rsDestination.Fields("å¤‰æ›´å‰å¥‘ç´„ç•ªå·") = .Fields("CARG_ACPTNO_B")
+            rsDestination.Fields("å¤‰æ›´å‰é¡§å®¢No") = Format(.Fields("CARG_UCODE_B"), "000000")  ' é¡§å®¢ã‚³ãƒ¼ãƒ‰
+            rsDestination.Fields("å¤‰æ›´å‰å¥‘ç´„è€…æ°å") = .Fields("USER_NAME_B")
+            rsDestination.Fields("å¤‰æ›´å‰æ³•äººä»£è¡¨è€…å") = .Fields("USER_TANM_B")
+            rsDestination.Fields("å¤‰æ›´å‰éƒµä¾¿ç•ªå·") = .Fields("USER_YUBINO_B")
+            rsDestination.Fields("å¤‰æ›´å‰ä½æ‰€1") = .Fields("USER_ADR_1_B") & .Fields("USER_ADR_2_B")
+            rsDestination.Fields("å¤‰æ›´å‰ä½æ‰€2") = .Fields("USER_ADR_3_B")
+            rsDestination.Fields("å¤‰æ›´å‰é›»è©±ç•ªå·") = .Fields("USER_TEL_B")
+            rsDestination.Fields("å¤‰æ›´å‰FAXç•ªå·") = .Fields("USER_FAX_B")
+            rsDestination.Fields("å¤‰æ›´å‰æºå¸¯ç•ªå·") = .Fields("USER_KEITAI_B")
             
-            '---------------20091201-----------ryu---------update---------•ÛØ‰ïĞ–¼•\¦‚ÌC³--------------<s>
-''            rsDestination.Fields("•ÏX‘O˜A‘Ñ•ÛØ¿•‰–@l") = "Š”®‰ïĞ  ƒŠƒvƒ‰ƒX"
-            rsDestination.Fields("•ÏX‘O˜A‘Ñ•ÛØ¿•‰–@l") = .Fields("HOSYO_NM_B")
-            '---------------20091201-----------ryu---------update---------•ÛØ‰ïĞ–¼•\¦‚ÌC³--------------<e>
+            '---------------20091201-----------ryu---------update---------ä¿è¨¼ä¼šç¤¾åè¡¨ç¤ºã®ä¿®æ­£--------------<s>
+''            rsDestination.Fields("å¤‰æ›´å‰é€£å¸¯ä¿è¨¼è«‹è² æ³•äºº") = "æ ªå¼ä¼šç¤¾  ãƒªãƒ—ãƒ©ã‚¹"
+            rsDestination.Fields("å¤‰æ›´å‰é€£å¸¯ä¿è¨¼è«‹è² æ³•äºº") = .Fields("HOSYO_NM_B")
+            '---------------20091201-----------ryu---------update---------ä¿è¨¼ä¼šç¤¾åè¡¨ç¤ºã®ä¿®æ­£--------------<e>
             
-            rsDestination.Fields("•ÏX‘O³”FNo") = .Fields("CARG_HOSYB_B")
+            rsDestination.Fields("å¤‰æ›´å‰æ‰¿èªNo") = .Fields("CARG_HOSYB_B")
 
-            ' *** •ÏXŒã *** (21€–Ú)
-            rsDestination.Fields("•ÏXŒã¤•i") = .Fields("NAME_NAME_A")
-            rsDestination.Fields("•ÏXŒã•¨Œ") = Format(.Fields("RCPT_YCODE_A"), "000000")    ' ƒ„[ƒhƒR[ƒh
-            rsDestination.Fields("•ÏXŒã•¨Œ–¼Ì") = .Fields("YARD_NAME_A")
-            rsDestination.Fields("•ÏXŒãg—p•¨Œ") = Format(.Fields("RCPT_CNO_A"), "000000")  ' ƒRƒ“ƒeƒi”Ô†
-            rsDestination.Fields("•ÏXŒã•¨ŒZŠ") = .Fields("YARD_ADDR_1_A") & .Fields("YARD_ADDR_2_A")
-            rsDestination.Fields("•ÏXŒãŒŠzg—p—¿E’À—¿") = "\" & Format(Nz(.Fields("RCPT_RENTKG_A"), 0), "#,##0")
-            rsDestination.Fields("•ÏXŒã‘¼ŒŠz—¿") = "\" & Format(Nz(.Fields("RCPT_EZAPPI_A"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI1_A"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI2_A"), 0), "#,##0")
-            rsDestination.Fields("•ÏXŒãŒ_–ñ”Ô†") = .Fields("RCPT_CARG_ACPTNO_A")
-            rsDestination.Fields("•ÏXŒãŒÚ‹qNo") = Format(.Fields("RCPT_UCODE_A"), "000000")  ' ŒÚ‹qƒR[ƒh
-            rsDestination.Fields("•ÏXŒãŒ_–ñÒ–¼") = .Fields("USER_NAME_A")
-            rsDestination.Fields("•ÏXŒã–@l‘ã•\Ò–¼") = .Fields("USER_TANM_A")
-            rsDestination.Fields("•ÏXŒã—X•Ö”Ô†") = .Fields("USER_YUBINO_A")
-            rsDestination.Fields("•ÏXŒãZŠ1") = .Fields("USER_ADR_1_A") & .Fields("USER_ADR_2_A")
-            rsDestination.Fields("•ÏXŒãZŠ2") = .Fields("USER_ADR_3_A")
-            rsDestination.Fields("•ÏXŒã“d˜b”Ô†") = .Fields("USER_TEL_A")
-            rsDestination.Fields("•ÏXŒãFAX”Ô†") = .Fields("USER_FAX_A")
-            rsDestination.Fields("•ÏXŒãŒg‘Ñ”Ô†") = .Fields("USER_KEITAI_A")
+            ' *** å¤‰æ›´å¾Œ *** (21é …ç›®)
+            rsDestination.Fields("å¤‰æ›´å¾Œå•†å“") = .Fields("NAME_NAME_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œç‰©ä»¶") = Format(.Fields("RCPT_YCODE_A"), "000000")    ' ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
+            rsDestination.Fields("å¤‰æ›´å¾Œç‰©ä»¶åç§°") = .Fields("YARD_NAME_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œä½¿ç”¨ç‰©ä»¶") = Format(.Fields("RCPT_CNO_A"), "000000")  ' ã‚³ãƒ³ãƒ†ãƒŠç•ªå·
+            rsDestination.Fields("å¤‰æ›´å¾Œç‰©ä»¶ä½æ‰€") = .Fields("YARD_ADDR_1_A") & .Fields("YARD_ADDR_2_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œæœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™") = "\" & Format(Nz(.Fields("RCPT_RENTKG_A"), 0), "#,##0")
+            rsDestination.Fields("å¤‰æ›´å¾Œä»–æœˆé¡æ–™") = "\" & Format(Nz(.Fields("RCPT_EZAPPI_A"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI1_A"), 0) + Nz(.Fields("RCPT_ADD_EZAPPI2_A"), 0), "#,##0")
+            rsDestination.Fields("å¤‰æ›´å¾Œå¥‘ç´„ç•ªå·") = .Fields("RCPT_CARG_ACPTNO_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œé¡§å®¢No") = Format(.Fields("RCPT_UCODE_A"), "000000")  ' é¡§å®¢ã‚³ãƒ¼ãƒ‰
+            rsDestination.Fields("å¤‰æ›´å¾Œå¥‘ç´„è€…æ°å") = .Fields("USER_NAME_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œæ³•äººä»£è¡¨è€…å") = .Fields("USER_TANM_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œéƒµä¾¿ç•ªå·") = .Fields("USER_YUBINO_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œä½æ‰€1") = .Fields("USER_ADR_1_A") & .Fields("USER_ADR_2_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œä½æ‰€2") = .Fields("USER_ADR_3_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œé›»è©±ç•ªå·") = .Fields("USER_TEL_A")
+            rsDestination.Fields("å¤‰æ›´å¾ŒFAXç•ªå·") = .Fields("USER_FAX_A")
+            rsDestination.Fields("å¤‰æ›´å¾Œæºå¸¯ç•ªå·") = .Fields("USER_KEITAI_A")
             
-            '---------------20091201-----------ryu---------update---------•ÛØ‰ïĞ–¼•\¦‚ÌC³--------------<s>
-            rsDestination.Fields("•ÏXŒã˜A‘Ñ•ÛØ¿•‰–@l") = "Š”®‰ïĞ  ƒŠƒvƒ‰ƒX"
-            rsDestination.Fields("•ÏXŒã˜A‘Ñ•ÛØ¿•‰–@l") = .Fields("HOSYO_NM_A")
-            '---------------20091201-----------ryu---------update---------•ÛØ‰ïĞ–¼•\¦‚ÌC³--------------<e>
+            '---------------20091201-----------ryu---------update---------ä¿è¨¼ä¼šç¤¾åè¡¨ç¤ºã®ä¿®æ­£--------------<s>
+            rsDestination.Fields("å¤‰æ›´å¾Œé€£å¸¯ä¿è¨¼è«‹è² æ³•äºº") = "æ ªå¼ä¼šç¤¾  ãƒªãƒ—ãƒ©ã‚¹"
+            rsDestination.Fields("å¤‰æ›´å¾Œé€£å¸¯ä¿è¨¼è«‹è² æ³•äºº") = .Fields("HOSYO_NM_A")
+            '---------------20091201-----------ryu---------update---------ä¿è¨¼ä¼šç¤¾åè¡¨ç¤ºã®ä¿®æ­£--------------<e>
             
-            rsDestination.Fields("•ÏXŒã³”FNo") = .Fields("CARG_HOSYB_B")
+            rsDestination.Fields("å¤‰æ›´å¾Œæ‰¿èªNo") = .Fields("CARG_HOSYB_B")
 
-            ' *** ƒtƒbƒ^[•” *** (4€–Ú)
-            rsDestination.Fields("‰ïĞZŠ1") = strCONT_ADDR_1
-            rsDestination.Fields("‰ïĞZŠ2") = strCONT_ADDR_2
-            rsDestination.Fields("‰ïĞ“d˜b”Ô†") = strCONT_TEL_NO
-            rsDestination.Fields("‰ïĞFAX”Ô†") = strCONT_FAX_NO
+            ' *** ãƒ•ãƒƒã‚¿ãƒ¼éƒ¨ *** (4é …ç›®)
+            rsDestination.Fields("ä¼šç¤¾ä½æ‰€1") = strCONT_ADDR_1
+            rsDestination.Fields("ä¼šç¤¾ä½æ‰€2") = strCONT_ADDR_2
+            rsDestination.Fields("ä¼šç¤¾é›»è©±ç•ªå·") = strCONT_TEL_NO
+            rsDestination.Fields("ä¼šç¤¾FAXç•ªå·") = strCONT_FAX_NO
             
             ' Update
             rsDestination.UPDATE
@@ -560,9 +560,9 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :subClearWork
-'        ‹@”\             :ƒ[ƒNƒe[ƒuƒ‹ƒNƒŠƒA
-'        IN               :dbAccess     - ACCESSƒf[ƒ^ƒx[ƒXƒIƒuƒWƒFƒNƒg(È—ª‰Â)
-'                         :strTableName - ƒe[ƒuƒ‹–¼(È—ª‰Â)
+'        æ©Ÿèƒ½             :ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã‚¯ãƒªã‚¢
+'        IN               :dbAccess     - ACCESSãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ(çœç•¥å¯)
+'                         :strTableName - ãƒ†ãƒ¼ãƒ–ãƒ«å(çœç•¥å¯)
 '        OUT              :
 '
 '==============================================================================*
@@ -578,7 +578,7 @@ On Error GoTo ErrorHandler
 
     blnError = False
 
-    'ƒf[ƒ^ƒx[ƒX‚É–¢Ú‘±‚È‚ç‚ÎCurrentDb‚ÉÚ‘±‚·‚é
+    'ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã«æœªæ¥ç¶šãªã‚‰ã°CurrentDbã«æ¥ç¶šã™ã‚‹
     If dbAccess Is Nothing Then
         Set dbAccess = CurrentDb
         blnConnect = True
@@ -586,12 +586,12 @@ On Error GoTo ErrorHandler
         blnConnect = False
     End If
 
-    'ƒ[ƒNƒe[ƒuƒ‹íœ
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«å‰Šé™¤
     If fncTableExist(dbAccess, strTable) Then
         Call dbAccess.TableDefs.Delete(strTable)
     End If
 
-    'ƒ[ƒNƒe[ƒuƒ‹ì¬
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     Set tdfNew = dbAccess.CreateTableDef(strTable)
     Call subFieldAppend(tdfNew)
     Call dbAccess.TableDefs.Append(tdfNew)
@@ -616,10 +616,10 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :fncTableExist
-'        ‹@”\             :ACCESSƒe[ƒuƒ‹‘¶İƒ`ƒFƒbƒN
-'        IN               :dbAccess     - ACCESSƒf[ƒ^ƒx[ƒXƒIƒuƒWƒFƒNƒg
-'                         :strTableName - ƒe[ƒuƒ‹–¼
-'        OUT              :True=‘¶İ‚·‚é False=‘¶İ‚µ‚È‚¢
+'        æ©Ÿèƒ½             :ACCESSãƒ†ãƒ¼ãƒ–ãƒ«å­˜åœ¨ãƒã‚§ãƒƒã‚¯
+'        IN               :dbAccess     - ACCESSãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
+'                         :strTableName - ãƒ†ãƒ¼ãƒ–ãƒ«å
+'        OUT              :True=å­˜åœ¨ã™ã‚‹ False=å­˜åœ¨ã—ãªã„
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -640,7 +640,7 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :subFieldAppend
-'        ‹@”\             :ƒ[ƒNƒe[ƒuƒ‹—ñì¬
+'        æ©Ÿèƒ½             :ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«åˆ—ä½œæˆ
 '        IN               :
 '        OUT              :
 '
@@ -653,53 +653,53 @@ Private Sub subFieldAppend(tdfNew As TableDef)
 
     With tdfNew
  
-        ' +++ •ÏX‘O +++
-        Call .Fields.Append(.CreateField("•ÏX‘O¤•i", DataTypeEnum.dbText, 20))              '•ÏX‘O¤•i
-        Call .Fields.Append(.CreateField("•ÏX‘O•¨Œ", DataTypeEnum.dbText, 6))               '•ÏX‘O•¨Œ(ƒ„[ƒhƒR[ƒh)
-        Call .Fields.Append(.CreateField("•ÏX‘O•¨Œ–¼Ì", DataTypeEnum.dbText, 36))          '•ÏX‘O•¨Œ–¼Ì(ƒ„[ƒh–¼)
-        Call .Fields.Append(.CreateField("•ÏX‘Og—p•¨Œ", DataTypeEnum.dbText, 6))           '•ÏX‘Og—p•¨Œ(ƒRƒ“ƒeƒi”Ô†)
-        Call .Fields.Append(.CreateField("•ÏX‘O•¨ŒZŠ", DataTypeEnum.dbText, 72))          '•ÏX‘O•¨ŒZŠ1
-        Call .Fields.Append(.CreateField("•ÏX‘OŒŠzg—p—¿E’À—¿", DataTypeEnum.dbText, 50))  '•ÏX‘OŒŠzg—p—¿E’À—¿
-        Call .Fields.Append(.CreateField("•ÏX‘O‘¼ŒŠz—¿", DataTypeEnum.dbText, 50))          '•ÏX‘O‘¼ŒŠz—¿
-        Call .Fields.Append(.CreateField("•ÏX‘OŒ_–ñ”Ô†", DataTypeEnum.dbText, 10))          '•ÏX‘OŒ_–ñ”Ô†
-        Call .Fields.Append(.CreateField("•ÏX‘OŒÚ‹qNo", DataTypeEnum.dbText, 6))             '•ÏX‘OŒÚ‹qNo
-        Call .Fields.Append(.CreateField("•ÏX‘OŒ_–ñÒ–¼", DataTypeEnum.dbText, 36))        '•ÏX‘OŒ_–ñÒ–¼
-        Call .Fields.Append(.CreateField("•ÏX‘O–@l‘ã•\Ò–¼", DataTypeEnum.dbText, 18))      '•ÏX‘O–@l‘ã•\Ò–¼
-        Call .Fields.Append(.CreateField("•ÏX‘O—X•Ö”Ô†", DataTypeEnum.dbText, 10))          '•ÏX‘O—X•Ö”Ô†
-        Call .Fields.Append(.CreateField("•ÏX‘OZŠ1", DataTypeEnum.dbText, 72))             '•ÏX‘OZŠ1
-        Call .Fields.Append(.CreateField("•ÏX‘OZŠ2", DataTypeEnum.dbText, 36))             '•ÏX‘OZŠ2
-        Call .Fields.Append(.CreateField("•ÏX‘O“d˜b”Ô†", DataTypeEnum.dbText, 15))          '•ÏX‘O“d˜b”Ô†
-        Call .Fields.Append(.CreateField("•ÏX‘OFAX”Ô†", DataTypeEnum.dbText, 15))           '•ÏX‘OFAX”Ô†
-        Call .Fields.Append(.CreateField("•ÏX‘OŒg‘Ñ”Ô†", DataTypeEnum.dbText, 15))          '•ÏX‘OŒg‘Ñ”Ô†
-        Call .Fields.Append(.CreateField("•ÏX‘O˜A‘Ñ•ÛØ¿•‰–@l", DataTypeEnum.dbText, 50))  '•ÏX‘O˜A‘Ñ•ÛØ¿•‰–@l
-        Call .Fields.Append(.CreateField("•ÏX‘O³”FNo", DataTypeEnum.dbText, 20))            '•ÏX‘O³”FNo
+        ' +++ å¤‰æ›´å‰ +++
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰å•†å“", DataTypeEnum.dbText, 20))              'å¤‰æ›´å‰å•†å“
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ç‰©ä»¶", DataTypeEnum.dbText, 6))               'å¤‰æ›´å‰ç‰©ä»¶(ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ç‰©ä»¶åç§°", DataTypeEnum.dbText, 36))          'å¤‰æ›´å‰ç‰©ä»¶åç§°(ãƒ¤ãƒ¼ãƒ‰å)
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ä½¿ç”¨ç‰©ä»¶", DataTypeEnum.dbText, 6))           'å¤‰æ›´å‰ä½¿ç”¨ç‰©ä»¶(ã‚³ãƒ³ãƒ†ãƒŠç•ªå·)
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ç‰©ä»¶ä½æ‰€", DataTypeEnum.dbText, 72))          'å¤‰æ›´å‰ç‰©ä»¶ä½æ‰€1
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰æœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™", DataTypeEnum.dbText, 50))  'å¤‰æ›´å‰æœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ä»–æœˆé¡æ–™", DataTypeEnum.dbText, 50))          'å¤‰æ›´å‰ä»–æœˆé¡æ–™
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰å¥‘ç´„ç•ªå·", DataTypeEnum.dbText, 10))          'å¤‰æ›´å‰å¥‘ç´„ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰é¡§å®¢No", DataTypeEnum.dbText, 6))             'å¤‰æ›´å‰é¡§å®¢No
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰å¥‘ç´„è€…æ°å", DataTypeEnum.dbText, 36))        'å¤‰æ›´å‰å¥‘ç´„è€…æ°å
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰æ³•äººä»£è¡¨è€…å", DataTypeEnum.dbText, 18))      'å¤‰æ›´å‰æ³•äººä»£è¡¨è€…å
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰éƒµä¾¿ç•ªå·", DataTypeEnum.dbText, 10))          'å¤‰æ›´å‰éƒµä¾¿ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ä½æ‰€1", DataTypeEnum.dbText, 72))             'å¤‰æ›´å‰ä½æ‰€1
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰ä½æ‰€2", DataTypeEnum.dbText, 36))             'å¤‰æ›´å‰ä½æ‰€2
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰é›»è©±ç•ªå·", DataTypeEnum.dbText, 15))          'å¤‰æ›´å‰é›»è©±ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰FAXç•ªå·", DataTypeEnum.dbText, 15))           'å¤‰æ›´å‰FAXç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰æºå¸¯ç•ªå·", DataTypeEnum.dbText, 15))          'å¤‰æ›´å‰æºå¸¯ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰é€£å¸¯ä¿è¨¼è«‹è² æ³•äºº", DataTypeEnum.dbText, 50))  'å¤‰æ›´å‰é€£å¸¯ä¿è¨¼è«‹è² æ³•äºº
+        Call .Fields.Append(.CreateField("å¤‰æ›´å‰æ‰¿èªNo", DataTypeEnum.dbText, 20))            'å¤‰æ›´å‰æ‰¿èªNo
 
-        ' +++ •ÏXŒã +++
-        Call .Fields.Append(.CreateField("•ÏXŒã¤•i", DataTypeEnum.dbText, 20))              '•ÏXŒã¤•i
-        Call .Fields.Append(.CreateField("•ÏXŒã•¨Œ", DataTypeEnum.dbText, 6))               '•ÏXŒã•¨Œ(ƒ„[ƒhƒR[ƒh)
-        Call .Fields.Append(.CreateField("•ÏXŒã•¨Œ–¼Ì", DataTypeEnum.dbText, 36))          '•ÏXŒã•¨Œ–¼Ì(ƒ„[ƒh–¼)
-        Call .Fields.Append(.CreateField("•ÏXŒãg—p•¨Œ", DataTypeEnum.dbText, 6))           '•ÏXŒãg—p•¨Œ(ƒRƒ“ƒeƒi”Ô†)
-        Call .Fields.Append(.CreateField("•ÏXŒã•¨ŒZŠ", DataTypeEnum.dbText, 36))          '•ÏXŒã•¨ŒZŠ
-        Call .Fields.Append(.CreateField("•ÏXŒãŒŠzg—p—¿E’À—¿", DataTypeEnum.dbText, 50))  '•ÏXŒãŒŠzg—p—¿E’À—¿
-        Call .Fields.Append(.CreateField("•ÏXŒã‘¼ŒŠz—¿", DataTypeEnum.dbText, 50))          '•ÏXŒã‘¼ŒŠz—¿
-        Call .Fields.Append(.CreateField("•ÏXŒãŒ_–ñ”Ô†", DataTypeEnum.dbText, 10))          '•ÏXŒãŒ_–ñ”Ô†
-        Call .Fields.Append(.CreateField("•ÏXŒãŒÚ‹qNo", DataTypeEnum.dbText, 6))             '•ÏXŒãŒÚ‹qNo
-        Call .Fields.Append(.CreateField("•ÏXŒãŒ_–ñÒ–¼", DataTypeEnum.dbText, 36))        '•ÏXŒãŒ_–ñÒ–¼
-        Call .Fields.Append(.CreateField("•ÏXŒã–@l‘ã•\Ò–¼", DataTypeEnum.dbText, 18))      '•ÏXŒã—X•Ö”Ô†
-        Call .Fields.Append(.CreateField("•ÏXŒã—X•Ö”Ô†", DataTypeEnum.dbText, 10))          '•ÏXŒã—X•Ö”Ô†
-        Call .Fields.Append(.CreateField("•ÏXŒãZŠ1", DataTypeEnum.dbText, 72))             '•ÏXŒãZŠ1
-        Call .Fields.Append(.CreateField("•ÏXŒãZŠ2", DataTypeEnum.dbText, 36))             '•ÏXŒãZŠ2
-        Call .Fields.Append(.CreateField("•ÏXŒã“d˜b”Ô†", DataTypeEnum.dbText, 15))          '•ÏXŒã“d˜b”Ô†
-        Call .Fields.Append(.CreateField("•ÏXŒãFAX”Ô†", DataTypeEnum.dbText, 15))           '•ÏXŒãFAX”Ô†
-        Call .Fields.Append(.CreateField("•ÏXŒãŒg‘Ñ”Ô†", DataTypeEnum.dbText, 15))          '•ÏXŒãŒg‘Ñ”Ô†
-        Call .Fields.Append(.CreateField("•ÏXŒã˜A‘Ñ•ÛØ¿•‰–@l", DataTypeEnum.dbText, 50))  '•ÏXŒã˜A‘Ñ•ÛØ¿•‰–@l
-        Call .Fields.Append(.CreateField("•ÏXŒã³”FNo", DataTypeEnum.dbText, 20))            '•ÏXŒã³”FNo
+        ' +++ å¤‰æ›´å¾Œ +++
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œå•†å“", DataTypeEnum.dbText, 20))              'å¤‰æ›´å¾Œå•†å“
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œç‰©ä»¶", DataTypeEnum.dbText, 6))               'å¤‰æ›´å¾Œç‰©ä»¶(ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œç‰©ä»¶åç§°", DataTypeEnum.dbText, 36))          'å¤‰æ›´å¾Œç‰©ä»¶åç§°(ãƒ¤ãƒ¼ãƒ‰å)
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œä½¿ç”¨ç‰©ä»¶", DataTypeEnum.dbText, 6))           'å¤‰æ›´å¾Œä½¿ç”¨ç‰©ä»¶(ã‚³ãƒ³ãƒ†ãƒŠç•ªå·)
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œç‰©ä»¶ä½æ‰€", DataTypeEnum.dbText, 36))          'å¤‰æ›´å¾Œç‰©ä»¶ä½æ‰€
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œæœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™", DataTypeEnum.dbText, 50))  'å¤‰æ›´å¾Œæœˆé¡ä½¿ç”¨æ–™ãƒ»è³ƒæ–™
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œä»–æœˆé¡æ–™", DataTypeEnum.dbText, 50))          'å¤‰æ›´å¾Œä»–æœˆé¡æ–™
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œå¥‘ç´„ç•ªå·", DataTypeEnum.dbText, 10))          'å¤‰æ›´å¾Œå¥‘ç´„ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œé¡§å®¢No", DataTypeEnum.dbText, 6))             'å¤‰æ›´å¾Œé¡§å®¢No
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œå¥‘ç´„è€…æ°å", DataTypeEnum.dbText, 36))        'å¤‰æ›´å¾Œå¥‘ç´„è€…æ°å
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œæ³•äººä»£è¡¨è€…å", DataTypeEnum.dbText, 18))      'å¤‰æ›´å¾Œéƒµä¾¿ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œéƒµä¾¿ç•ªå·", DataTypeEnum.dbText, 10))          'å¤‰æ›´å¾Œéƒµä¾¿ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œä½æ‰€1", DataTypeEnum.dbText, 72))             'å¤‰æ›´å¾Œä½æ‰€1
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œä½æ‰€2", DataTypeEnum.dbText, 36))             'å¤‰æ›´å¾Œä½æ‰€2
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œé›»è©±ç•ªå·", DataTypeEnum.dbText, 15))          'å¤‰æ›´å¾Œé›»è©±ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾ŒFAXç•ªå·", DataTypeEnum.dbText, 15))           'å¤‰æ›´å¾ŒFAXç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œæºå¸¯ç•ªå·", DataTypeEnum.dbText, 15))          'å¤‰æ›´å¾Œæºå¸¯ç•ªå·
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œé€£å¸¯ä¿è¨¼è«‹è² æ³•äºº", DataTypeEnum.dbText, 50))  'å¤‰æ›´å¾Œé€£å¸¯ä¿è¨¼è«‹è² æ³•äºº
+        Call .Fields.Append(.CreateField("å¤‰æ›´å¾Œæ‰¿èªNo", DataTypeEnum.dbText, 20))            'å¤‰æ›´å¾Œæ‰¿èªNo
 
-        ' +++ ƒtƒbƒ^[•” ++++
-        Call .Fields.Append(.CreateField("‰ïĞZŠ1", DataTypeEnum.dbText, 40))               '‰ïĞZŠ1
-        Call .Fields.Append(.CreateField("‰ïĞZŠ2", DataTypeEnum.dbText, 40))               '‰ïĞZŠ2
-        Call .Fields.Append(.CreateField("‰ïĞ“d˜b”Ô†", DataTypeEnum.dbText, 15))            '‰ïĞ“d˜b”Ô†
-        Call .Fields.Append(.CreateField("‰ïĞFAX”Ô†", DataTypeEnum.dbText, 15))             '‰ïĞFAX”Ô†
+        ' +++ ãƒ•ãƒƒã‚¿ãƒ¼éƒ¨ ++++
+        Call .Fields.Append(.CreateField("ä¼šç¤¾ä½æ‰€1", DataTypeEnum.dbText, 40))               'ä¼šç¤¾ä½æ‰€1
+        Call .Fields.Append(.CreateField("ä¼šç¤¾ä½æ‰€2", DataTypeEnum.dbText, 40))               'ä¼šç¤¾ä½æ‰€2
+        Call .Fields.Append(.CreateField("ä¼šç¤¾é›»è©±ç•ªå·", DataTypeEnum.dbText, 15))            'ä¼šç¤¾é›»è©±ç•ªå·
+        Call .Fields.Append(.CreateField("ä¼šç¤¾FAXç•ªå·", DataTypeEnum.dbText, 15))             'ä¼šç¤¾FAXç•ªå·
 
         For intCount = 0 To .Fields.Count - 1
             If .Fields(intCount).Type = dbText Then
@@ -713,10 +713,10 @@ End Sub
 
 '==============================================================================*
 '
-'       MODULE_NAME     : ƒf[ƒ^ƒx[ƒXÚ‘±
+'       MODULE_NAME     : ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹æ¥ç¶š
 '       MODULE_ID       : subConnectServer
 '       CREATE_DATE     :
-'       PARAM           : ƒf[ƒ^ƒx[ƒXƒIƒuƒWƒFƒNƒg
+'       PARAM           : ãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 '       RETURN          :
 '
 '==============================================================================*
@@ -728,10 +728,10 @@ Private Sub subConnectServer(adoDbConnection As Object)
 
 On Error GoTo ErrorHandler
 
-    '•”–åƒR[ƒhæ“¾
+    'éƒ¨é–€ã‚³ãƒ¼ãƒ‰å–å¾—
     strBUMOC = fncGetBumonCode()
 
-    'ADOÚ‘±Object¶¬
+    'ADOæ¥ç¶šObjectç”Ÿæˆ
     Set adoDbConnection = MSZZ025.ADODB_Connection(strBUMOC)
 
     Exit Sub
@@ -742,11 +742,11 @@ End Sub
 
 '==============================================================================*
 '
-'       MODULE_NAME     : •”–åƒR[ƒhæ“¾
+'       MODULE_NAME     : éƒ¨é–€ã‚³ãƒ¼ãƒ‰å–å¾—
 '       MODULE_ID       : fncGetBumonCode
 '       CREATE_DATE     :
 '       PARAM           :
-'       RETURN          : •”–åƒR[ƒh
+'       RETURN          : éƒ¨é–€ã‚³ãƒ¼ãƒ‰
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -758,8 +758,8 @@ On Error GoTo ErrorHandler
 
     strBumonCode = Nz(DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY=1"))
     If strBumonCode = "" Then
-        'ƒe[ƒuƒ‹[CONT_MAST]‚Ìİ’è•s³
-        Call MSZZ024_M10("MSZZ007_M00", "•”–åƒR[ƒh‚Ìİ’è•s³B")
+        'ãƒ†ãƒ¼ãƒ–ãƒ«[CONT_MAST]ã®è¨­å®šä¸æ­£
+        Call MSZZ024_M10("MSZZ007_M00", "éƒ¨é–€ã‚³ãƒ¼ãƒ‰ã®è¨­å®šä¸æ­£ã€‚")
     End If
 
     fncGetBumonCode = strBumonCode

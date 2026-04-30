@@ -2,8 +2,8 @@ Attribute VB_Name = "MSZZD00"
 '****************************  strat of program ********************************
 '==============================================================================*
 '
-'        SYSTEM_NAME     : ‰Á£‘‡ƒVƒXƒeƒ€
-'        SUB_SYSTEM_NAME : ‹¤’ÊŠÖ”
+'        SYSTEM_NAME     : åŠ ç€¬ç·åˆã‚·ã‚¹ãƒ†ãƒ 
+'        SUB_SYSTEM_NAME : å…±é€šé–¢æ•°
 '
 '        PROGRAM_NAME    : DLOOK_UP
 '        PROGRAM_ID      : MSZZD00
@@ -16,17 +16,17 @@ Attribute VB_Name = "MSZZD00"
 '        UPDATE          : 2004/04/12
 '        UPDATER         : N.MIURA
 '        Ver             : 0.1
-'                        : ‹ÆŽÒ–¼ÌEŽd“üƒJƒi
+'                        : æ¥­è€…åç§°ãƒ»ä»•å…¥ã‚«ãƒŠ
 '
 '        UPDATE          : 2004/06/07
 '        UPDATER         : N.MIURA
 '        Ver             : 0.2
-'                        : ŽŸ‰ñXV‹æ•ª–¼Ì
+'                        : æ¬¡å›žæ›´æ–°åŒºåˆ†åç§°
 '
 '        UPDATE          : 2005/07/06
 '        UPDATER         : K.KINEBUCHI
 '        Ver             : 0.3
-'                        : ’À—¿‰ü’è–¼ÌiŽÔŒÉØ–¾E’À—¿‰ü’è‘Î‰žj
+'                        : è³ƒæ–™æ”¹å®šåç§°ï¼ˆè»Šåº«è¨¼æ˜Žãƒ»è³ƒæ–™æ”¹å®šå¯¾å¿œï¼‰
 '
 '        UPDATE          : 2008/12/19
 '        UPDATER         : S.SHIBAZAKI
@@ -36,14 +36,14 @@ Attribute VB_Name = "MSZZD00"
 '        UPDATE          : 2011/02/17
 '        UPDATER         : K.ISHIZAKA
 '        Ver             : 0.5
-'                        : MSZZD00_RECDB_Collection ‚ð’Ç‰Á
-'                        : INTI_FILE —p‚Å INTIF_RECFB ‚ðƒL[‚ÉŽ‚Â INTIF_RECDB ‚ÌƒRƒŒƒNƒVƒ‡ƒ“
+'                        : MSZZD00_RECDB_Collection ã‚’è¿½åŠ 
+'                        : INTI_FILE ç”¨ã§ INTIF_RECFB ã‚’ã‚­ãƒ¼ã«æŒã¤ INTIF_RECDB ã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
 '
 '==============================================================================*
 Option Compare Database
 Option Explicit
 '==============================================================================*
-'   •Ï”éŒ¾
+'   å¤‰æ•°å®£è¨€
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -51,7 +51,7 @@ Private Const PROG_ID = "MSZZD00"
 '
 '==============================================================================*
 '
-'        MODULE_NAME      :•”–å–¼Ì
+'        MODULE_NAME      :éƒ¨é–€åç§°
 '        MODULE_ID        :MSZZD00_BUMON
 '        CREATE_DATE      :
 '
@@ -69,7 +69,7 @@ Function MSZZD00_BUMON(MSZZD00_BUMOC As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :ƒJƒ“ƒpƒj[–¼Ì
+'        MODULE_NAME      :ã‚«ãƒ³ãƒ‘ãƒ‹ãƒ¼åç§°
 '        MODULE_ID        :MSZZD00_CAMPN
 '        CREATE_DATE      :
 '
@@ -87,7 +87,7 @@ Function MSZZD00_CAMPN(MSZZD00_CAMPC As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :’S“–ŽÒ–¼
+'        MODULE_NAME      :æ‹…å½“è€…å
 '        MODULE_ID        :MSZZD00_TANTN
 '        CREATE_DATE      :
 '
@@ -106,7 +106,7 @@ Function MSZZD00_TANTN(MSZZD00_BUMOC As String, MSZZD00_TANTC As String) As Stri
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :Žd“üæ–¼Ì
+'        MODULE_NAME      :ä»•å…¥å…ˆåç§°
 '        MODULE_ID        :MSZZD00_SHIRN
 '        CREATE_DATE      :
 '
@@ -125,7 +125,7 @@ Function MSZZD00_SHIRN(MSZZD00_BUMOC As String, MSZZD00_SHIRC As String) As Stri
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :Žd“üæƒJƒi
+'        MODULE_NAME      :ä»•å…¥å…ˆã‚«ãƒŠ
 '        MODULE_ID        :MSZZD00_SHIRF
 '        CREATE_DATE      :2004/04/12
 '
@@ -144,7 +144,7 @@ Function MSZZD00_SHIRF(MSZZD00_BUMOC As String, MSZZD00_SHIRC As String) As Stri
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :•¨Œ–{‘Ì–¼Ì
+'        MODULE_NAME      :ç‰©ä»¶æœ¬ä½“åç§°
 '        MODULE_ID        :MSZZD00_BUKHN
 '        CREATE_DATE      :
 '
@@ -163,7 +163,7 @@ Function MSZZD00_BUKHN(MSZZD00_BUKHC As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :¤•i–¼Ì
+'        MODULE_NAME      :å•†å“åç§°
 '        MODULE_ID        :MSZZD00_SYOHN
 '        CREATE_DATE      :
 '
@@ -185,7 +185,7 @@ Function MSZZD00_SYOHN(MSZZD00_BUMOC As String, _
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :‹à—Z‹@ŠÖ–¼
+'        MODULE_NAME      :é‡‘èžæ©Ÿé–¢å
 '        MODULE_ID        :MSZZD00_KINYN
 '        CREATE_DATE      :
 '
@@ -203,7 +203,7 @@ Function MSZZD00_KINYN(MSZZD00_KINYC As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :Žx“X–¼
+'        MODULE_NAME      :æ”¯åº—å
 '        MODULE_ID        :MSZZD00_SHITN
 '        CREATE_DATE      :
 '
@@ -223,7 +223,7 @@ Function MSZZD00_SHITN(MSZZD00_KINYC As String _
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :—X•Ö”Ô†
+'        MODULE_NAME      :éƒµä¾¿ç•ªå·
 '        MODULE_ID        :MSZZD00_YUBIB
 '        CREATE_DATE      :
 '
@@ -241,7 +241,7 @@ Function MSZZD00_YUBIB(MSZZD00_ADRRN As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :ŠÇ—‹æ•ª–¼Ì
+'        MODULE_NAME      :ç®¡ç†åŒºåˆ†åç§°
 '        MODULE_ID        :MSZZD00_KANRN
 '        CREATE_DATE      :
 '
@@ -259,7 +259,7 @@ Function MSZZD00_KANRN(MSZZD00_KANRI As Integer) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :‰ÛÅ‹æ•ª–¼Ì
+'        MODULE_NAME      :èª²ç¨ŽåŒºåˆ†åç§°
 '        MODULE_ID        :MSZZD00_KAZEN
 '        CREATE_DATE      :
 '
@@ -277,7 +277,7 @@ Function MSZZD00_KAZEN(MSZZD00_KANRI As Integer) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :—a‹àŽí•Ê
+'        MODULE_NAME      :é é‡‘ç¨®åˆ¥
 '        MODULE_ID        :MSZZD00_YOKIN
 '        CREATE_DATE      :
 '
@@ -295,7 +295,7 @@ Function MSZZD00_YOKIN(MSZZD00_YOKII As Integer) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :Žx•¥ŽwŽ¦‘–¼Ì
+'        MODULE_NAME      :æ”¯æ‰•æŒ‡ç¤ºæ›¸åç§°
 '        MODULE_ID        :MSZZD00_SIIHN
 '        CREATE_DATE      :
 '
@@ -313,7 +313,7 @@ Function MSZZD00_SIIHN(MSZZD00_SIIHI As Integer) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :W‹à‹æ•ª
+'        MODULE_NAME      :é›†é‡‘åŒºåˆ†
 '        MODULE_ID        :MSZZD00_SKBNN
 '        CREATE_DATE      :
 '
@@ -331,7 +331,7 @@ Function MSZZD00_SKBNN(MSZZD00_SKBNI As Integer) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :‹ÆŽÒ–¼Ì
+'        MODULE_NAME      :æ¥­è€…åç§°
 '        MODULE_ID        :MSZZD00_GYOUN
 '        CREATE_DATE      :2004/04/12
 '
@@ -349,7 +349,7 @@ Function MSZZD00_GYOUN(MSZZD00_GYOUC As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :‹ÆŽÒƒJƒi
+'        MODULE_NAME      :æ¥­è€…ã‚«ãƒŠ
 '        MODULE_ID        :MSZZD00_GYOUF
 '        CREATE_DATE      :2004/04/12
 '
@@ -363,7 +363,7 @@ Function MSZZD00_GYOUF(MSZZD00_GYOUC As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :ŽŸ‰ñXV–¼Ì
+'        MODULE_NAME      :æ¬¡å›žæ›´æ–°åç§°
 '        MODULE_ID        :MSZZD00_JNEXN
 '        CREATE_DATE      :2004/06/07
 '
@@ -377,7 +377,7 @@ Function MSZZD00_JNEXN(MSZZD00_JNEXI As String) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :’À—¿‰ü’è–¼Ì
+'        MODULE_NAME      :è³ƒæ–™æ”¹å®šåç§°
 '        MODULE_ID        :MSZZD00_CHIKN
 '        CREATE_DATE      :2005/07/06
 '
@@ -416,11 +416,11 @@ End Function
 
 '==============================================================================*
 '
-'       MODULE_NAME     : INTIF_RECFB ‚ðƒL[‚ÉŽ‚Â INTIF_RECDB ‚ÌƒRƒŒƒNƒVƒ‡ƒ“
+'       MODULE_NAME     : INTIF_RECFB ã‚’ã‚­ãƒ¼ã«æŒã¤ INTIF_RECDB ã®ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
 '       MODULE_ID       : MSZZD00_RECDB_Collection
 '       CREATE_DATE     : 2011/02/17            K.ISHIZAKA
-'       PARAM           : strPROGB              ƒvƒƒOƒ‰ƒ€‚h‚c(I)
-'       RETURN          : ƒRƒŒƒNƒVƒ‡ƒ“
+'       PARAM           : strPROGB              ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼©ï¼¤(I)
+'       RETURN          : ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -438,13 +438,13 @@ End Function
 
 '==============================================================================*
 '
-'       MODULE_NAME     : ƒe[ƒuƒ‹‚ðƒRƒŒƒNƒVƒ‡ƒ“‚É•ÏŠ·‚·‚é
+'       MODULE_NAME     : ãƒ†ãƒ¼ãƒ–ãƒ«ã‚’ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã«å¤‰æ›ã™ã‚‹
 '       MODULE_ID       : MSZZD00_Collection
 '       CREATE_DATE     : 2011/02/17            K.ISHIZAKA
-'       PARAM           : strSQL                ‚r‚p‚k•¶(I)
-'                       : strKeyFieldName       ƒL[‚Æ‚È‚é—ñ–¼(I)
-'                       : strValueFieldName     ’l‚Æ‚È‚é—ñ–¼(I)
-'       RETURN          : ƒRƒŒƒNƒVƒ‡ƒ“
+'       PARAM           : strSQL                ï¼³ï¼±ï¼¬æ–‡(I)
+'                       : strKeyFieldName       ã‚­ãƒ¼ã¨ãªã‚‹åˆ—å(I)
+'                       : strValueFieldName     å€¤ã¨ãªã‚‹åˆ—å(I)
+'       RETURN          : ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8

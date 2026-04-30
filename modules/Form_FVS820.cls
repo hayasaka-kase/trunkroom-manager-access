@@ -8,52 +8,52 @@ Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '**********************************************
-'   ƒ†[ƒU–¼@@@@F@(Š”)‰Á£‘qŒÉ
-'   ƒVƒXƒeƒ€–¼@@@F@ƒRƒ“ƒeƒiŠÇ—ƒVƒXƒeƒ€
+'   ãƒ¦ãƒ¼ã‚¶åã€€ã€€ã€€ã€€ï¼šã€€(æ ª)åŠ ç€¬å€‰åº«
+'   ã‚·ã‚¹ãƒ†ãƒ åã€€ã€€ã€€ï¼šã€€ã‚³ãƒ³ãƒ†ãƒŠç®¡ç†ã‚·ã‚¹ãƒ†ãƒ 
 '**********************************************
-'   ƒvƒƒOƒ‰ƒ€–¼@@F@‹óƒRƒ“ƒeƒi—\–ñ“ü—Í
-'   ƒvƒƒOƒ‰ƒ€‚h‚c@F@FVS820
-'   ì@¬@“ú@@@F  2003/06/09
-'   ì@¬@Ò@@@F  Eagle Soft “c“‡
-'   Ver             F  0.0
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ åã€€ã€€ï¼šã€€ç©ºã‚³ãƒ³ãƒ†ãƒŠäºˆç´„å…¥åŠ›
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼©ï¼¤ã€€ï¼šã€€FVS820
+'   ä½œã€€æˆã€€æ—¥ã€€ã€€ã€€ï¼š  2003/06/09
+'   ä½œã€€æˆã€€è€…ã€€ã€€ã€€ï¼š  Eagle Soft ç”°å³¶
+'   Ver             ï¼š  0.0
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F  2004/11/06
-'   C@³@Ò@@@F  N.MIURA
-'   Ver             F  0.1
-'   C@³@“à@—e@F  ƒLƒƒƒ“ƒy[ƒ“•\¦
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2004/11/06
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  N.MIURA
+'   Ver             ï¼š  0.1
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š  ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³è¡¨ç¤º
 '**********************************************
-'   C@³@“ú@@@F  2004/12/04
-'   C@³@Ò@@@F  K.ISHIZAKA
-'   Ver             F  0.2
-'   C@³@“à@—e@F  ƒRƒ“ƒeƒií•ÊF–¢İ’u‚Í‘ÎÛŠO
-'**********************************************
-'**********************************************
-'   C@³@“ú@@@F  2005/05/10
-'   C@³@Ò@@@F  K.mitsuno
-'   Ver            F  0.3
-'   C@³@“à@—e@F  Vó•t“ü—Í‰æ–Ê‘Î‰
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2004/12/04
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  K.ISHIZAKA
+'   Ver             ï¼š  0.2
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š  ã‚³ãƒ³ãƒ†ãƒŠç¨®åˆ¥ï¼šæœªè¨­ç½®ã¯å¯¾è±¡å¤–
 '**********************************************
 '**********************************************
-'   C@³@“ú@@@F  2005/06/14
-'   C@³@Ò@@@F  T.SUZUKI
-'   Ver            F  0.4
-'   C@³@“à@—e@F  ‹óŒŸõiƒRƒ“ƒeƒij‚Æ“¯—lA‹óŒŸõiƒgƒ‰ƒ“ƒNj‚É‚¨‚¢‚Ä‚à
-'                      [—\–ñ“ü—Í]‰æ–Ê‚É‘JˆÚ‚Å‚«‚é‚æ‚¤Aˆ—‚ğ’Ç‰Á
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2005/05/10
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  K.mitsuno
+'   Ver            ï¼š  0.3
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š  æ–°å—ä»˜å…¥åŠ›ç”»é¢å¯¾å¿œ
 '**********************************************
-'   C@³@“ú@@@F  2005/07/17
-'   C@³@Ò@@@F  K.ISHIZAKA
-'   Ver             F  0.5
-'   C@³@“à@—e@F  ŠO•”‚©‚çÄ•\¦‚³‚ê‚é‘O‚É•Û‘¶‚·‚é
-'   C@³@“à@—e@F  ‰æ–Ê‘JˆÚ‚·‚é‘O‚ÉƒJƒŒƒ“ƒg‚ğ•Û‘¶
+'**********************************************
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2005/06/14
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  T.SUZUKI
+'   Ver            ï¼š  0.4
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š  ç©ºæ¤œç´¢ï¼ˆã‚³ãƒ³ãƒ†ãƒŠï¼‰ã¨åŒæ§˜ã€ç©ºæ¤œç´¢ï¼ˆãƒˆãƒ©ãƒ³ã‚¯ï¼‰ã«ãŠã„ã¦ã‚‚
+'                      [äºˆç´„å…¥åŠ›]ç”»é¢ã«é·ç§»ã§ãã‚‹ã‚ˆã†ã€å‡¦ç†ã‚’è¿½åŠ 
+'**********************************************
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2005/07/17
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  K.ISHIZAKA
+'   Ver             ï¼š  0.5
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š  å¤–éƒ¨ã‹ã‚‰å†è¡¨ç¤ºã•ã‚Œã‚‹å‰ã«ä¿å­˜ã™ã‚‹
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š  ç”»é¢é·ç§»ã™ã‚‹å‰ã«ã‚«ãƒ¬ãƒ³ãƒˆã‚’ä¿å­˜
 '**********************************************
 Option Compare Database
 Option Explicit
     
-Dim intAns As Integer                        'Šm”F“ü—Í—p
+Dim intAns As Integer                        'ç¢ºèªå…¥åŠ›ç”¨
 
-Const strMsg_kaku = "Šm”F"
-Const strMsg_err = "ƒGƒ‰["
+Const strMsg_kaku = "ç¢ºèª"
+Const strMsg_err = "ã‚¨ãƒ©ãƒ¼"
 
 Dim objDb                   As Database
 Dim objRs                   As Recordset
@@ -61,32 +61,32 @@ Dim objRs                   As Recordset
 Dim WRI_ObjWS               As Workspace
 Dim WRI_objDb               As Database
 
-'ã‰º’i‚Ìƒf[ƒ^‚Ì—L–³@0=ã‰º’i‚Æ‚àƒf[ƒ^–³‚µ
-'                    1=ã’i‚Ì‚İ‚ ‚è
-'                    2=‰º’i‚Ì‚İ‚ ‚è
-'                    3=—¼•û‚ ‚è
+'ä¸Šä¸‹æ®µã®ãƒ‡ãƒ¼ã‚¿ã®æœ‰ç„¡ã€€0=ä¸Šä¸‹æ®µã¨ã‚‚ãƒ‡ãƒ¼ã‚¿ç„¡ã—
+'                    1=ä¸Šæ®µã®ã¿ã‚ã‚Š
+'                    2=ä¸‹æ®µã®ã¿ã‚ã‚Š
+'                    3=ä¸¡æ–¹ã‚ã‚Š
 Dim vStep                   As Variant
 
-'True=ã’i‚ÉƒtƒH[ƒJƒX‚ ‚è False=‚È‚µ
+'True=ä¸Šæ®µã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚ã‚Š False=ãªã—
 Dim bActiveUp               As Boolean
 
-'True=‰º’i‚ÉƒtƒH[ƒJƒX‚ ‚è False=‚È‚µ
+'True=ä¸‹æ®µã«ãƒ•ã‚©ãƒ¼ã‚«ã‚¹ã‚ã‚Š False=ãªã—
 Dim bActiveDown             As Boolean
 
 Dim bChangeFlag_FVS820      As Boolean                          'INSERT 20050718 K.ISHIZAKA
 Dim strCaption              As String                           'INSERT 20050718 K.ISHIZAKA
 
-'ƒTƒuƒtƒH[ƒ€•\¦—p‚Ìƒ[ƒN‚ğì¬
-'FVS820_W03:Œ_–ñƒgƒ‰ƒ“‚ÌÅ‘åSTDATE‚Ìƒf[ƒ^‚Ì‚İ‚ğ’Šo‚µ‚Ä“o˜^
-'FVS820_W01:ŠY“–ƒ„[ƒh‚Ì‹óƒRƒ“ƒeƒi‚ğ’Šo‚µ‚Ä“o˜^
-'FVS820_W02:FVS820_W01‚ÌƒRƒs[BæÁˆ—‚ÉFVS820_W01‚ÉƒRƒs[‚·‚éB
+'ã‚µãƒ–ãƒ•ã‚©ãƒ¼ãƒ è¡¨ç¤ºç”¨ã®ãƒ¯ãƒ¼ã‚¯ã‚’ä½œæˆ
+'FVS820_W03:å¥‘ç´„ãƒˆãƒ©ãƒ³ã®æœ€å¤§STDATEã®ãƒ‡ãƒ¼ã‚¿ã®ã¿ã‚’æŠ½å‡ºã—ã¦ç™»éŒ²
+'FVS820_W01:è©²å½“ãƒ¤ãƒ¼ãƒ‰ã®ç©ºã‚³ãƒ³ãƒ†ãƒŠã‚’æŠ½å‡ºã—ã¦ç™»éŒ²
+'FVS820_W02:FVS820_W01ã®ã‚³ãƒ”ãƒ¼ã€‚å–æ¶ˆå‡¦ç†æ™‚ã«FVS820_W01ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹ã€‚
 Public Sub Make_Work()
     
     Dim strSQL As String
   
 On Error GoTo err_rtn
   
-    If txt_ƒ„[ƒhƒR[ƒh = "" Then
+    If txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ = "" Then
         Exit Sub
     End If
   
@@ -101,7 +101,7 @@ On Error GoTo err_rtn
     strSQL = strSQL & "     ON (FVS820_Q01.MAXSTDATE = dbo_CARG_FILE.CARG_FSDATE) AND "
     strSQL = strSQL & "        (FVS820_Q01.CARG_NO = dbo_CARG_FILE.CARG_NO) AND "
     strSQL = strSQL & "        (FVS820_Q01.CARG_YCODE = dbo_CARG_FILE.CARG_YCODE) "
-    strSQL = strSQL & " where dbo_CARG_FILE.CARG_YCODE = " & txt_ƒ„[ƒhƒR[ƒh
+    strSQL = strSQL & " where dbo_CARG_FILE.CARG_YCODE = " & txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
     
     objDb.Execute strSQL, dbFailOnError
     
@@ -161,7 +161,7 @@ On Error GoTo err_rtn
     strSQL = strSQL & " ( CNTA_YARD, CNTA_NO, CNTA_STEP, "
     strSQL = strSQL & " CNTA_YNAME, CNTA_YTEL, NAME_RYAK, CNTA_KYDATE, CNTA_CHANGE ) "
     strSQL = strSQL & " SELECT "
-    strSQL = strSQL & Val(txt_ƒ„[ƒhƒR[ƒh) & ","
+    strSQL = strSQL & Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) & ","
     strSQL = strSQL & " dbo_CNTA_MAST.CNTA_NO, dbo_CNTA_MAST.CNTA_STEP, "
     strSQL = strSQL & " dbo_CNTA_MAST.CNTA_YNAME, dbo_CNTA_MAST.CNTA_YTEL, "
     strSQL = strSQL & " dbo_NAME_MAST.NAME_RYAK, FVS820_W03.CARG_KYDATE, 0 "
@@ -170,11 +170,11 @@ On Error GoTo err_rtn
     strSQL = strSQL & " (dbo_CNTA_MAST.CNTA_NO = FVS820_W03.CARG_NO) AND "
     strSQL = strSQL & " (dbo_CNTA_MAST.CNTA_CODE = FVS820_W03.CARG_YCODE)) "
     strSQL = strSQL & " INNER JOIN dbo_NAME_MAST ON dbo_CNTA_MAST.CNTA_SYU = dbo_NAME_MAST.NAME_CODE "
-    strSQL = strSQL & " Where dbo_CNTA_MAST.CNTA_CODE = " & txt_ƒ„[ƒhƒR[ƒh
+    strSQL = strSQL & " Where dbo_CNTA_MAST.CNTA_CODE = " & txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
     'strSql = strSql & "   AND dbo_CNTA_MAST.CNTA_SYU <= 40 "
     '>>>>> ADD START 20041204 K.ISHIZAKA >>>>>>>>>>>>
-    '–¢İ’u‚Í‘ÎÛŠO‚Æ‚·‚é
-    '‚¿‚È‚İ‚Éã‚Ìs‚ÍŠù‚ÉƒRƒƒ“ƒg‚É‚È‚Á‚Ä‚¢‚½
+    'æœªè¨­ç½®ã¯å¯¾è±¡å¤–ã¨ã™ã‚‹
+    'ã¡ãªã¿ã«ä¸Šã®è¡Œã¯æ—¢ã«ã‚³ãƒ¡ãƒ³ãƒˆã«ãªã£ã¦ã„ãŸ
     strSQL = strSQL & "   AND dbo_CNTA_MAST.CNTA_SYU > 0 "
     '<<<<< ADD END   20041204 K.ISHIZAKA <<<<<<<<<<<<
     strSQL = strSQL & "   AND dbo_NAME_MAST.NAME_ID = ""040"" "
@@ -182,13 +182,13 @@ On Error GoTo err_rtn
     strSQL = strSQL & "           (FVS820_W03.CARG_NO Is not Null AND "
     strSQL = strSQL & "           FVS820_W03.CARG_KYDATE Is not Null) )"
 
-'š‰º‹LSQL‚ÍFVS020‚ğQl‚É‚µ‚½‚à‚ÌAã‹L‚ÍFVS820C³‘O‚ÌSQL•¶
+'â˜…ä¸‹è¨˜SQLã¯FVS020ã‚’å‚è€ƒã«ã—ãŸã‚‚ã®ã€ä¸Šè¨˜ã¯FVS820ä¿®æ­£å‰ã®SQLæ–‡
 '    strSQL = ""
 '    strSQL = "INSERT INTO FVS820_W01 "
 '    strSQL = strSQL & " ( CNTA_YARD, CNTA_NO, CNTA_STEP, "
 '    strSQL = strSQL & " CNTA_YNAME, CNTA_YTEL, NAME_RYAK, CNTA_KYDATE, CNTA_CHANGE ) "
 '    strSQL = strSQL & " SELECT "
-'    strSQL = strSQL & Val(txt_ƒ„[ƒhƒR[ƒh) & ","
+'    strSQL = strSQL & Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) & ","
 '    strSQL = strSQL & " dbo_CNTA_MAST.CNTA_NO, dbo_CNTA_MAST.CNTA_STEP, "
 '    strSQL = strSQL & " dbo_CNTA_MAST.CNTA_YNAME, dbo_CNTA_MAST.CNTA_YTEL, "
 '    strSQL = strSQL & " dbo_NAME_MAST.NAME_RYAK, FVS820_W03.CARG_KYDATE, 0 "
@@ -197,9 +197,9 @@ On Error GoTo err_rtn
 '    strSQL = strSQL & " (dbo_CNTA_MAST.CNTA_NO = FVS820_W03.CARG_NO) AND "
 '    strSQL = strSQL & " (dbo_CNTA_MAST.CNTA_CODE = FVS820_W03.CARG_YCODE)) "
 '    strSQL = strSQL & " INNER JOIN dbo_NAME_MAST ON dbo_CNTA_MAST.CNTA_SYU = dbo_NAME_MAST.NAME_CODE "
-'    strSQL = strSQL & " Where dbo_CNTA_MAST.CNTA_CODE = " & txt_ƒ„[ƒhƒR[ƒh
+'    strSQL = strSQL & " Where dbo_CNTA_MAST.CNTA_CODE = " & txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
 '    '>>>>> CHANGE START 20041204 K.ISHIZAKA >>>>>>>>>>>>>>>>>>>>>>>>>>>
-'    '–¢İ’u‚Í‘ÎÛŠO‚Æ‚·‚é
+'    'æœªè¨­ç½®ã¯å¯¾è±¡å¤–ã¨ã™ã‚‹
 '    'strSQL = strSQL & "   AND dbo_CNTA_MAST.CNTA_SYU <= 40 "
 '    strSQL = strSQL & "   AND dbo_CNTA_MAST.CNTA_SYU BETWEEN 1 AND 40 "
 '    '<<<<< CHANGE END   20041204 K.ISHIZAKA <<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -212,7 +212,7 @@ On Error GoTo err_rtn
 '--- T.SUZUKI
 
     'INSERT 20050516 MITSUNO START
-    '—\–ñó•tƒgƒ‰ƒ“‚æ‚è—\–ñŒÚ‹q–¼E“d˜b”Ô†‚Ìæ“¾
+    'äºˆç´„å—ä»˜ãƒˆãƒ©ãƒ³ã‚ˆã‚Šäºˆç´„é¡§å®¢åãƒ»é›»è©±ç•ªå·ã®å–å¾—
     strSQL = ""
     strSQL = strSQL & "UPDATE "
     strSQL = strSQL & "FVS820_W01 INNER JOIN dbo_YOUK_TRAN ON "
@@ -221,7 +221,7 @@ On Error GoTo err_rtn
     strSQL = strSQL & "SET "
     strSQL = strSQL & "FVS820_W01.YOUKT_UKNO = dbo_YOUK_TRAN.YOUKT_UKNO, "
     strSQL = strSQL & "FVS820_W01.CNTA_YNAME = dbo_YOUK_TRAN.YOUKT_NAME, "
-    '“d˜b”Ô†¨Œg‘Ñ“d˜b¨FAX‚ÅƒZƒbƒg
+    'é›»è©±ç•ªå·â†’æºå¸¯é›»è©±â†’FAXã§ã‚»ãƒƒãƒˆ
     strSQL = strSQL & "FVS820_W01.CNTA_YTEL = " & "Nz(dbo_YOUK_TRAN.YOUKT_TEL, Nz(dbo_YOUK_TRAN.YOUKT_KEITAI, NZ(dbo_YOUK_TRAN.YOUKT_FAX,''))) "
     
     strSQL = strSQL & "WHERE "
@@ -232,13 +232,13 @@ On Error GoTo err_rtn
     objDb.Execute strSQL, dbFailOnError
     'INSERT 20050516 MITSUNO END
     
-    'FVS820_W02ì¬
+    'FVS820_W02ä½œæˆ
     Call MakeTorikeshiTable
     
     GoTo Exit_rtn
     
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
 
 Exit_rtn:
@@ -253,7 +253,7 @@ On Error GoTo err_rtn
     
     Call DeleteWk2
     
-    'æÁ—p‚Ìƒe[ƒuƒ‹ì¬
+    'å–æ¶ˆç”¨ã®ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     strSQL = ""
     strSQL = "INSERT INTO FVS820_W02 "
     strSQL = strSQL & " SELECT * "
@@ -264,7 +264,7 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
     
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
 
 Exit_rtn:
@@ -278,7 +278,7 @@ Private Sub UpdateCntaChange()
   
 On Error GoTo err_rtn
     
-    '•ÏXƒtƒ‰ƒO‚ğ‘S•”OFF‚É•ÏX
+    'å¤‰æ›´ãƒ•ãƒ©ã‚°ã‚’å…¨éƒ¨OFFã«å¤‰æ›´
     strSQL = ""
     strSQL = "UPDATE FVS820_W01 "
     strSQL = strSQL & " set CNTA_CHANGE = 0 "
@@ -288,7 +288,7 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
     
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
 
 Exit_rtn:
@@ -300,9 +300,9 @@ Private Sub CLR_RTN()
   
   Dim objControl As Object
   
-  '‰æ–Êã‚ÌƒeƒLƒXƒgƒ{ƒbƒNƒX‚ğƒNƒŠƒA‚·‚é
+  'ç”»é¢ä¸Šã®ãƒ†ã‚­ã‚¹ãƒˆãƒœãƒƒã‚¯ã‚¹ã‚’ã‚¯ãƒªã‚¢ã™ã‚‹
   
-On Error Resume Next  'ƒGƒ‰[‚ª‚ ‚Á‚Ä‚àˆ—‘±s
+On Error Resume Next  'ã‚¨ãƒ©ãƒ¼ãŒã‚ã£ã¦ã‚‚å‡¦ç†ç¶šè¡Œ
     
     
     For Each objControl In Me.Controls
@@ -320,23 +320,23 @@ On Error Resume Next  'ƒGƒ‰[‚ª‚ ‚Á‚Ä‚àˆ—‘±s
         End Select
     Next
           
-    Me.txt_ƒ„[ƒh–¼ = ""
-    Me.txt_ƒ„[ƒhZŠ = ""
+    Me.txt_ãƒ¤ãƒ¼ãƒ‰å = ""
+    Me.txt_ãƒ¤ãƒ¼ãƒ‰ä½æ‰€ = ""
   
           
     Call DELWK_RTN
   
-    'ƒTƒuƒtƒH[ƒ€‚Ì‰Šú‰»
-    Me.ƒTƒuã.Requery
-    Me.ƒTƒu‰º.Requery
+    'ã‚µãƒ–ãƒ•ã‚©ãƒ¼ãƒ ã®åˆæœŸåŒ–
+    Me.ã‚µãƒ–ä¸Š.Requery
+    Me.ã‚µãƒ–ä¸‹.Requery
   
 End Sub
 
 
 Private Sub CmLockControl(ByVal ContNM As Object, ByVal iMode As Integer)
 
-    'ˆø” ‚O  g—p‰Â
-    '     ‚P  g—p•s‰Â
+    'å¼•æ•° ï¼  ä½¿ç”¨å¯
+    '     ï¼‘  ä½¿ç”¨ä¸å¯
     Dim objControl As Object
   
     Set objControl = ContNM
@@ -363,15 +363,15 @@ On Error GoTo err_rtn
     Set WRI_ObjWS = DBEngine(0)
     Set WRI_objDb = CurrentDb
   
-    'ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ŠJn
+    'ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³é–‹å§‹
     WRI_ObjWS.BeginTrans
   
-    '—\–ñİ’è
+    'äºˆç´„è¨­å®š
     If WRI_RTN_For_CNTA_MAST() = False Then
         GoTo Update_Err
     End If
       
-    'ƒRƒ~ƒbƒg
+    'ã‚³ãƒŸãƒƒãƒˆ
     WRI_ObjWS.CommitTrans
     WRI_RTN = True
   
@@ -381,13 +381,13 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
 
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
 
 Update_Err:
-    'ƒ[ƒ‹ƒoƒbƒN
+    'ãƒ­ãƒ¼ãƒ«ãƒãƒƒã‚¯
     WRI_ObjWS.Rollback
-    MsgBox "XV’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½B" & vbCrLf & "iˆ—‚Í’†’f‚³‚ê‚Ü‚µ‚½Bj", vbCritical, strMsg_kaku
+    MsgBox "æ›´æ–°ä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚" & vbCrLf & "ï¼ˆå‡¦ç†ã¯ä¸­æ–­ã•ã‚Œã¾ã—ãŸã€‚ï¼‰", vbCritical, strMsg_kaku
 
 Exit_rtn:
     doCmd.Hourglass False
@@ -401,7 +401,7 @@ End Function
 
 Private Function WRI_RTN_For_CNTA_MAST() As Boolean
   
-    'FVS820_W01‚©‚çƒRƒ“ƒeƒiƒ}ƒXƒ^‚É—\–ñ‚ğƒZƒbƒg‚·‚éB
+    'FVS820_W01ã‹ã‚‰ã‚³ãƒ³ãƒ†ãƒŠãƒã‚¹ã‚¿ã«äºˆç´„ã‚’ã‚»ãƒƒãƒˆã™ã‚‹ã€‚
   
     Dim strSQL  As String
   
@@ -426,10 +426,10 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
 
 err_rtn:
-    '*** ƒGƒ‰[ˆ—i‚q‚‚Œ‚Œ‚‚‚‚ƒ‚‹j ***
+    '*** ã‚¨ãƒ©ãƒ¼å‡¦ç†ï¼ˆï¼²ï½ï½Œï½Œï½‚ï½ï½ƒï½‹ï¼‰ ***
     Dim errLoop As Error
     
-    MsgBox "´×°”Ô†:" & Err.Number & vbCr & Err.Description, vbInformation + vbOKOnly, strMsg_err
+    MsgBox "ï½´ï¾—ï½°ç•ªå·:" & Err.Number & vbCr & Err.Description, vbInformation + vbOKOnly, strMsg_err
     If DBEngine.Errors.Count > 0 Then
         For Each errLoop In DBEngine.Errors
             MsgBox "Error Number:" + CStr(errLoop.Number) + vbCrLf + errLoop.Description
@@ -455,7 +455,7 @@ Private Sub cmd_WEB_Click()
 End Sub
 '==============================================================================*
 '
-'        MODULE_NAME      :ƒLƒƒƒ“ƒy[ƒ“•\¦
+'        MODULE_NAME      :ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³è¡¨ç¤º
 '        MODULE_ID        :cmd_CAMPB_Click
 '        CREATE_DATE      :2004/11/06
 '
@@ -469,20 +469,20 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :
-'        MODULE_ID        :cmd_æÁ_Click
+'        MODULE_ID        :cmd_å–æ¶ˆ_Click
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_æÁ_Click()
+Private Sub cmd_å–æ¶ˆ_Click()
 
-    intAns = MsgBox("ƒf[ƒ^“ü—Í‚ğæ‚èÁ‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbQuestion + vbYesNo + vbDefaultButton2, strMsg_kaku)
+    intAns = MsgBox("ãƒ‡ãƒ¼ã‚¿å…¥åŠ›ã‚’å–ã‚Šæ¶ˆã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbQuestion + vbYesNo + vbDefaultButton2, strMsg_kaku)
     If intAns = vbNo Then
         Call SubFormSetFocus
         GoTo Exit_rtn
     End If
   
-    'FVS820_W02‚ğFVS820_W01‚ÉƒRƒs[‚·‚é
+    'FVS820_W02ã‚’FVS820_W01ã«ã‚³ãƒ”ãƒ¼ã™ã‚‹
     'Call DeleteWk1                                                             'DELETE 20050718 K.ISHIZAKA
     'Call DataTorikeshi                                                         'DELETE 20050718 K.ISHIZAKA
     Call DELWK_RTN                                                              'INSERT 20050718 K.ISHIZAKA
@@ -490,8 +490,8 @@ Private Sub cmd_æÁ_Click()
     
     Call SubFormSetFocus
   
-    Me.ƒTƒuã.Requery
-    Me.ƒTƒu‰º.Requery
+    Me.ã‚µãƒ–ä¸Š.Requery
+    Me.ã‚µãƒ–ä¸‹.Requery
     
     bChangeFlag_FVS820 = False                                                  'INSERT 20050718 K.ISHIZAKA
     Me.Caption = strCaption                                                     'INSERT 20050718 K.ISHIZAKA
@@ -508,7 +508,7 @@ On Error GoTo err_rtn
   
     Call DeleteWk1
     
-    'æÁ—p‚Ìƒe[ƒuƒ‹‚©‚çƒRƒs[
+    'å–æ¶ˆç”¨ã®ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰ã‚³ãƒ”ãƒ¼
     strSQL = ""
     strSQL = "INSERT INTO FVS820_W01 "
     strSQL = strSQL & " SELECT * "
@@ -517,13 +517,13 @@ On Error GoTo err_rtn
     objDb.Execute strSQL, dbFailOnError
     GoTo Exit_rtn
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
 Exit_rtn:
     Exit Sub
 End Sub
 'Start 2003/06/23 azegami@eagle-soft.co.jp
-Private Sub cmd_”z’u_Click()
+Private Sub cmd_é…ç½®_Click()
     
     On Error GoTo err_rtn
     
@@ -534,7 +534,7 @@ Private Sub cmd_”z’u_Click()
     vRET2 = Nz(DLookup("CONT_EXCEL_PATH", "dbo_CONT_MAST", ""), "")
     
     If (vRET2 = "") Or (vRET2 = " ") Then
-        MsgBox "EXCELî•ñƒpƒX‚ª“o˜^‚³‚ê‚Ä‚¢‚Ü‚¹‚ñB", vbOK, strMsg_kaku
+        MsgBox "EXCELæƒ…å ±ãƒ‘ã‚¹ãŒç™»éŒ²ã•ã‚Œã¦ã„ã¾ã›ã‚“ã€‚", vbOK, strMsg_kaku
         Exit Sub
     End If
 
@@ -544,13 +544,13 @@ Private Sub cmd_”z’u_Click()
             vRET2 = vRET2 & "\"
     End If
 
-    strExcel = Dir(vRET2 & Format(Me.txt_ƒ„[ƒhƒR[ƒh, "000000") & "*.XLS")
+    strExcel = Dir(vRET2 & Format(Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰, "000000") & "*.XLS")
     
     If strExcel <> "" Then
         Call Y_Exec(Me.hwnd, vRET2 & strExcel, "", "", SW_SHOWNORMAL)
         Exit Sub
         Else
-            MsgBox "ºİÃÅ”z’uEXCEL‚ª‘¶İ‚µ‚Ü‚¹‚ñB", vbOK, strMsg_kaku
+            MsgBox "ï½ºï¾ï¾ƒï¾…é…ç½®EXCELãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚", vbOK, strMsg_kaku
             Exit Sub
     End If
 
@@ -559,35 +559,35 @@ err_rtn:
 End Sub
 'End 2003/06/23 azegami@eagle-soft.co.jp
 
-Private Sub cmd_•Û‘¶_Click()
+Private Sub cmd_ä¿å­˜_Click()
 On Error GoTo err_rtn
     
-    'Šm”FƒƒbƒZ[ƒW
-    'intAns = MsgBox("•Û‘¶‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbQuestion + vbYesNo, strMsg_kaku) 'DELETE 20050718 K.ISHIZAKA
-    intAns = MsgBox("C³’†‚Ì“à—e‚ğ•Û‘¶‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbQuestion + vbYesNo, strMsg_kaku)  'INSERT 20050718 K.ISHIZAKA
+    'ç¢ºèªãƒ¡ãƒƒã‚»ãƒ¼ã‚¸
+    'intAns = MsgBox("ä¿å­˜ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbQuestion + vbYesNo, strMsg_kaku) 'DELETE 20050718 K.ISHIZAKA
+    intAns = MsgBox("ä¿®æ­£ä¸­ã®å†…å®¹ã‚’ä¿å­˜ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbQuestion + vbYesNo, strMsg_kaku)  'INSERT 20050718 K.ISHIZAKA
     
     If intAns = vbNo Then
         Call SubFormSetFocus
         GoTo Exit_rtn
     End If
     
-    'o—Í
+    'å‡ºåŠ›
     Call WRI_RTN
     
-    '•ÏXƒtƒ‰ƒOƒNƒŠƒA
+    'å¤‰æ›´ãƒ•ãƒ©ã‚°ã‚¯ãƒªã‚¢
     Call UpdateCntaChange
-    'æÁƒe[ƒuƒ‹(FVS820_W02)Ä“o˜^
+    'å–æ¶ˆãƒ†ãƒ¼ãƒ–ãƒ«(FVS820_W02)å†ç™»éŒ²
     Call MakeTorikeshiTable
     
     Call SubFormSetFocus
     
-    Me.ƒTƒuã.Requery
-    Me.ƒTƒu‰º.Requery
+    Me.ã‚µãƒ–ä¸Š.Requery
+    Me.ã‚µãƒ–ä¸‹.Requery
     
     GoTo Exit_rtn
 
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
     
 Exit_rtn:
@@ -596,7 +596,7 @@ Exit_rtn:
 End Sub
 '==============================================================================*
 '
-'        MODULE_NAME      :ó•t“ü—Í(ºİÃÅ–¢Šm’èËÔ°ÄŞ”Ô†‚Ì‚İ“n‚·)
+'        MODULE_NAME      :å—ä»˜å…¥åŠ›(ï½ºï¾ï¾ƒï¾…æœªç¢ºå®šâ‡’ï¾”ï½°ï¾„ï¾ç•ªå·ã®ã¿æ¸¡ã™)
 '        MODULE_ID        :cmd_YUke_Click
 '        CREATE_DATE      :2005/05/06 K.MITSUNO
 '
@@ -608,30 +608,30 @@ Private Sub cmdYUke_Click()
     
     doCmd.RunCommand acCmdSaveRecord                                            'INSERT 20050718 K.ISHIZAKA
     If Me.SaveData() = False Then                                               'INSERT 20050718 K.ISHIZAKA
-        Me.txt_ƒ„[ƒhƒR[ƒh.SetFocus                                            'INSERT 20050718 K.ISHIZAKA
+        Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰.SetFocus                                            'INSERT 20050718 K.ISHIZAKA
         Exit Sub                                                                'INSERT 20050718 K.ISHIZAKA
     End If                                                                      'INSERT 20050718 K.ISHIZAKA
     
-    'Ô°ÄŞ”Ô†(6Œ…)
-    vHData = Format$(Me.txt_ƒ„[ƒhƒR[ƒh, "000000")
+    'ï¾”ï½°ï¾„ï¾ç•ªå·(6æ¡)
+    vHData = Format$(Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰, "000000")
     
-    '—\–ñ“ü—Í‰æ–Ê@‹N“®
+    'äºˆç´„å…¥åŠ›ç”»é¢ã€€èµ·å‹•
     doCmd.OpenForm "FVS500", , , , , , vHData
     
 End Sub
 
 Private Sub Form_Activate()
     
-    'ƒtƒ‹ƒXƒNƒŠ[ƒ“‰»
+    'ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³åŒ–
     doCmd.Maximize
 
 End Sub
 
 Private Sub Form_Close()
 
-    'ƒ[ƒNƒe[ƒuƒ‹íœ
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«å‰Šé™¤
     Call DELWK_RTN
-    'ƒIƒuƒWƒFƒNƒg•Ï”‚Ì‰ğ•ú
+    'ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆå¤‰æ•°ã®è§£æ”¾
     Set objRs = Nothing
     Set objDb = Nothing
     Set WRI_ObjWS = Nothing
@@ -657,7 +657,7 @@ Private Sub Form_Error(DataErr As Integer, Response As Integer)
     Debug.Print DataErr
     Debug.Print Response
     Select Case DataErr
-    Case 2169       'uƒŒƒR[ƒh‚Í•Û‘¶‚³‚ê‚Ü‚¹‚ñBv‚Æ‚¢‚¤
+    Case 2169       'ã€Œãƒ¬ã‚³ãƒ¼ãƒ‰ã¯ä¿å­˜ã•ã‚Œã¾ã›ã‚“ã€‚ã€ã¨ã„ã†æ™‚
         DataErr = 0
         Response = 0
     End Select
@@ -668,47 +668,47 @@ Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
 
 On Error Resume Next
    
-    'F1:–ß‚é
-    'F2:•Û‘¶
-    'F3:æÁ
-    'F5:’iØ‚è‘Ö‚¦
-    'F8:”z’u
+    'F1:æˆ»ã‚‹
+    'F2:ä¿å­˜
+    'F3:å–æ¶ˆ
+    'F5:æ®µåˆ‡ã‚Šæ›¿ãˆ
+    'F8:é…ç½®
     Select Case KeyCode
     Case vbKeyF1
         KeyCode = 0
-        Call cmd_I—¹_Click
+        Call cmd_çµ‚äº†_Click
     Case vbKeyF2
         KeyCode = 0
-        Me.cmd_•Û‘¶.SetFocus
-        Call cmd_•Û‘¶_Click
+        Me.cmd_ä¿å­˜.SetFocus
+        Call cmd_ä¿å­˜_Click
     Case vbKeyF3
         KeyCode = 0
-        cmd_æÁ.SetFocus
-        Call cmd_æÁ_Click
+        cmd_å–æ¶ˆ.SetFocus
+        Call cmd_å–æ¶ˆ_Click
     Case vbKeyF5
         If bActiveUp = True Then
             If vStep >= 2 Then
-                Me.ƒTƒu‰º.SetFocus
+                Me.ã‚µãƒ–ä¸‹.SetFocus
                 '2005/06/01 MITSUNO
-                Me.ƒTƒu‰º.Form!cmdUke.SetFocus
-                '—\–ñ–¼/“d˜b”Ô†•ÏXA—\–ñƒgƒ‰ƒ“‚Éó•t”Ô†‚ª“ü‚Á‚Ä‚¢‚½‚ç
-                'ºİÃÅÏ½À‚ÖUpdate‚µ‚È‚¢ˆ—’Ç‰Á‚Ìˆ×AˆÈ‰º‚Ìˆ—‚ğƒRƒƒ“ƒg
-'                Me.ƒTƒu‰º.Form!txt_—\–ñ‹qæ–¼.SetFocus
+                Me.ã‚µãƒ–ä¸‹.Form!cmdUke.SetFocus
+                'äºˆç´„å/é›»è©±ç•ªå·å¤‰æ›´æ™‚ã€äºˆç´„ãƒˆãƒ©ãƒ³ã«å—ä»˜ç•ªå·ãŒå…¥ã£ã¦ã„ãŸã‚‰
+                'ï½ºï¾ï¾ƒï¾…ï¾ï½½ï¾€ã¸Updateã—ãªã„å‡¦ç†è¿½åŠ ã®ç‚ºã€ä»¥ä¸‹ã®å‡¦ç†ã‚’ã‚³ãƒ¡ãƒ³ãƒˆ
+'                Me.ã‚µãƒ–ä¸‹.Form!txt_äºˆç´„å®¢å…ˆå.SetFocus
             End If
         ElseIf bActiveDown = True Then
             If vStep = 1 Or vStep = 3 Then
-                Me.ƒTƒuã.SetFocus
+                Me.ã‚µãƒ–ä¸Š.SetFocus
                 '2005/06/01 MITSUNO
-                Me.ƒTƒu‰º.Form!cmdUke.SetFocus
-                '—\–ñ–¼/“d˜b”Ô†•ÏXA—\–ñƒgƒ‰ƒ“‚Éó•t”Ô†‚ª“ü‚Á‚Ä‚¢‚½‚ç
-                'ºİÃÅÏ½À‚ÖUpdate‚µ‚È‚¢ˆ—’Ç‰Á‚Ìˆ×AˆÈ‰º‚Ìˆ—‚ğƒRƒƒ“ƒg
-'                Me.ƒTƒuã.Form!txt_—\–ñ‹qæ–¼.SetFocus
+                Me.ã‚µãƒ–ä¸‹.Form!cmdUke.SetFocus
+                'äºˆç´„å/é›»è©±ç•ªå·å¤‰æ›´æ™‚ã€äºˆç´„ãƒˆãƒ©ãƒ³ã«å—ä»˜ç•ªå·ãŒå…¥ã£ã¦ã„ãŸã‚‰
+                'ï½ºï¾ï¾ƒï¾…ï¾ï½½ï¾€ã¸Updateã—ãªã„å‡¦ç†è¿½åŠ ã®ç‚ºã€ä»¥ä¸‹ã®å‡¦ç†ã‚’ã‚³ãƒ¡ãƒ³ãƒˆ
+'                Me.ã‚µãƒ–ä¸Š.Form!txt_äºˆç´„å®¢å…ˆå.SetFocus
             End If
         End If
         
     Case vbKeyF8
         KeyCode = 0
-        Call cmd_”z’u_Click
+        Call cmd_é…ç½®_Click
     Case vbKeyF3, vbKeyF5 To vbKeyF12
         KeyCode = 0
     End Select
@@ -719,18 +719,18 @@ Private Sub Form_Load()
 
     strCaption = Me.Caption                                                     'INSERT 20050718 K.ISHIZAKA
 
-    'ƒtƒ‹ƒXƒNƒŠ[ƒ“‰»
+    'ãƒ•ãƒ«ã‚¹ã‚¯ãƒªãƒ¼ãƒ³åŒ–
     doCmd.Maximize
     
-    txt_ƒ„[ƒhƒR[ƒh = Me.OpenArgs
+    txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ = Me.OpenArgs
     
-    '‰ğ–ñ“ú‚ÍŒ»İ“ú‚æ‚èˆÈ~‚Ì“ú•t‚µ‚©•\¦‚µ‚È‚¢
-    '‚»‚ÌğŒ‚Ég‚¤
+    'è§£ç´„æ—¥ã¯ç¾åœ¨æ—¥ã‚ˆã‚Šä»¥é™ã®æ—¥ä»˜ã—ã‹è¡¨ç¤ºã—ãªã„
+    'ãã®æ¡ä»¶ã«ä½¿ã†
     txt_NowDate = Format(Now, "yyyy/mm/dd")
     
     Set objDb = CurrentDb
   
-    'ƒtƒH[ƒ€‚Ì‰Šú‰»ˆ—
+    'ãƒ•ã‚©ãƒ¼ãƒ ã®åˆæœŸåŒ–å‡¦ç†
     Call CLR_RTN
     Call Etc_Lock_Rtn
   
@@ -738,30 +738,30 @@ Private Sub Form_Load()
     bActiveUp = False
     bActiveDown = False
     
-    '•\¦ƒf[ƒ^ì¬
+    'è¡¨ç¤ºãƒ‡ãƒ¼ã‚¿ä½œæˆ
     Call MakeDisplay
     
 End Sub
 
 Private Sub MakeDisplay()
 
-    'ZŠ^ƒ„[ƒh–¼“™æ“¾
+    'ä½æ‰€ï¼ãƒ¤ãƒ¼ãƒ‰åç­‰å–å¾—
     Call GetYardData(1)
   
-    'ƒTƒuƒtƒH[ƒ€‚Åƒf[ƒ^ƒŠƒ“ƒX‚·‚éƒ[ƒNƒe[ƒuƒ‹ì¬
+    'ã‚µãƒ–ãƒ•ã‚©ãƒ¼ãƒ ã§ãƒ‡ãƒ¼ã‚¿ãƒªãƒ³ã‚¹ã™ã‚‹ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     Call Make_Work
     
-    Me.ƒTƒuã.Enabled = True
-    Me.ƒTƒu‰º.Enabled = True
+    Me.ã‚µãƒ–ä¸Š.Enabled = True
+    Me.ã‚µãƒ–ä¸‹.Enabled = True
 
-    Me.ƒTƒuã.Requery
-    Me.ƒTƒu‰º.Requery
+    Me.ã‚µãƒ–ä¸Š.Requery
+    Me.ã‚µãƒ–ä¸‹.Requery
   
-    Me.ƒTƒuãA.Enabled = True         '2000/07/03 insert n-miua
-    Me.ƒTƒu‰ºA.Enabled = True         '2000/07/03 insert n-miua
+    Me.ã‚µãƒ–ä¸ŠA.Enabled = True         '2000/07/03 insert n-miua
+    Me.ã‚µãƒ–ä¸‹A.Enabled = True         '2000/07/03 insert n-miua
     
-    Me.ƒTƒuãA.Requery                '2000/07/03 insert n-miua
-    Me.ƒTƒu‰ºA.Requery                '2000/07/03 insert n-miua
+    Me.ã‚µãƒ–ä¸ŠA.Requery                '2000/07/03 insert n-miua
+    Me.ã‚µãƒ–ä¸‹A.Requery                '2000/07/03 insert n-miua
         
     Call SubFormSetFocus
 
@@ -773,16 +773,16 @@ Private Sub Form_Open(Cancel As Integer)
     
 End Sub
 Private Sub Etc_Lock_Rtn()
-    '“ü—Í‹æ•ª‚É‚æ‚éƒRƒ“ƒgƒ[ƒ‹‚ÌƒƒbƒN‚ğİ’è
+    'å…¥åŠ›åŒºåˆ†ã«ã‚ˆã‚‹ã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«ã®ãƒ­ãƒƒã‚¯ã‚’è¨­å®š
       
-    Me.ƒTƒuã.Enabled = False
-    Me.ƒTƒu‰º.Enabled = False
-    Me.cmd_•Û‘¶.Enabled = True
-    Me.cmd_æÁ.Enabled = True
-    Me.cmd_I—¹.Enabled = True
+    Me.ã‚µãƒ–ä¸Š.Enabled = False
+    Me.ã‚µãƒ–ä¸‹.Enabled = False
+    Me.cmd_ä¿å­˜.Enabled = True
+    Me.cmd_å–æ¶ˆ.Enabled = True
+    Me.cmd_çµ‚äº†.Enabled = True
   
 End Sub
-Private Sub cmd_I—¹_Click()
+Private Sub cmd_çµ‚äº†_Click()
 On Error Resume Next
     doCmd.Close acForm, Me.FormName
     
@@ -800,7 +800,7 @@ Private Sub DeleteWk1()
     Dim strSQL     As String
 
 On Error Resume Next
-    'ƒ[ƒN‚Ìíœ
+    'ãƒ¯ãƒ¼ã‚¯ã®å‰Šé™¤
     strSQL = ""
     strSQL = " delete from FVS820_W01"
   
@@ -812,7 +812,7 @@ Private Sub DeleteWk2()
     Dim strSQL     As String
 
 On Error Resume Next
-    'ƒ[ƒN‚Ìíœ
+    'ãƒ¯ãƒ¼ã‚¯ã®å‰Šé™¤
     strSQL = ""
     strSQL = " delete from FVS820_W02 "
   
@@ -824,7 +824,7 @@ Private Sub DeleteWk3()
     Dim strSQL     As String
 
 On Error Resume Next
-    'ƒ[ƒN‚Ìíœ
+    'ãƒ¯ãƒ¼ã‚¯ã®å‰Šé™¤
     strSQL = ""
     strSQL = " delete from FVS820_W03 "
   
@@ -840,7 +840,7 @@ On Error GoTo err_rtn
         
     vStep = 0
     
-    'ã’iƒf[ƒ^—L–³ƒ`ƒFƒbƒN
+    'ä¸Šæ®µãƒ‡ãƒ¼ã‚¿æœ‰ç„¡ãƒã‚§ãƒƒã‚¯
     strSQL = ""
     strSQL = " SELECT"
     strSQL = strSQL & " count(*) AS RECCOUNT"
@@ -852,13 +852,13 @@ On Error GoTo err_rtn
       
     If Not (objRs.BOF And objRs.EOF) Then
         If objRs.Fields("RECCOUNT") <> 0 Then
-            '‚ ‚è
+            'ã‚ã‚Š
             vStep = vStep + 1
         End If
     End If
     Set objRs = Nothing
     
-    '‰º’iƒf[ƒ^—L–³ƒ`ƒFƒbƒN
+    'ä¸‹æ®µãƒ‡ãƒ¼ã‚¿æœ‰ç„¡ãƒã‚§ãƒƒã‚¯
     strSQL = ""
     strSQL = " SELECT"
     strSQL = strSQL & " count(*) AS RECCOUNT"
@@ -870,7 +870,7 @@ On Error GoTo err_rtn
       
     If Not (objRs.BOF And objRs.EOF) Then
         If objRs.Fields("RECCOUNT") <> 0 Then
-            '‚ ‚è
+            'ã‚ã‚Š
             vStep = vStep + 2
         End If
     End If
@@ -880,7 +880,7 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
 
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.numberr & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.numberr & vbCrLf & Err.Description
     Err.Clear
 
 Exit_rtn:
@@ -891,9 +891,9 @@ Exit_rtn:
 
 End Function
 Private Function GetYardData(ByVal iMode As Integer) As Boolean
-    'ƒ„[ƒhƒ}ƒXƒ^–â‚¢‡‚í‚¹
-    'ˆø” ‚OF‘¶İƒ`ƒFƒbƒN
-    '     ‚PFƒf[ƒ^QÆ
+    'ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿å•ã„åˆã‚ã›
+    'å¼•æ•° ï¼ï¼šå­˜åœ¨ãƒã‚§ãƒƒã‚¯
+    '     ï¼‘ï¼šãƒ‡ãƒ¼ã‚¿å‚ç…§
     
     Dim strSQL As String
     Dim vRet   As Variant
@@ -904,7 +904,7 @@ On Error GoTo err_rtn
   
     GetYardData = False
   
-    If txt_ƒ„[ƒhƒR[ƒh = "" Then
+    If txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ = "" Then
         GetYardData = True
         GoTo Exit_rtn
     End If
@@ -915,14 +915,14 @@ On Error GoTo err_rtn
   
     If iMode = 0 Then
   
-        '‘¶İƒ`ƒFƒbƒN
+        'å­˜åœ¨ãƒã‚§ãƒƒã‚¯
         strSQL = ""
-        strSQL = strSQL & " YARD_CODE =" & Val(txt_ƒ„[ƒhƒR[ƒh)
+        strSQL = strSQL & " YARD_CODE =" & Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)
       
         vRet = Nz(DLookup("YARD_NAME", "dbo_YARD_MAST", strSQL), "")
       
         If vRet = "" Then
-            MsgBox "ŠY“–‚·‚éƒ„[ƒhƒ}ƒXƒ^‚ª‚ ‚è‚Ü‚¹‚ñB", vbInformation, strMsg_kaku
+            MsgBox "è©²å½“ã™ã‚‹ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ãŒã‚ã‚Šã¾ã›ã‚“ã€‚", vbInformation, strMsg_kaku
             'GetYardData = True     'Del 01-07-2000 Araki
             GoTo Exit_rtn             'Add 01-07-2000 Araki
         End If
@@ -944,18 +944,18 @@ On Error GoTo err_rtn
         strSQL = strSQL & "FROM "
         strSQL = strSQL & "dbo_YARD_MAST "
         strSQL = strSQL & "WHERE "
-        strSQL = strSQL & " YARD_CODE =" & Val(txt_ƒ„[ƒhƒR[ƒh)
+        strSQL = strSQL & " YARD_CODE =" & Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)
         
         Set objRs = objDb.OpenRecordset(strSQL, dbOpenSnapshot)
       
         If Not (objRs.BOF And objRs.EOF) Then
            With Me
-           .txt_ƒ„[ƒh–¼ = objRs.Fields("YARD_NAME")
-           .txt_ƒ„[ƒhZŠ = objRs.Fields("YARD_ADDR_1") & _
+           .txt_ãƒ¤ãƒ¼ãƒ‰å = objRs.Fields("YARD_NAME")
+           .txt_ãƒ¤ãƒ¼ãƒ‰ä½æ‰€ = objRs.Fields("YARD_ADDR_1") & _
                              objRs.Fields("YARD_ADDR_2") & _
                              objRs.Fields("YARD_ADDR_3")
-           .txt_•t‹ßƒƒ‚ = objRs.Fields("YARD_NOTE")
-           .txt_”õl = objRs.Fields("YARD_BIKON")
+           .txt_ä»˜è¿‘ãƒ¡ãƒ¢ = objRs.Fields("YARD_NOTE")
+           .txt_å‚™è€ƒ = objRs.Fields("YARD_BIKON")
             
            If Not (IsNull(objRs.Fields("YARD_SEV1N")) Or objRs.Fields("YARD_SEV1N") = "" Or objRs.Fields("YARD_SEV1N") = " ") Or _
               Not (IsNull(objRs.Fields("YARD_SEV2N")) Or objRs.Fields("YARD_SEV2N") = "" Or objRs.Fields("YARD_SEV2N") = " ") Or _
@@ -968,9 +968,9 @@ On Error GoTo err_rtn
 
            .txtBUMOC = DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1")
            If .txtBUMOC = "8" Then
-              .txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & Val(.txt_ƒ„[ƒhƒR[ƒh) & ".htm"
+              .txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & Val(.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) & ".htm"
            Else
-              .txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & .txt_ƒ„[ƒhƒR[ƒh & ".htm"
+              .txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & .txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ & ".htm"
            End If
            End With
         End If                                                                  'INSERT 20041106 N.MIURA ENDED
@@ -982,20 +982,20 @@ On Error GoTo err_rtn
         'strSQL = strSQL & " YARD_ADDR_2 "
         'strSQL = strSQL & " FROM dbo_YARD_MAST"
         'strSQL = strSQL & " Where"
-        'strSQL = strSQL & " YARD_CODE =" & Val(txt_ƒ„[ƒhƒR[ƒh)
+        'strSQL = strSQL & " YARD_CODE =" & Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)
         'Set objRS = objDB.OpenRecordset(strSQL, dbOpenSnapshot)
         'If Not (objRS.BOF And objRS.EOF) Then
-        '    Me.txt_ƒ„[ƒh–¼ = objRS![YARD_NAME]
+        '    Me.txt_ãƒ¤ãƒ¼ãƒ‰å = objRS![YARD_NAME]
         '    vRET2 = objRS![YARD_ADDR_1]
         '    vRet = objRS![YARD_ADDR_2]
-        '    Me.txt_ƒ„[ƒhZŠ = vRET2 & vRet
-        '    Me.txt_”õl = objRS![YARD_NOTE]
+        '    Me.txt_ãƒ¤ãƒ¼ãƒ‰ä½æ‰€ = vRET2 & vRet
+        '    Me.txt_å‚™è€ƒ = objRS![YARD_NOTE]
         '    Me.cmd_CAMPB.Enabled = True
         '    Me.txtBUMOC = DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1")                                             'INSERT 20040710 N.MIURA START
         '    If Me.txtBUMOC = "8" Then
-        '       Me.txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & Val(Me.txt_ƒ„[ƒhƒR[ƒh) & ".htm"
+        '       Me.txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & Val(Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) & ".htm"
         '    Else
-        '       Me.txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & Me.txt_ƒ„[ƒhƒR[ƒh & ".htm"
+        '       Me.txtAddress = DLookup("CONT_DISKBACK", "dbo_CONT_MAST", "CONT_KEY = 1") & Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ & ".htm"
         '    End If                                                                                                           'INSERT 20040710 N.MIURA ENDED
         'End If                                                                 'DELETE 20041106 N.MIURA ENDED
       
@@ -1005,7 +1005,7 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
 
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.numberr & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.numberr & vbCrLf & Err.Description
     Err.Clear
 
 Exit_rtn:
@@ -1030,31 +1030,31 @@ Err_Form_Unload:
 
 End Sub
 
-Private Sub ƒTƒu‰º_Enter()
+Private Sub ã‚µãƒ–ä¸‹_Enter()
 On Error Resume Next
     doCmd.GoToRecord , , acFirst
     bActiveDown = True
 End Sub
 
-Private Sub ƒTƒu‰º_Exit(Cancel As Integer)
+Private Sub ã‚µãƒ–ä¸‹_Exit(Cancel As Integer)
 
     bActiveDown = False
 
 End Sub
 
-Private Sub ƒTƒuã_Enter()
+Private Sub ã‚µãƒ–ä¸Š_Enter()
 On Error Resume Next
     doCmd.GoToRecord , , acFirst
     bActiveUp = True
 End Sub
 
-Private Sub ƒTƒuã_Exit(Cancel As Integer)
+Private Sub ã‚µãƒ–ä¸Š_Exit(Cancel As Integer)
     
     bActiveUp = False
 
 End Sub
 
-Private Sub ƒTƒuãA_Enter()
+Private Sub ã‚µãƒ–ä¸ŠA_Enter()
 On Error Resume Next
     doCmd.GoToRecord , , acFirst
 End Sub
@@ -1062,31 +1062,31 @@ End Sub
 Sub SubFormSetFocus()
     
     '2005/05/29 MITSUNO
-    '—\–ñ–¼/“d˜b”Ô†•ÏXA—\–ñƒgƒ‰ƒ“‚Éó•t”Ô†‚ª“ü‚Á‚Ä‚¢‚½‚ç
-    'ºİÃÅÏ½À‚ÖUpdate‚µ‚È‚¢ˆ—’Ç‰Á‚Ìˆ×AˆÈ‰º‚Ìˆ—‚ğƒRƒƒ“ƒg
-    'ã‰º’i‚Ìƒf[ƒ^—L–³ƒ`ƒFƒbƒN
+    'äºˆç´„å/é›»è©±ç•ªå·å¤‰æ›´æ™‚ã€äºˆç´„ãƒˆãƒ©ãƒ³ã«å—ä»˜ç•ªå·ãŒå…¥ã£ã¦ã„ãŸã‚‰
+    'ï½ºï¾ï¾ƒï¾…ï¾ï½½ï¾€ã¸Updateã—ãªã„å‡¦ç†è¿½åŠ ã®ç‚ºã€ä»¥ä¸‹ã®å‡¦ç†ã‚’ã‚³ãƒ¡ãƒ³ãƒˆ
+    'ä¸Šä¸‹æ®µã®ãƒ‡ãƒ¼ã‚¿æœ‰ç„¡ãƒã‚§ãƒƒã‚¯
     If CheckCntaData = False Then
         Exit Sub
     End If
 
     Select Case vStep
-    Case 0  'ã‰º’i‚Æ‚àƒf[ƒ^–³‚µ
-        Me.cmd_æÁ.SetFocus
-    Case 1  'ã’i‚Ì‚İƒf[ƒ^‚ ‚è
-        Me.ƒTƒuã.SetFocus
-        Me.ƒTƒuã.Form!cmdUke.SetFocus
-        'Me.ƒTƒuã.Form!txt_—\–ñ‹qæ–¼.SetFocus
-    Case 2  '‰º’i‚Ì‚İƒf[ƒ^‚ ‚è
-        Me.ƒTƒu‰º.SetFocus
-        Me.ƒTƒu‰º.Form!cmdUke.SetFocus
-        'Me.ƒTƒu‰º.Form!txt_—\–ñ‹qæ–¼.SetFocus
-    Case 3  'ã‰º’i‚Æ‚à‚Éƒf[ƒ^‚ ‚è
-        Me.ƒTƒu‰º.SetFocus
-        Me.ƒTƒu‰º.Form!cmdUke.SetFocus
-        'Me.ƒTƒu‰º.Form!txt_—\–ñ‹qæ–¼.SetFocus
-        Me.ƒTƒuã.SetFocus
-        Me.ƒTƒuã.Form!cmdUke.SetFocus
-        'Me.ƒTƒuã.Form!txt_—\–ñ‹qæ–¼.SetFocus
+    Case 0  'ä¸Šä¸‹æ®µã¨ã‚‚ãƒ‡ãƒ¼ã‚¿ç„¡ã—
+        Me.cmd_å–æ¶ˆ.SetFocus
+    Case 1  'ä¸Šæ®µã®ã¿ãƒ‡ãƒ¼ã‚¿ã‚ã‚Š
+        Me.ã‚µãƒ–ä¸Š.SetFocus
+        Me.ã‚µãƒ–ä¸Š.Form!cmdUke.SetFocus
+        'Me.ã‚µãƒ–ä¸Š.Form!txt_äºˆç´„å®¢å…ˆå.SetFocus
+    Case 2  'ä¸‹æ®µã®ã¿ãƒ‡ãƒ¼ã‚¿ã‚ã‚Š
+        Me.ã‚µãƒ–ä¸‹.SetFocus
+        Me.ã‚µãƒ–ä¸‹.Form!cmdUke.SetFocus
+        'Me.ã‚µãƒ–ä¸‹.Form!txt_äºˆç´„å®¢å…ˆå.SetFocus
+    Case 3  'ä¸Šä¸‹æ®µã¨ã‚‚ã«ãƒ‡ãƒ¼ã‚¿ã‚ã‚Š
+        Me.ã‚µãƒ–ä¸‹.SetFocus
+        Me.ã‚µãƒ–ä¸‹.Form!cmdUke.SetFocus
+        'Me.ã‚µãƒ–ä¸‹.Form!txt_äºˆç´„å®¢å…ˆå.SetFocus
+        Me.ã‚µãƒ–ä¸Š.SetFocus
+        Me.ã‚µãƒ–ä¸Š.Form!cmdUke.SetFocus
+        'Me.ã‚µãƒ–ä¸Š.Form!txt_äºˆç´„å®¢å…ˆå.SetFocus
     End Select
 
 
@@ -1094,15 +1094,15 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :Šm”F‚Æ•Û‘¶
+'        MODULE_NAME      :ç¢ºèªã¨ä¿å­˜
 '        MODULE_ID        :SaveData
 '        CREATE_DATE      :20050718 K.ISHIZAKA
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Public Function SaveData() As Boolean
-    If (Nz(Me.txt_ƒ„[ƒhƒR[ƒh) <> "") And bChangeFlag_FVS820 Then
-        If MsgBox("C³’†‚Ì“à—e‚ğ•Û‘¶‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbQuestion + vbYesNo, strMsg_kaku) = vbYes Then
+    If (Nz(Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) <> "") And bChangeFlag_FVS820 Then
+        If MsgBox("ä¿®æ­£ä¸­ã®å†…å®¹ã‚’ä¿å­˜ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbQuestion + vbYesNo, strMsg_kaku) = vbYes Then
             SaveData = WRI_RTN()
             Exit Function
         End If
@@ -1112,7 +1112,7 @@ End Function
 
 '==============================================================================*
 '
-'        MODULE_NAME      :•ÒW’†‚Éİ’è
+'        MODULE_NAME      :ç·¨é›†ä¸­ã«è¨­å®š
 '        MODULE_ID        :SetChangeFlag
 '        CREATE_DATE      :2005/07/18 K.ISHIZAKA
 '
@@ -1120,31 +1120,31 @@ End Function
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Public Sub SetChangeFlag()
     If bChangeFlag_FVS820 = False Then
-        Me.Caption = strCaption & "(C³’†)"
+        Me.Caption = strCaption & "(ä¿®æ­£ä¸­)"
         bChangeFlag_FVS820 = True
     End If
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :ŠO•”‚©‚çÄ•\¦‚³‚¹‚é
+'        MODULE_NAME      :å¤–éƒ¨ã‹ã‚‰å†è¡¨ç¤ºã•ã›ã‚‹
 '        MODULE_ID        :Reload
 '        CREATE_DATE      :2005/06/03 K.I
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 'Public Sub Reload()                                                            'DELETE 20050718 K.ISHIZAKA
-'‚±‚±‚©‚ç                                                                       'INSERT 20050718 K.ISHIZAKA
+'ã“ã“ã‹ã‚‰                                                                       'INSERT 20050718 K.ISHIZAKA
 Public Sub Reload(ByVal strYard1 As String, ByVal strYard2 As String)
     If bChangeFlag_FVS820 Then
         Exit Sub
     End If
-    If (strYard1 <> Me.txt_ƒ„[ƒhƒR[ƒh) And (strYard2 <> Me.txt_ƒ„[ƒhƒR[ƒh) Then
+    If (strYard1 <> Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) And (strYard2 <> Me.txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰) Then
         Exit Sub
     End If
-'‚±‚±‚Ü‚Å                                                                       'INSERT 20050718 K.ISHIZAKA
-    'ƒ[ƒNƒe[ƒuƒ‹íœ
+'ã“ã“ã¾ã§                                                                       'INSERT 20050718 K.ISHIZAKA
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«å‰Šé™¤
     Call DELWK_RTN
-    '•\¦ƒf[ƒ^ì¬
+    'è¡¨ç¤ºãƒ‡ãƒ¼ã‚¿ä½œæˆ
     Call MakeDisplay
 End Sub

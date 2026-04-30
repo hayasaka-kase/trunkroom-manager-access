@@ -9,43 +9,43 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '****************************  strat or program ********************************
 '**********************************************
-'   ƒ†[ƒU–¼@@@@F@(Š”)‰Á£‘qŒÉ
-'   ƒVƒXƒeƒ€–¼@@@F@ƒRƒ“ƒeƒiŠÇ—ƒVƒXƒeƒ€
+'   ãƒ¦ãƒ¼ã‚¶åã€€ã€€ã€€ã€€ï¼šã€€(æ ª)åŠ ç€¬å€‰åº«
+'   ã‚·ã‚¹ãƒ†ãƒ åã€€ã€€ã€€ï¼šã€€ã‚³ãƒ³ãƒ†ãƒŠç®¡ç†ã‚·ã‚¹ãƒ†ãƒ 
 '**********************************************
-'   ƒvƒƒOƒ‰ƒ€–¼@@F@Š„ˆøƒ}ƒXƒ^ˆê——iƒTƒuj
-'   ƒvƒƒOƒ‰ƒ€‚h‚c@F@FKS700_S01
-'   ì@¬@“ú@@@F  2008/07/25
-'   ì@¬@Ò@@@F  T.Suzuki
-'   Ver            F  0.0
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ åã€€ã€€ï¼šã€€å‰²å¼•ãƒã‚¹ã‚¿ä¸€è¦§ï¼ˆã‚µãƒ–ï¼‰
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼©ï¼¤ã€€ï¼šã€€FKS700_S01
+'   ä½œã€€æˆã€€æ—¥ã€€ã€€ã€€ï¼š  2008/07/25
+'   ä½œã€€æˆã€€è€…ã€€ã€€ã€€ï¼š  T.Suzuki
+'   Ver            ï¼š  0.0
 '**********************************************
-'   C@³@“ú@@@F  2008/11/13
-'   C@³@Ò@@@F  N.IMAI
-'   “à@@@—e@@@F  Ÿ‰æ–Ê‚Ö•¶Œ¾‚ğˆø‚«”‚Å“n‚·Û‚É
-'   @@@@@@@@@@‹æØ‚è•¶š‚ªƒJƒ“ƒ}‚Ìê‡A•s‹ï‡‚ª‚ ‚é‚Ì‚Å
-'   @@@@@@@@@@‹æØ‚è•¶š‚ğƒ^ƒu‚É•ÏX
-'   Ver            F  0.1
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2008/11/13
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  N.IMAI
+'   å†…ã€€ã€€ã€€å®¹ã€€ã€€ã€€ï¼š  æ¬¡ç”»é¢ã¸æ–‡è¨€ã‚’å¼•ãæ•°ã§æ¸¡ã™éš›ã«
+'   ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€åŒºåˆ‡ã‚Šæ–‡å­—ãŒã‚«ãƒ³ãƒã®å ´åˆã€ä¸å…·åˆãŒã‚ã‚‹ã®ã§
+'   ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€åŒºåˆ‡ã‚Šæ–‡å­—ã‚’ã‚¿ãƒ–ã«å¤‰æ›´
+'   Ver            ï¼š  0.1
 '**********************************************
-'   C@³@“ú@@@F  2009/06/30
-'   C@³@Ò@@@F  hirano
-'   “à@@@—e@@@F  Š„ˆøƒ}ƒXƒ^ KASE_DB‚ÖˆÚs‚É”º‚¤•ÏX
-'   Ver            F  0.3
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2009/06/30
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  hirano
+'   å†…ã€€ã€€ã€€å®¹ã€€ã€€ã€€ï¼š  å‰²å¼•ãƒã‚¹ã‚¿ KASE_DBã¸ç§»è¡Œã«ä¼´ã†å¤‰æ›´
+'   Ver            ï¼š  0.3
 '**********************************************
-'   C@³@“ú@@@F  2013/04/08
-'   C@³@Ò@@@F  M.HONDA
-'   “à@@@—e@@@F  ‰æ–Ê‚Ì•À‚Ñ‡‚ğ•ÏX
-'   Ver            F  0.4
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2013/04/08
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  M.HONDA
+'   å†…ã€€ã€€ã€€å®¹ã€€ã€€ã€€ï¼š  ç”»é¢ã®ä¸¦ã³é †ã‚’å¤‰æ›´
+'   Ver            ï¼š  0.4
 '**********************************************
-'   C@³@“ú@@@F  2017/12/01
-'   C@³@Ò@@@F  ƒC[ƒOƒ‹ƒ\ƒtƒg
-'   “à@@@—e@@@F  ƒLƒƒƒ“ƒy[ƒ“ˆêŠ‡İ’è‘Î‰
-'   Ver            F  0.6
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š  2017/12/01
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼š  ã‚¤ãƒ¼ã‚°ãƒ«ã‚½ãƒ•ãƒˆ
+'   å†…ã€€ã€€ã€€å®¹ã€€ã€€ã€€ï¼š  ã‚­ãƒ£ãƒ³ãƒšãƒ¼ãƒ³ä¸€æ‹¬è¨­å®šå¯¾å¿œ
+'   Ver            ï¼š  0.6
 '**********************************************
 
 Option Compare Database
 Option Explicit
 
 '==============================================================================*
-'   ’è”éŒ¾
+'   å®šæ•°å®£è¨€
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -53,24 +53,24 @@ Private Const PROG_ID = "FKS700_S01"
 Private Const P_ROOM_WORK_TABLE         As String = "WK_FKS700"
 Private Const P_NEBIKI_LIST_WORK_TABLE  As String = "WK_FKS700_S01_TEMP"
 
-Private Const P_KAKUNIN                 As String = "Šm”F"
-Private Const P_ERROR                   As String = "ƒGƒ‰["
+Private Const P_KAKUNIN                 As String = "ç¢ºèª"
+Private Const P_ERROR                   As String = "ã‚¨ãƒ©ãƒ¼"
 
 Private pobjDB                          As Object
 
-Private pstrBumonCode                   As String       ' •”–åƒR[ƒh
+Private pstrBumonCode                   As String       ' éƒ¨é–€ã‚³ãƒ¼ãƒ‰
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmd_íœ_Click
-'        MODULE_ID        :cmd_íœ_Click
+'        MODULE_NAME      :cmd_å‰Šé™¤_Click
+'        MODULE_ID        :cmd_å‰Šé™¤_Click
 '        NOTE             :
 '        CREATE_DATE      :2008/07/25
 '        UPDATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_íœ_Click()
+Private Sub cmd_å‰Šé™¤_Click()
 
     Dim isException        As Boolean
 
@@ -78,13 +78,13 @@ Private Sub cmd_íœ_Click()
 
     On Error GoTo Exception
 
-    If Nz(Me.txt_Œ_–ñ”, "0") <> "0" Then
-        MsgBox "‚±‚ÌŠ„ˆø‚Í“K—p‚µ‚½ó•t‚Ü‚½‚ÍŒ_–ñ‚ªŠù‚É‚ ‚é‚½‚ßíœ‚Ío—ˆ‚Ü‚¹‚ñB", vbInformation, P_ERROR
+    If Nz(Me.txt_å¥‘ç´„æ•°, "0") <> "0" Then
+        MsgBox "ã“ã®å‰²å¼•ã¯é©ç”¨ã—ãŸå—ä»˜ã¾ãŸã¯å¥‘ç´„ãŒæ—¢ã«ã‚ã‚‹ãŸã‚å‰Šé™¤ã¯å‡ºæ¥ã¾ã›ã‚“ã€‚", vbInformation, P_ERROR
         Exit Sub
     End If
 
-    If MsgBox("ƒf[ƒ^‚ğíœ‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbQuestion + vbYesNo + vbDefaultButton2, P_KAKUNIN) = vbYes Then
-        'íœ
+    If MsgBox("ãƒ‡ãƒ¼ã‚¿ã‚’å‰Šé™¤ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbQuestion + vbYesNo + vbDefaultButton2, P_KAKUNIN) = vbYes Then
+        'å‰Šé™¤
         Call DEL_RTN
         Call Form_FKS700.createNebikiData
         Call Form_FKS700.Requery
@@ -96,20 +96,20 @@ Exception:
     isException = True
 
 Finally:
-    If isException Then Call MSZZ024_M00("cmd_íœ_Click", True)
+    If isException Then Call MSZZ024_M00("cmd_å‰Šé™¤_Click", True)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmd_C³_Click
-'        MODULE_ID        :cmd_C³_Click
+'        MODULE_NAME      :cmd_ä¿®æ­£_Click
+'        MODULE_ID        :cmd_ä¿®æ­£_Click
 '        NOTE             :
 '        CREATE_DATE      :2008/06/02
 '        UPDATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_C³_Click()
+Private Sub cmd_ä¿®æ­£_Click()
     
     Dim anStrParameter As String
     Dim isException    As Boolean
@@ -120,38 +120,38 @@ Private Sub cmd_C³_Click()
 
     anStrParameter = ""
 
-    ' (0)Š„ˆø”Ô† - (1)Š„ˆøŠúŠÔ - (2)Š„ˆøŒ`® - (3)Š„ˆø’l - (4)ó•tí•Ê - (5)ƒTƒCƒYFrom - (6)ƒTƒCƒYTo(5) - (7)’i - (8)—p“r -
-    ' (9)—˜—pŠúŠÔ - (10)•¶Œ¾©“®¶¬ - (11)‚¨‹q—l’ñ¦•¶Œ¾ - (12)ƒ^ƒCƒgƒ‹ - (13)ˆ—ƒ‚[ƒh
+    ' (0)å‰²å¼•ç•ªå· - (1)å‰²å¼•æœŸé–“ - (2)å‰²å¼•å½¢å¼ - (3)å‰²å¼•å€¤ - (4)å—ä»˜ç¨®åˆ¥ - (5)ã‚µã‚¤ã‚ºFrom - (6)ã‚µã‚¤ã‚ºTo(5) - (7)æ®µ - (8)ç”¨é€” -
+    ' (9)åˆ©ç”¨æœŸé–“ - (10)æ–‡è¨€è‡ªå‹•ç”Ÿæˆ - (11)ãŠå®¢æ§˜æç¤ºæ–‡è¨€ - (12)ã‚¿ã‚¤ãƒˆãƒ« - (13)å‡¦ç†ãƒ¢ãƒ¼ãƒ‰
 'D:2008.11.13 N.IMAI Start
-'    anStrParameter = Nz(Me.txt_Š„ˆø”Ô†.VALUE, "") & "," & _
-'                     Nz(Me.txt_Š„ˆøŠúŠÔ’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_Š„ˆøŒ`®’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_Š„ˆø’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_ó•t’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_ƒTƒCƒYFrom.VALUE, "") & "," & _
-'                     Nz(Me.txt_ƒTƒCƒYTo.VALUE, "") & "," & _
-'                     Nz(Me.txt_’i’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_—p“r’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_—˜—pŠúŠÔ’l.VALUE, "") & "," & _
-'                     Nz(Me.txt_•¶Œ¾©“®¶¬.VALUE, "") & "," & _
-'                     Nz(Me.txt_“à—e.VALUE, "") & "," & _
-'                     "C³" & "," & _
+'    anStrParameter = Nz(Me.txt_å‰²å¼•ç•ªå·.VALUE, "") & "," & _
+'                     Nz(Me.txt_å‰²å¼•æœŸé–“å€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_å‰²å¼•å½¢å¼å€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_å‰²å¼•å€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_å—ä»˜å€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_ã‚µã‚¤ã‚ºFrom.VALUE, "") & "," & _
+'                     Nz(Me.txt_ã‚µã‚¤ã‚ºTo.VALUE, "") & "," & _
+'                     Nz(Me.txt_æ®µå€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_ç”¨é€”å€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_åˆ©ç”¨æœŸé–“å€¤.VALUE, "") & "," & _
+'                     Nz(Me.txt_æ–‡è¨€è‡ªå‹•ç”Ÿæˆ.VALUE, "") & "," & _
+'                     Nz(Me.txt_å†…å®¹.VALUE, "") & "," & _
+'                     "ä¿®æ­£" & "," & _
 '                     "1"
 'D:2008.11.13 N.IMAI End
 'I:2008.11.13 N.IMAI Start
-    anStrParameter = Nz(Me.txt_Š„ˆø”Ô†.VALUE, "") & vbTab & _
-                     Nz(Me.txt_Š„ˆøŠúŠÔ’l.VALUE, "") & vbTab & _
-                     Nz(Me.txt_Š„ˆøŒ`®’l.VALUE, "") & vbTab & _
-                     Nz(Me.txt_Š„ˆø’l.VALUE, "") & vbTab & _
-                     Nz(Me.txt_ó•t’l.VALUE, "") & vbTab & _
-                     Nz(Me.txt_ƒTƒCƒYFrom.VALUE, "") & vbTab & _
-                     Nz(Me.txt_ƒTƒCƒYTo.VALUE, "") & vbTab & _
-                     Nz(Me.txt_’i’l.VALUE, "") & vbTab & _
-                     Nz(Me.txt_—p“r’l.VALUE, "") & vbTab & _
-                     Nz(Replace(Me.txt_—˜—pŠúŠÔ’l.VALUE, ",", vbTab), "") & vbTab & _
-                     Nz(Replace(Me.txt_•¶Œ¾©“®¶¬.VALUE, ",", vbTab), "") & vbTab & _
-                     Nz(Me.txt_“à—e.VALUE, "") & vbTab & _
-                     "C³" & vbTab & _
+    anStrParameter = Nz(Me.txt_å‰²å¼•ç•ªå·.VALUE, "") & vbTab & _
+                     Nz(Me.txt_å‰²å¼•æœŸé–“å€¤.VALUE, "") & vbTab & _
+                     Nz(Me.txt_å‰²å¼•å½¢å¼å€¤.VALUE, "") & vbTab & _
+                     Nz(Me.txt_å‰²å¼•å€¤.VALUE, "") & vbTab & _
+                     Nz(Me.txt_å—ä»˜å€¤.VALUE, "") & vbTab & _
+                     Nz(Me.txt_ã‚µã‚¤ã‚ºFrom.VALUE, "") & vbTab & _
+                     Nz(Me.txt_ã‚µã‚¤ã‚ºTo.VALUE, "") & vbTab & _
+                     Nz(Me.txt_æ®µå€¤.VALUE, "") & vbTab & _
+                     Nz(Me.txt_ç”¨é€”å€¤.VALUE, "") & vbTab & _
+                     Nz(Replace(Me.txt_åˆ©ç”¨æœŸé–“å€¤.VALUE, ",", vbTab), "") & vbTab & _
+                     Nz(Replace(Me.txt_æ–‡è¨€è‡ªå‹•ç”Ÿæˆ.VALUE, ",", vbTab), "") & vbTab & _
+                     Nz(Me.txt_å†…å®¹.VALUE, "") & vbTab & _
+                     "ä¿®æ­£" & vbTab & _
                      "1"
 'I:2008.11.13 N.IMAI End
     doCmd.OpenForm "FKS710", , , , , acDialog, anStrParameter
@@ -162,20 +162,20 @@ Exception:
     isException = True
 
 Finally:
-    If isException Then Call MSZZ024_M00("cmd_C³_Click", True)
+    If isException Then Call MSZZ024_M00("cmd_ä¿®æ­£_Click", True)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmd_’Ç‰Á_Click
-'        MODULE_ID        :cmd_’Ç‰Á_Click
+'        MODULE_NAME      :cmd_è¿½åŠ _Click
+'        MODULE_ID        :cmd_è¿½åŠ _Click
 '        NOTE             :
 '        CREATE_DATE      :2008/08/20
 '        UPDATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_’Ç‰Á_Click()
+Private Sub cmd_è¿½åŠ _Click()
     
     Dim strParameter As String
     Dim isException  As Boolean
@@ -185,33 +185,33 @@ Private Sub cmd_’Ç‰Á_Click()
     On Error GoTo Exception
     
 '2017/11/01 start ADD EGL
-    If Me.Parent.Form.lbl_•W‘è.Caption = "Š„ˆø‘I‘ğ" Then
+    If Me.Parent.Form.lbl_æ¨™é¡Œ.Caption = "å‰²å¼•é¸æŠ" Then
         Form_FKS450.p450_RET = True
-        Form_FKS450.p450_WaribikiNo = Nz(txt_Š„ˆø”Ô†, "")
-        Form_FKS450.p450_Youto = Nz(Me.txt_—p“r’l, "")
-        Form_FKS450.p450_Mongon = Nz(txt_“à—e, "")
+        Form_FKS450.p450_WaribikiNo = Nz(txt_å‰²å¼•ç•ªå·, "")
+        Form_FKS450.p450_Youto = Nz(Me.txt_ç”¨é€”å€¤, "")
+        Form_FKS450.p450_Mongon = Nz(txt_å†…å®¹, "")
         doCmd.Close acForm, Me.Parent.NAME
         Exit Sub
     End If
 '2017/11/01 end ADD EGL
     
-    ' (0)ƒ^ƒCƒgƒ‹ - (1)ƒ‚[ƒh   - (2)ƒ„[ƒhƒR[ƒh - (3)•”–åƒR[ƒh - (4)Š„ˆø”Ô†
-    ' (5)è“®•¶Œ¾
+    ' (0)ã‚¿ã‚¤ãƒˆãƒ« - (1)ãƒ¢ãƒ¼ãƒ‰   - (2)ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰ - (3)éƒ¨é–€ã‚³ãƒ¼ãƒ‰ - (4)å‰²å¼•ç•ªå·
+    ' (5)æ‰‹å‹•æ–‡è¨€
 'D:2008.11.13 N.IMAI Start
-'    strParameter = "V‹K’Ç‰Á" _
+'    strParameter = "æ–°è¦è¿½åŠ " _
 '                 & ",0" _
-'                 & "," & Me.Parent.Form.txt_ƒ„[ƒh _
+'                 & "," & Me.Parent.Form.txt_ãƒ¤ãƒ¼ãƒ‰ _
 '                 & "," & pstrBumonCode _
-'                 & "," & Nz(txt_Š„ˆø”Ô†, "") _
-'                 & "," & Nz(txt_“à—e)
+'                 & "," & Nz(txt_å‰²å¼•ç•ªå·, "") _
+'                 & "," & Nz(txt_å†…å®¹)
 'D:2008.11.13 N.IMAI End
 'I:2008.11.13 N.IMAI Start
-    strParameter = "V‹K’Ç‰Á" & vbTab & _
+    strParameter = "æ–°è¦è¿½åŠ " & vbTab & _
                    "0" & vbTab & _
-                   Me.Parent.Form.txt_ƒ„[ƒh & vbTab & _
+                   Me.Parent.Form.txt_ãƒ¤ãƒ¼ãƒ‰ & vbTab & _
                    pstrBumonCode & vbTab & _
-                   Nz(txt_Š„ˆø”Ô†, "") & vbTab & _
-                   Nz(txt_“à—e) & vbTab
+                   Nz(txt_å‰²å¼•ç•ªå·, "") & vbTab & _
+                   Nz(txt_å†…å®¹) & vbTab
 'I:2008.11.13 N.IMAI End
     doCmd.OpenForm "FKS721", , , , , acDialog, strParameter
 
@@ -221,7 +221,7 @@ Exception:
     isException = True
 
 Finally:
-    If isException Then Call MSZZ024_M00("cmd_’Ç‰Á_Click", True)
+    If isException Then Call MSZZ024_M00("cmd_è¿½åŠ _Click", True)
 
 End Sub
 
@@ -245,24 +245,24 @@ Private Sub Form_Load()
 
     pstrBumonCode = Nz(DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY=1"))
     If pstrBumonCode = "" Then
-        'ƒe[ƒuƒ‹[CONT_MAST]‚Ìİ’è•s³
-        Call MSZZ024_M10("MSZZ007_M00", "•”–åƒR[ƒh‚Ìİ’è•s³B")
+        'ãƒ†ãƒ¼ãƒ–ãƒ«[CONT_MAST]ã®è¨­å®šä¸æ­£
+        Call MSZZ024_M10("MSZZ007_M00", "éƒ¨é–€ã‚³ãƒ¼ãƒ‰ã®è¨­å®šä¸æ­£ã€‚")
     End If
 
     Set pobjDB = CurrentDb
     
-    '‰æ–Ê“à—eØ‘Ö
-    lbl_İ’è—L–³.Visible = Not IsNull(Me.Parent.OpenArgs)
-    lbl_İ’è—L–³”wŒi.Visible = Not IsNull(Me.Parent.OpenArgs)
-    lbl_’Ç‰Á.Visible = Not IsNull(Me.Parent.OpenArgs)
-    lbl_’Ç‰Á”wŒi.Visible = Not IsNull(Me.Parent.OpenArgs)
-    txt_İ’è—L–³.Visible = Not IsNull(Me.Parent.OpenArgs)
-    cmd_’Ç‰Á.Visible = Not IsNull(Me.Parent.OpenArgs)
+    'ç”»é¢å†…å®¹åˆ‡æ›¿
+    lbl_è¨­å®šæœ‰ç„¡.Visible = Not IsNull(Me.Parent.OpenArgs)
+    lbl_è¨­å®šæœ‰ç„¡èƒŒæ™¯.Visible = Not IsNull(Me.Parent.OpenArgs)
+    lbl_è¿½åŠ .Visible = Not IsNull(Me.Parent.OpenArgs)
+    lbl_è¿½åŠ èƒŒæ™¯.Visible = Not IsNull(Me.Parent.OpenArgs)
+    txt_è¨­å®šæœ‰ç„¡.Visible = Not IsNull(Me.Parent.OpenArgs)
+    cmd_è¿½åŠ .Visible = Not IsNull(Me.Parent.OpenArgs)
     
-    lbl_•ÏX.Visible = IsNull(Me.Parent.OpenArgs)
-    lbl_•ÏX”wŒi.Visible = IsNull(Me.Parent.OpenArgs)
-    cmd_C³.Visible = IsNull(Me.Parent.OpenArgs)
-    cmd_íœ.Visible = IsNull(Me.Parent.OpenArgs)
+    lbl_å¤‰æ›´.Visible = IsNull(Me.Parent.OpenArgs)
+    lbl_å¤‰æ›´èƒŒæ™¯.Visible = IsNull(Me.Parent.OpenArgs)
+    cmd_ä¿®æ­£.Visible = IsNull(Me.Parent.OpenArgs)
+    cmd_å‰Šé™¤.Visible = IsNull(Me.Parent.OpenArgs)
 
     GoTo Finally
 
@@ -291,7 +291,7 @@ Private Sub Form_Close()
 
     On Error GoTo Exception
 
-    'ƒRƒlƒNƒVƒ‡ƒ“ƒNƒ[ƒY
+    'ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³ã‚¯ãƒ­ãƒ¼ã‚º
     If Not pobjDB Is Nothing Then
        pobjDB.Close
        Set pobjDB = Nothing
@@ -308,10 +308,10 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      : íœˆ—
+'        MODULE_NAME      : å‰Šé™¤å‡¦ç†
 '        MODULE_ID        : DEL_RTN
-'        PARAMETER        : ˆø”‚È‚µ
-'        –ß‚è’l           : True=³í False=ˆÙí
+'        PARAMETER        : å¼•æ•°ãªã—
+'        æˆ»ã‚Šå€¤           : True=æ­£å¸¸ False=ç•°å¸¸
 '        CREATE_DATE      : 2008/**/**
 '
 '==============================================================================*
@@ -320,27 +320,27 @@ Private Function DEL_RTN() As Boolean
 
     Dim objAdoDbConnection   As Object
     Dim strSQL               As String
-    Dim rsDataDel            As Object    ' ƒ}ƒXƒ^Aƒgƒ‰ƒ“íœ—p
-    Dim strDCNTM_NO          As String    ' Š„ˆø”Ô†
+    Dim rsDataDel            As Object    ' ãƒã‚¹ã‚¿ã€ãƒˆãƒ©ãƒ³å‰Šé™¤ç”¨
+    Dim strDCNTM_NO          As String    ' å‰²å¼•ç•ªå·
 
     On Error GoTo Exception
 
     DEL_RTN = False
-    '2009/06/30 MOD <S> Š„ˆøƒ}ƒXƒ^ KASE_DB‚ÖˆÚs
+    '2009/06/30 MOD <S> å‰²å¼•ãƒã‚¹ã‚¿ KASE_DBã¸ç§»è¡Œ
     'Set objAdoDbConnection = MSZZ025.ADODB_Connection(pstrBumonCode)
     Set objAdoDbConnection = MSZZ025.ADODB_Connection()
     '2009/06/30 MOD <E>
 
-    ' ƒgƒ‰ƒ“ƒUƒNƒVƒ‡ƒ“ŠJn
+    ' ãƒˆãƒ©ãƒ³ã‚¶ã‚¯ã‚·ãƒ§ãƒ³é–‹å§‹
     objAdoDbConnection.BeginTrans
 
-    ' Š„ˆø”Ô†İ’è
-    strDCNTM_NO = Me.txt_Š„ˆø”Ô†
+    ' å‰²å¼•ç•ªå·è¨­å®š
+    strDCNTM_NO = Me.txt_å‰²å¼•ç•ªå·
 
     strSQL = ""
     strSQL = strSQL & " SELECT * FROM DCNT_MAST "
     strSQL = strSQL & " WHERE DCNTM_NO = '" & strDCNTM_NO & "' "
-    '2009/06/30 INS <S> Š„ˆøƒ}ƒXƒ^ KASE_DB‚ÖˆÚs
+    '2009/06/30 INS <S> å‰²å¼•ãƒã‚¹ã‚¿ KASE_DBã¸ç§»è¡Œ
     strSQL = strSQL & " AND  DCNTM_BUMOC = '" & pstrBumonCode & "' "
     '2009/06/30 INS <E>
     Set rsDataDel = MSZZ025.ADODB_Recordset(strSQL, objAdoDbConnection, adoReadWrite)
@@ -351,7 +351,7 @@ Private Function DEL_RTN() As Boolean
     Set rsDataDel = Nothing
     
     DEL_RTN = True
-    ' ƒRƒ~ƒbƒg
+    ' ã‚³ãƒŸãƒƒãƒˆ
     objAdoDbConnection.CommitTrans
     objAdoDbConnection.Close
     Set objAdoDbConnection = Nothing

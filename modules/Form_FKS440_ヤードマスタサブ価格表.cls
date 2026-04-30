@@ -2,217 +2,217 @@ VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
 END
-Attribute VB_Name = "Form_FKS440_ƒ„[ƒhƒ}ƒXƒ^ƒTƒu‰¿Ši•\"
+Attribute VB_Name = "Form_FKS440_ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ã‚µãƒ–ä¾¡æ ¼è¡¨"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '****************************  strat or program ********************************
 '**********************************************
-'   ƒ†[ƒU–¼@@@@F@iŠ”j‰Á£‘qŒÉ
-'   ƒVƒXƒeƒ€–¼@@@F@‘qŒÉŠÇ—ƒVƒXƒeƒ€
+'   ãƒ¦ãƒ¼ã‚¶åã€€ã€€ã€€ã€€ï¼šã€€ï¼ˆæ ªï¼‰åŠ ç€¬å€‰åº«
+'   ã‚·ã‚¹ãƒ†ãƒ åã€€ã€€ã€€ï¼šã€€å€‰åº«ç®¡ç†ã‚·ã‚¹ãƒ†ãƒ 
 '**********************************************
-'   ƒvƒƒOƒ‰ƒ€–¼@@F@ƒ„[ƒhƒ}ƒXƒ^ƒTƒu‰¿Ši•\
-'   ƒvƒƒOƒ‰ƒ€‚h‚c@F
-'   ì@¬@“ú@@@F  2005/11/18
-'   ì@¬@Ò@@@F  S.SHIBAZAKI
-'   Ver             F  0.1
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ åã€€ã€€ï¼šã€€ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ã‚µãƒ–ä¾¡æ ¼è¡¨
+'   ãƒ—ãƒ­ã‚°ãƒ©ãƒ ï¼©ï¼¤ã€€ï¼š
+'   ä½œã€€æˆã€€æ—¥ã€€ã€€ã€€ï¼š  2005/11/18
+'   ä½œã€€æˆã€€è€…ã€€ã€€ã€€ï¼š  S.SHIBAZAKI
+'   Ver             ï¼š  0.1
 '**********************************************
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F2006/03/18
-'   C@³@Ò@@@FT.SUZUKI
-'   C@³@“à@—e@FG”ï‚Åu–³‚µv‚ğ‘I‚ç‚ñ‚¾ê‡Au0vˆÈã‚ÌG”ï‹àŠz‚ª“ü—Í‚Å‚«‚È‚¢
-'   Ver             F0.2
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š2006/03/18
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šT.SUZUKI
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼šé›‘è²»ã§ã€Œç„¡ã—ã€ã‚’é¸ã‚‰ã‚“ã å ´åˆã€ã€Œ0ã€ä»¥ä¸Šã®é›‘è²»é‡‘é¡ãŒå…¥åŠ›ã§ããªã„
+'   Ver             ï¼š0.2
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F2006/06/24
-'   C@³@Ò@@@Ftajima
-'   C@³@“à@—e@FC‘UŒÄo‘Î‰
-'   Ver             F0.3
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š2006/06/24
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼štajima
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼šä¿®ç¹•å‘¼å‡ºå¯¾å¿œ
+'   Ver             ï¼š0.3
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F2007/05/25
-'   C@³@Ò@@@Ftajima
-'   C@³@“à@—e@F ƒfƒUƒCƒ“‚Ì‚İ•ÏX
-'                   F 1.ƒoƒCƒN‘Î‰i30:ƒoƒCƒN‘S”Ê‚Í‘I‘ğˆ‚ÉŠÜ‚Ü‚¸j
-'   Ver             F0.4
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š2007/05/25
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼štajima
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹ã€€ï¼š ãƒ‡ã‚¶ã‚¤ãƒ³ã®ã¿å¤‰æ›´
+'                   ï¼š 1.ãƒã‚¤ã‚¯å¯¾å¿œï¼ˆ30:ãƒã‚¤ã‚¯å…¨èˆ¬ã¯é¸æŠè‚¢ã«å«ã¾ãšï¼‰
+'   Ver             ï¼š0.4
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F2008/10/15
-'   C@³@Ò@@@Fiizuka
-'   C@³@“à@—e  F‰¿Ši•\‚ÆƒRƒ“ƒeƒiƒ}ƒXƒ^‚É
-'                     uŠ„ˆø‚«‘ÎÛŠOv‚ğ’Ç‰Á
-'   Ver             F0.5
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š2008/10/15
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šiizuka
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼šä¾¡æ ¼è¡¨ã¨ã‚³ãƒ³ãƒ†ãƒŠãƒã‚¹ã‚¿ã«
+'                     ã€Œå‰²å¼•ãå¯¾è±¡å¤–ã€ã‚’è¿½åŠ 
+'   Ver             ï¼š0.5
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F2008/11/14
-'   C@³@Ò@@@FK.KINEBUCHI
-'   C@³@“à@—e  F–¢İ’ès€–Ú‚É‘Î‚µuŠ„ˆø‚«‘ÎÛŠOv‚ğƒ`ƒFƒbƒN‚µ‚½‚Ì•s‹ï‡‚ğC³‚·‚é
-'   Ver            F0.6
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š2008/11/14
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šK.KINEBUCHI
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼šæœªè¨­å®šè¡Œé …ç›®ã«å¯¾ã—ã€Œå‰²å¼•ãå¯¾è±¡å¤–ã€ã‚’ãƒã‚§ãƒƒã‚¯ã—ãŸæ™‚ã®ä¸å…·åˆã‚’ä¿®æ­£ã™ã‚‹
+'   Ver            ï¼š0.6
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F2012/06/12
-'   C@³@Ò@@@FM.HONDA
-'   C@³@“à@—e  FºİÃÅ(ÊŞ²¸)‘I‘ğ‚É‰‰ñG”ï‚É”z‘——¿‚ğ¾¯Ä‚·‚é
-'   Ver            F0.7
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼š2012/06/12
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šM.HONDA
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼šï½ºï¾ï¾ƒï¾…(ï¾Šï¾ï½²ï½¸)é¸æŠæ™‚ã«åˆå›é›‘è²»ã«é…é€æ–™ã‚’ï½¾ï½¯ï¾„ã™ã‚‹
+'   Ver            ï¼š0.7
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F@2012/12/26
-'   C@³@Ò@@@F@M.HONDA
-'   Ver             F@0.8
-'   C@³@“à@—e  F  —p“r : ƒoƒCƒNˆÈŠO‚ª‘I‘ğ‘I‘ğ‚³‚ê‚½Û‚É
-'                       –ˆŒG”ï‚É•ÛŒ¯—¿‘Š“–Šz‚ğ©“®“I‚ÉƒZƒbƒgB
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼šã€€2012/12/26
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šã€€M.HONDA
+'   Ver             ï¼šã€€0.8
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼š  ç”¨é€” : ãƒã‚¤ã‚¯ä»¥å¤–ãŒé¸æŠé¸æŠã•ã‚ŒãŸéš›ã«
+'                       æ¯æœˆé›‘è²»ã«ä¿é™ºæ–™ç›¸å½“é¡ã‚’è‡ªå‹•çš„ã«ã‚»ãƒƒãƒˆã€‚
 '
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F@2013/03/17
-'   C@³@Ò@@@F@M.HONDA
-'   Ver             F@0.9
-'   C@³@“à@—e  F  •ÛØ‰Á“ü”ï‚Ì‰¿Ši‚ğ•ÏX
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼šã€€2013/03/17
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šã€€M.HONDA
+'   Ver             ï¼šã€€0.9
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼š  ä¿è¨¼åŠ å…¥è²»ã®ä¾¡æ ¼ã‚’å¤‰æ›´
 '
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F@2018/08/20
-'   C@³@Ò@@@F@K.WADA
-'   Ver             F@1.0
-'   C@³@“à@—e  F  ––±è”—¿“o˜^‹@”\AŠK”“ü—Í‹@”\‚Ì’Ç‰Á
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼šã€€2018/08/20
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šã€€K.WADA
+'   Ver             ï¼šã€€1.0
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼š  äº‹å‹™æ‰‹æ•°æ–™ç™»éŒ²æ©Ÿèƒ½ã€éšæ•°å…¥åŠ›æ©Ÿèƒ½ã®è¿½åŠ 
 '
 '**********************************************
-'C³—š—ğ
-'   C@³@“ú@@@F@2019/07/08
-'   C@³@Ò@@@F@M.HONDA
-'   Ver             F@1.1
-'   C@³@“à@—e  F  ’À—¿‚ª•ÏX‚³‚ê‚½‚ç––±è”—¿‚à•ÏX‚·‚é‚æ‚¤‚ÉC³
+'ä¿®æ­£å±¥æ­´
+'   ä¿®ã€€æ­£ã€€æ—¥ã€€ã€€ã€€ï¼šã€€2019/07/08
+'   ä¿®ã€€æ­£ã€€è€…ã€€ã€€ã€€ï¼šã€€M.HONDA
+'   Ver             ï¼šã€€1.1
+'   ä¿®ã€€æ­£ã€€å†…ã€€å®¹  ï¼š  è³ƒæ–™ãŒå¤‰æ›´ã•ã‚ŒãŸã‚‰äº‹å‹™æ‰‹æ•°æ–™ã‚‚å¤‰æ›´ã™ã‚‹ã‚ˆã†ã«ä¿®æ­£
 '**********************************************
 
 Option Compare Database
 Option Explicit
 
-Private Const strMsg_kaku           As String = "Šm”F"
-Private Const strMsg_err            As String = "ƒGƒ‰["
-Private Const strmsgd•¡            As String = "Šù‚É“¯‚¶—p“r/“¯‚¶À’Ÿ‚ªİ’è‚³‚ê‚Ä‚¢‚Ü‚·B"
-Private Const strMSG“ü—Í•s³        As String = "•K{“ü—Í‚Å‚·B"
-Private Const strMSGŒ…”ƒI[ƒo[    As String = "Œ…”ƒI[ƒo[‚µ‚Ä‚¢‚Ü‚·B"  ' 2005/12/15 ADD T.SUZUKI
+Private Const strMsg_kaku           As String = "ç¢ºèª"
+Private Const strMsg_err            As String = "ã‚¨ãƒ©ãƒ¼"
+Private Const strmsgé‡è¤‡            As String = "æ—¢ã«åŒã˜ç”¨é€”/åŒã˜å®Ÿå¸–ãŒè¨­å®šã•ã‚Œã¦ã„ã¾ã™ã€‚"
+Private Const strMSGå…¥åŠ›ä¸æ­£        As String = "å¿…é ˆå…¥åŠ›ã§ã™ã€‚"
+Private Const strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼    As String = "æ¡æ•°ã‚ªãƒ¼ãƒãƒ¼ã—ã¦ã„ã¾ã™ã€‚"  ' 2005/12/15 ADD T.SUZUKI
 
-Private Const pcstrfmtSTANDARD      As String = "Standard"  ' ‘®F•W€
-Private Const pcstrfmtFIXED         As String = "Fixed"     ' ‘®FŒÅ’è
+Private Const pcstrfmtSTANDARD      As String = "Standard"  ' æ›¸å¼ï¼šæ¨™æº–
+Private Const pcstrfmtFIXED         As String = "Fixed"     ' æ›¸å¼ï¼šå›ºå®š
 
-Private Const G”ï‹æ•ª_–³‚µ = 0
+Private Const é›‘è²»åŒºåˆ†_ç„¡ã— = 0
 
-'True‚Ìê‡‚ÍXV‚Ì•K{€–Úƒ`ƒFƒbƒN“™‚Ís‚í‚È‚¢
+'Trueã®å ´åˆã¯æ›´æ–°æ™‚ã®å¿…é ˆé …ç›®ãƒã‚§ãƒƒã‚¯ç­‰ã¯è¡Œã‚ãªã„
 Dim blnCheckSkip                    As Boolean
 
-Private Const pstrName_Up           As String = "FKS440_ƒ„[ƒhƒ}ƒXƒ^ƒTƒu‰¿Ši•\ã"
-Private Const pstrName_Down         As String = "FKS440_ƒ„[ƒhƒ}ƒXƒ^ƒTƒu‰¿Ši•\‰º"
+Private Const pstrName_Up           As String = "FKS440_ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ã‚µãƒ–ä¾¡æ ¼è¡¨ä¸Š"
+Private Const pstrName_Down         As String = "FKS440_ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ã‚µãƒ–ä¾¡æ ¼è¡¨ä¸‹"
 
-Private Const pcsglSizeMaxValue     As Single = 999.99   ' À’Ÿ‚Ì“ü—ÍÅ‘å’l      ' 2005/12/15 ADD T.SUZUKI
-Private Const pcsglMoneyMaxValue    As Long = 999999999  ' ‹àŠz€–Ú‚Ì“ü—ÍÅ‘å’l  ' 2005/12/17 ADD T.SUZUKI
-Private Const pcintMINUS            As Integer = 45      ' ƒ}ƒCƒiƒX•„†          ' 2005/12/15 ADD T.SUZUKI
+Private Const pcsglSizeMaxValue     As Single = 999.99   ' å®Ÿå¸–ã®å…¥åŠ›æœ€å¤§å€¤      ' 2005/12/15 ADD T.SUZUKI
+Private Const pcsglMoneyMaxValue    As Long = 999999999  ' é‡‘é¡é …ç›®ã®å…¥åŠ›æœ€å¤§å€¤  ' 2005/12/17 ADD T.SUZUKI
+Private Const pcintMINUS            As Integer = 45      ' ãƒã‚¤ãƒŠã‚¹ç¬¦å·          ' 2005/12/15 ADD T.SUZUKI
 
-Private Const pcstrZAPPI_ErrMsg_F   As String = "‰‰ñG”ï‚P‚Åu–³‚µv‚ğ‘I‚ñ‚¾ê‡u0vˆÈã‚Ì‹àŠz‚Í“ü—Í‚Å‚«‚Ü‚¹‚ñB"
-Private Const pcstrZAPPI2_ErrMsg_F   As String = "‰‰ñG”ï‚Q‚Åu–³‚µv‚ğ‘I‚ñ‚¾ê‡u0vˆÈã‚Ì‹àŠz‚Í“ü—Í‚Å‚«‚Ü‚¹‚ñB"    ' 2018/08/20 ADD K.WADA
-Private Const pcstrZAPPI_ErrMsg_M   As String = "–ˆŒG”ï‚P‚Åu–³‚µv‚ğ‘I‚ñ‚¾ê‡u0vˆÈã‚Ì‹àŠz‚Í“ü—Í‚Å‚«‚Ü‚¹‚ñB"
+Private Const pcstrZAPPI_ErrMsg_F   As String = "åˆå›é›‘è²»ï¼‘ã§ã€Œç„¡ã—ã€ã‚’é¸ã‚“ã å ´åˆã€Œ0ã€ä»¥ä¸Šã®é‡‘é¡ã¯å…¥åŠ›ã§ãã¾ã›ã‚“ã€‚"
+Private Const pcstrZAPPI2_ErrMsg_F   As String = "åˆå›é›‘è²»ï¼’ã§ã€Œç„¡ã—ã€ã‚’é¸ã‚“ã å ´åˆã€Œ0ã€ä»¥ä¸Šã®é‡‘é¡ã¯å…¥åŠ›ã§ãã¾ã›ã‚“ã€‚"    ' 2018/08/20 ADD K.WADA
+Private Const pcstrZAPPI_ErrMsg_M   As String = "æ¯æœˆé›‘è²»ï¼‘ã§ã€Œç„¡ã—ã€ã‚’é¸ã‚“ã å ´åˆã€Œ0ã€ä»¥ä¸Šã®é‡‘é¡ã¯å…¥åŠ›ã§ãã¾ã›ã‚“ã€‚"
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_‰‰ñG”ï‹æ•ª_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_‰‰ñG”ï‹æ•ª_AfterUpdate
+'        MODULE_NAME      :cmb_åˆå›é›‘è²»åŒºåˆ†_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_åˆå›é›‘è²»åŒºåˆ†_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_‰‰ñG”ï‹æ•ª_AfterUpdate()
+Private Sub cmb_åˆå›é›‘è²»åŒºåˆ†_AfterUpdate()
 
     Me.Parent.blnDataUpdate = True
 
 ' 2006/03/18 ADD T.SUZUKI Start
-    If Me.cmb_‰‰ñG”ï‹æ•ª = 0 And Nz(Me.txt_‰‰ñG”ï, 0) > 0 Then
+    If Me.cmb_åˆå›é›‘è²»åŒºåˆ† = 0 And Nz(Me.txt_åˆå›é›‘è²», 0) > 0 Then
         MsgBox pcstrZAPPI_ErrMsg_F, vbInformation, strMsg_err
-        Me.txt_‰‰ñG”ï.SetFocus
+        Me.txt_åˆå›é›‘è²».SetFocus
     End If
 ' 2006/03/18 ADD T.SUZUKI End
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_‰‰ñG”ï‹æ•ª_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_‰‰ñG”ï‹æ•ª_KeyPress
+'        MODULE_NAME      :cmb_åˆå›é›‘è²»åŒºåˆ†_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_åˆå›é›‘è²»åŒºåˆ†_KeyPress
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_‰‰ñG”ï‹æ•ª_KeyPress(KeyAscii As Integer)
-    ' “ü—Í‚ğ‹–‰Â‚µ‚È‚¢
+Private Sub cmb_åˆå›é›‘è²»åŒºåˆ†_KeyPress(KeyAscii As Integer)
+    ' å…¥åŠ›ã‚’è¨±å¯ã—ãªã„
     KeyAscii = 0: Exit Sub
 End Sub
 
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_‰‰ñG”ï‹æ•ª2_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_‰‰ñG”ï‹æ•ª2_AfterUpdate
+'        MODULE_NAME      :cmb_åˆå›é›‘è²»åŒºåˆ†2_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_åˆå›é›‘è²»åŒºåˆ†2_AfterUpdate
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_‰‰ñG”ï‹æ•ª2_AfterUpdate()
+Private Sub cmb_åˆå›é›‘è²»åŒºåˆ†2_AfterUpdate()
     Me.Parent.blnDataUpdate = True
-    If Me.cmb_‰‰ñG”ï‹æ•ª2 = 0 And Nz(Me.txt_‰‰ñG”ï2, 0) > 0 Then
+    If Me.cmb_åˆå›é›‘è²»åŒºåˆ†2 = 0 And Nz(Me.txt_åˆå›é›‘è²»2, 0) > 0 Then
         MsgBox pcstrZAPPI2_ErrMsg_F, vbInformation, strMsg_err
-        Me.txt_‰‰ñG”ï2.SetFocus
+        Me.txt_åˆå›é›‘è²»2.SetFocus
     End If
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_‰‰ñG”ï‹æ•ª2_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_‰‰ñG”ï‹æ•ª2_KeyPress
+'        MODULE_NAME      :cmb_åˆå›é›‘è²»åŒºåˆ†2_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_åˆå›é›‘è²»åŒºåˆ†2_KeyPress
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_‰‰ñG”ï‹æ•ª2_KeyPress(KeyAscii As Integer)
-    ' “ü—Í‚ğ‹–‰Â‚µ‚È‚¢
+Private Sub cmb_åˆå›é›‘è²»åŒºåˆ†2_KeyPress(KeyAscii As Integer)
+    ' å…¥åŠ›ã‚’è¨±å¯ã—ãªã„
     KeyAscii = 0: Exit Sub
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_–ˆŒG”ï‹æ•ª_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_–ˆŒG”ï‹æ•ª_AfterUpdate
+'        MODULE_NAME      :cmb_æ¯æœˆé›‘è²»åŒºåˆ†_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_æ¯æœˆé›‘è²»åŒºåˆ†_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_–ˆŒG”ï‹æ•ª_AfterUpdate()
+Private Sub cmb_æ¯æœˆé›‘è²»åŒºåˆ†_AfterUpdate()
 
     Me.Parent.blnDataUpdate = True
 
 ' 2006/03/18 ADD T.SUZUKI Start
-    If Me.cmb_–ˆŒG”ï‹æ•ª = 0 And Nz(Me.txt_–ˆŒG”ï, 0) > 0 Then
+    If Me.cmb_æ¯æœˆé›‘è²»åŒºåˆ† = 0 And Nz(Me.txt_æ¯æœˆé›‘è²», 0) > 0 Then
         MsgBox pcstrZAPPI_ErrMsg_M, vbInformation, strMsg_err
-        Me.txt_–ˆŒG”ï.SetFocus
+        Me.txt_æ¯æœˆé›‘è²».SetFocus
     End If
 ' 2006/03/18 ADD T.SUZUKI End
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_–ˆŒG”ï‹æ•ª_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_–ˆŒG”ï‹æ•ª_KeyPress
+'        MODULE_NAME      :cmb_æ¯æœˆé›‘è²»åŒºåˆ†_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_æ¯æœˆé›‘è²»åŒºåˆ†_KeyPress
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_–ˆŒG”ï‹æ•ª_KeyPress(KeyAscii As Integer)
-    ' “ü—Í‚ğ‹–‰Â‚µ‚È‚¢
+Private Sub cmb_æ¯æœˆé›‘è²»åŒºåˆ†_KeyPress(KeyAscii As Integer)
+    ' å…¥åŠ›ã‚’è¨±å¯ã—ãªã„
     KeyAscii = 0: Exit Sub
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :Form_BeforeUpdate ƒCƒxƒ“ƒg
+'        MODULE_NAME      :Form_BeforeUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
 '        MODULE_ID        :Form_BeforeUpdate
 '        CREATE_DATE      :
 '
@@ -225,46 +225,46 @@ On Error GoTo err_rtn
         Exit Sub
     End If
     
-    '•K{ƒ`ƒFƒbƒN
+    'å¿…é ˆãƒã‚§ãƒƒã‚¯
     If Not RequireCheck() Then
         Cancel = True
         Exit Sub
     End If
     
-    '“¯ˆê—p“r^ƒTƒCƒY‚ª‘¶İ‚µ‚Ä‚éH
+    'åŒä¸€ç”¨é€”ï¼ã‚µã‚¤ã‚ºãŒå­˜åœ¨ã—ã¦ã‚‹ï¼Ÿ
     If CHK_PRIC_EXIST() Then
-        MsgBox strmsgd•¡, , strMsg_err
+        MsgBox strmsgé‡è¤‡, , strMsg_err
         Cancel = True
         Exit Sub
     End If
     
-    'G”ïŠÖŒW‰Šú’l
-    If Nz(cmb_‰‰ñG”ï‹æ•ª, "") = "" Then
-        cmb_‰‰ñG”ï‹æ•ª = G”ï‹æ•ª_–³‚µ
+    'é›‘è²»é–¢ä¿‚åˆæœŸå€¤
+    If Nz(cmb_åˆå›é›‘è²»åŒºåˆ†, "") = "" Then
+        cmb_åˆå›é›‘è²»åŒºåˆ† = é›‘è²»åŒºåˆ†_ç„¡ã—
     End If
 
     ' INSERT START 2018/08/20 K.WADA
-    If Nz(cmb_‰‰ñG”ï‹æ•ª2, "") = "" Then
-        cmb_‰‰ñG”ï‹æ•ª2 = G”ï‹æ•ª_–³‚µ
+    If Nz(cmb_åˆå›é›‘è²»åŒºåˆ†2, "") = "" Then
+        cmb_åˆå›é›‘è²»åŒºåˆ†2 = é›‘è²»åŒºåˆ†_ç„¡ã—
     End If
     ' INSERT END 2018/08/20 K.WADA
 
-    If Nz(cmb_–ˆŒG”ï‹æ•ª, "") = "" Then
-        cmb_–ˆŒG”ï‹æ•ª = G”ï‹æ•ª_–³‚µ
+    If Nz(cmb_æ¯æœˆé›‘è²»åŒºåˆ†, "") = "" Then
+        cmb_æ¯æœˆé›‘è²»åŒºåˆ† = é›‘è²»åŒºåˆ†_ç„¡ã—
     End If
 
-    If Nz(txt_‰‰ñG”ï, "") = "" Then
-        txt_‰‰ñG”ï = 0
+    If Nz(txt_åˆå›é›‘è²», "") = "" Then
+        txt_åˆå›é›‘è²» = 0
     End If
 
     ' INSERT START 2018/08/20 K.WADA
-    If Nz(txt_‰‰ñG”ï2, "") = "" Then
-        txt_‰‰ñG”ï2 = 0
+    If Nz(txt_åˆå›é›‘è²»2, "") = "" Then
+        txt_åˆå›é›‘è²»2 = 0
     End If
     ' INSERT END 2018/08/20 K.WADA
 
-    If Nz(txt_–ˆŒG”ï, "") = "" Then
-        txt_–ˆŒG”ï = 0
+    If Nz(txt_æ¯æœˆé›‘è²», "") = "" Then
+        txt_æ¯æœˆé›‘è²» = 0
     End If
     
     Exit Sub
@@ -276,7 +276,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :Form_LoadƒCƒxƒ“ƒg
+'        MODULE_NAME      :Form_Loadã‚¤ãƒ™ãƒ³ãƒˆ
 '        MODULE_ID        :Form_Load
 '        CREATE_DATE      :
 '
@@ -288,7 +288,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :Form_KeyDownƒCƒxƒ“ƒg
+'        MODULE_NAME      :Form_KeyDownã‚¤ãƒ™ãƒ³ãƒˆ
 '        MODULE_ID        :Form_KeyDown
 '        CREATE_DATE      :
 '
@@ -300,19 +300,19 @@ Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
 
     On Error Resume Next  ' 2005/12/15 ADD T.SUZUKI
 
-    Call CmReprMod.OpenFVS90n(KeyCode, Me.Parent.cmb_ƒ„[ƒhƒR[ƒh)  ' 2006/06/24 Add tajima
+    Call CmReprMod.OpenFVS90n(KeyCode, Me.Parent.cmb_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)  ' 2006/06/24 Add tajima
    
     Select Case KeyCode
         Case vbKeyF1
             KeyCode = 0
-            Me.Parent.cmd_I—¹.SetFocus
+            Me.Parent.cmd_çµ‚äº†.SetFocus
 
         Case vbKeyF2
             KeyCode = 0
-            If Me.Parent.opg_ˆ—‘I‘ğ.VALUE = 3 Then
-                Me.Parent.cmd_íœ.SetFocus
+            If Me.Parent.opg_å‡¦ç†é¸æŠ.VALUE = 3 Then
+                Me.Parent.cmd_å‰Šé™¤.SetFocus
             Else
-                Me.Parent.cmd_•Û‘¶.SetFocus
+                Me.Parent.cmd_ä¿å­˜.SetFocus
             End If
 
 ' 2005/11/21 ADD T.SUZUKI Start
@@ -320,10 +320,10 @@ Private Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
             strName = Me.Parent.ActiveControl.NAME
             Select Case strName
                 Case pstrName_Up
-                    Me.Parent.FKS440_ƒ„[ƒhƒ}ƒXƒ^ƒTƒu‰¿Ši•\‰º.SetFocus
+                    Me.Parent.FKS440_ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ã‚µãƒ–ä¾¡æ ¼è¡¨ä¸‹.SetFocus
 
                 Case pstrName_Down
-                    Me.Parent.FKS440_ƒ„[ƒhƒ}ƒXƒ^ƒTƒuã.SetFocus
+                    Me.Parent.FKS440_ãƒ¤ãƒ¼ãƒ‰ãƒã‚¹ã‚¿ã‚µãƒ–ä¸Š.SetFocus
             End Select
 ' 2005/11/21 ADD T.SUZUKI End
 
@@ -337,7 +337,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :Form_ErrorƒCƒxƒ“ƒg
+'        MODULE_NAME      :Form_Errorã‚¤ãƒ™ãƒ³ãƒˆ
 '        MODULE_ID        :Form_Error
 '        CREATE_DATE      :2005/12/17
 '
@@ -348,34 +348,34 @@ Private Sub Form_Error(DataErr As Integer, Response As Integer)
     Dim strCtrlName As String
 
     Select Case DataErr
-        Case 2113  '’èŒ^“ü—ÍƒGƒ‰[iƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒGƒ‰[j
-            strCtrlName = Me.ActiveControl.NAME  ' ƒAƒNƒeƒBƒu‚ÈƒRƒ“ƒgƒ[ƒ‹–¼‚ğæ“¾
+        Case 2113  'å®šå‹å…¥åŠ›ã‚¨ãƒ©ãƒ¼ï¼ˆã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚¨ãƒ©ãƒ¼ï¼‰
+            strCtrlName = Me.ActiveControl.NAME  ' ã‚¢ã‚¯ãƒ†ã‚£ãƒ–ãªã‚³ãƒ³ãƒˆãƒ­ãƒ¼ãƒ«åã‚’å–å¾—
             Select Case strCtrlName
-                Case Me.txt_‰¿Ši.NAME
-                    ' *** ’À—¿ ***
-                    If Me.Parent.fncTxtInputCheck(Me.txt_‰¿Ši, pcsglMoneyMaxValue, 9, 1) = False Then
-                        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+                Case Me.txt_ä¾¡æ ¼.NAME
+                    ' *** è³ƒæ–™ ***
+                    If Me.Parent.fncTxtInputCheck(Me.txt_ä¾¡æ ¼, pcsglMoneyMaxValue, 9, 1) = False Then
+                        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
                         SendKeys "{ESC}"
                     End If
 
-                Case Me.txt_‰‰ñG”ï.NAME
-                    ' *** ‰‰ñG”ï ***
-                    If Me.Parent.fncTxtInputCheck(Me.txt_‰‰ñG”ï, pcsglMoneyMaxValue, 9, 1) = False Then
-                        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+                Case Me.txt_åˆå›é›‘è²».NAME
+                    ' *** åˆå›é›‘è²» ***
+                    If Me.Parent.fncTxtInputCheck(Me.txt_åˆå›é›‘è²», pcsglMoneyMaxValue, 9, 1) = False Then
+                        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
                         SendKeys "{ESC}"
                     End If
                 
-                Case Me.txt_‰‰ñG”ï2.NAME
-                    ' *** ‰‰ñG”ï2 ***
-                    If Me.Parent.fncTxtInputCheck(Me.txt_‰‰ñG”ï2, pcsglMoneyMaxValue, 9, 1) = False Then
-                        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+                Case Me.txt_åˆå›é›‘è²»2.NAME
+                    ' *** åˆå›é›‘è²»2 ***
+                    If Me.Parent.fncTxtInputCheck(Me.txt_åˆå›é›‘è²»2, pcsglMoneyMaxValue, 9, 1) = False Then
+                        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
                         SendKeys "{ESC}"
                     End If
 
-                Case Me.txt_–ˆŒG”ï.NAME
-                    ' *** –ˆŒG”ï ***
-                    If Me.Parent.fncTxtInputCheck(Me.txt_–ˆŒG”ï, pcsglMoneyMaxValue, 9, 1) = False Then
-                        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+                Case Me.txt_æ¯æœˆé›‘è²».NAME
+                    ' *** æ¯æœˆé›‘è²» ***
+                    If Me.Parent.fncTxtInputCheck(Me.txt_æ¯æœˆé›‘è²», pcsglMoneyMaxValue, 9, 1) = False Then
+                        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
                         SendKeys "{ESC}"
                     End If
             End Select
@@ -386,48 +386,48 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_—p“r_AfterUpdateƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_—p“r_AfterUpdate
+'        MODULE_NAME      :cmb_ç”¨é€”_AfterUpdateã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_ç”¨é€”_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_—p“r_AfterUpdate()
+Private Sub cmb_ç”¨é€”_AfterUpdate()
     
     '' INS 2012/06/13 M.HONDA START
-    '' ºİÃÅ(ÊŞ²¸)‚Ìê‡‚É‚Í‰‰ñG”ï‚É”z‘——¿‚ğ¾¯Ä‚·‚é
-    If cmb_—p“r.VALUE = "33" Then
-        cmb_‰‰ñG”ï‹æ•ª = 95
+    '' ï½ºï¾ï¾ƒï¾…(ï¾Šï¾ï½²ï½¸)ã®å ´åˆã«ã¯åˆå›é›‘è²»ã«é…é€æ–™ã‚’ï½¾ï½¯ï¾„ã™ã‚‹
+    If cmb_ç”¨é€”.VALUE = "33" Then
+        cmb_åˆå›é›‘è²»åŒºåˆ† = 95
     Else
-        cmb_‰‰ñG”ï‹æ•ª = 0
+        cmb_åˆå›é›‘è²»åŒºåˆ† = 0
     End If
     '' INS 2012/06/13 M.HONDA END
     
     ' INSERT START 2018/08/20 K.WADA
-    cmb_‰‰ñG”ï‹æ•ª2 = 63
-    txt_‰‰ñG”ï2 = ""
+    cmb_åˆå›é›‘è²»åŒºåˆ†2 = 63
+    txt_åˆå›é›‘è²»2 = ""
     ' INSERT END 2018/08/20 K.WADA
     
     ' DELETE START 2018/08/20 K.WADA
     '' INS 2012/12/26 M.HONDA START
-    '' ÊŞ²¸EÊŞ°Á¬ÙµÌ¨½ˆÈŠO‚Ìê‡‚É‚Í–ˆŒG”ï‚É•ÛŒ¯—¿‘Š“–Šz‚ğƒZƒbƒg
-'    If cmb_—p“r.VALUE = "0" Or cmb_—p“r.VALUE = "1" Or cmb_—p“r.VALUE = "2" Or cmb_—p“r.VALUE = "4" Or cmb_—p“r.VALUE = "5" Or cmb_—p“r.VALUE = "6" _
-'       Or cmb_—p“r.VALUE = "39" Or cmb_—p“r.VALUE = "98" Or cmb_—p“r.VALUE = "99" Then
-'        cmb_–ˆŒG”ï‹æ•ª = 68
+    '' ï¾Šï¾ï½²ï½¸ãƒ»ï¾Šï¾ï½°ï¾ï½¬ï¾™ï½µï¾Œï½¨ï½½ä»¥å¤–ã®å ´åˆã«ã¯æ¯æœˆé›‘è²»ã«ä¿é™ºæ–™ç›¸å½“é¡ã‚’ã‚»ãƒƒãƒˆ
+'    If cmb_ç”¨é€”.VALUE = "0" Or cmb_ç”¨é€”.VALUE = "1" Or cmb_ç”¨é€”.VALUE = "2" Or cmb_ç”¨é€”.VALUE = "4" Or cmb_ç”¨é€”.VALUE = "5" Or cmb_ç”¨é€”.VALUE = "6" _
+'       Or cmb_ç”¨é€”.VALUE = "39" Or cmb_ç”¨é€”.VALUE = "98" Or cmb_ç”¨é€”.VALUE = "99" Then
+'        cmb_æ¯æœˆé›‘è²»åŒºåˆ† = 68
 '        '2014/03/17 M.HONDA UPD
-'        'txt_–ˆŒG”ï = 450
-'        txt_–ˆŒG”ï = 480
+'        'txt_æ¯æœˆé›‘è²» = 450
+'        txt_æ¯æœˆé›‘è²» = 480
 '        '2014/03/17 M.HONDA UPD
 '    Else
-'        cmb_–ˆŒG”ï‹æ•ª = 0
-'        txt_–ˆŒG”ï = 0
+'        cmb_æ¯æœˆé›‘è²»åŒºåˆ† = 0
+'        txt_æ¯æœˆé›‘è²» = 0
 '    End If
     '' INS 2012/12/26 M.HONDA END
     ' DELETE END 2018/08/20 K.WADA
     
     ' INSERT START 2018/08/20 K.WADA
-    cmb_–ˆŒG”ï‹æ•ª = 68
-    txt_–ˆŒG”ï = fncGetInitZappi(68)
+    cmb_æ¯æœˆé›‘è²»åŒºåˆ† = 68
+    txt_æ¯æœˆé›‘è²» = fncGetInitZappi(68)
     ' INSERT END 2018/08/20 K.WADA
     
     Me.Parent.blnDataUpdate = True
@@ -437,7 +437,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :G”ïƒR[ƒh‚æ‚èG”ï‰Šú’l‚ğæ“¾‚·‚é
+'        MODULE_NAME      :é›‘è²»ã‚³ãƒ¼ãƒ‰ã‚ˆã‚Šé›‘è²»åˆæœŸå€¤ã‚’å–å¾—ã™ã‚‹
 '        MODULE_ID        :fncGetZappi
 '        CREATE_DATE      :2018/08/20
 '
@@ -461,52 +461,52 @@ Private Function fncGetInitZappi(intZappiCode As Integer) As String
 End Function
 '==============================================================================*
 '
-'        MODULE_NAME      :cmb_—p“r_KeyPressƒCƒxƒ“ƒg
-'        MODULE_ID        :cmb_—p“r_KeyPress
+'        MODULE_NAME      :cmb_ç”¨é€”_KeyPressã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmb_ç”¨é€”_KeyPress
 '        CREATE_DATE      :
 '
 
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmb_—p“r_KeyPress(KeyAscii As Integer)
-    ' “ü—Í‚ğ‹–‰Â‚µ‚È‚¢
+Private Sub cmb_ç”¨é€”_KeyPress(KeyAscii As Integer)
+    ' å…¥åŠ›ã‚’è¨±å¯ã—ãªã„
     KeyAscii = 0: Exit Sub
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmd_íœ_ClickƒCƒxƒ“ƒg
-'        MODULE_ID        :cmd_íœ_Click
+'        MODULE_NAME      :cmd_å‰Šé™¤_Clickã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :cmd_å‰Šé™¤_Click
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_íœ_Click()
+Private Sub cmd_å‰Šé™¤_Click()
 On Error GoTo err_rtn
     
     Dim objDb                           As Database
 
-    If Nz(txt_˜A”Ô, "") = "" Then
+    If Nz(txt_é€£ç•ª, "") = "" Then
         Exit Sub
     End If
 
-    If MsgBox("íœ‚µ‚Ü‚·A‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbCritical + vbYesNo + vbDefaultButton2, strMsg_kaku) = vbNo Then
-'    If MsgBox("íœ‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbYesNo, strMsg_kaku) = vbNo Then
+    If MsgBox("å‰Šé™¤ã—ã¾ã™ã€ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbCritical + vbYesNo + vbDefaultButton2, strMsg_kaku) = vbNo Then
+'    If MsgBox("å‰Šé™¤ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbYesNo, strMsg_kaku) = vbNo Then
         Exit Sub
     End If
     
     blnCheckSkip = True
     
-    '“ü—Í’†‚ÌƒŒƒR[ƒh‚ğ‚¢‚Á‚½‚ñ•Û‘¶‚·‚é
+    'å…¥åŠ›ä¸­ã®ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’ã„ã£ãŸã‚“ä¿å­˜ã™ã‚‹
     On Error Resume Next
     doCmd.RunCommand acCmdSaveRecord
     On Error GoTo err_rtn
     
     blnCheckSkip = False
     
-    'ƒ[ƒNƒe[ƒuƒ‹‚©‚çíœ
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã‹ã‚‰å‰Šé™¤
     Set objDb = CurrentDb
-    objDb.Execute "DELETE FROM FKS440_W02 WHERE PRIC_SEQ = " & txt_˜A”Ô, dbFailOnError
+    objDb.Execute "DELETE FROM FKS440_W02 WHERE PRIC_SEQ = " & txt_é€£ç•ª, dbFailOnError
 
     Me.Requery
 
@@ -521,7 +521,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :‰¿Ši•\‘¶İƒ`ƒFƒbƒN
+'        MODULE_NAME      :ä¾¡æ ¼è¡¨å­˜åœ¨ãƒã‚§ãƒƒã‚¯
 '        MODULE_ID        :CHK_PRIC_EXIST
 '        CREATE_DATE      :
 '
@@ -534,15 +534,15 @@ Private Function CHK_PRIC_EXIST() As Boolean
 
     CHK_PRIC_EXIST = False
     
-    '‘¶İƒ`ƒFƒbƒN
+    'å­˜åœ¨ãƒã‚§ãƒƒã‚¯
     strWhere = ""
-    strWhere = strWhere & " PRIC_YCODE= " & Val(txt_ƒ„[ƒhƒR[ƒh)
-    strWhere = strWhere & " AND PRIC_USAGE = " & Val(cmb_—p“r)
-    strWhere = strWhere & " AND PRIC_SIZE = " & Val(txt_À’Ÿ)
-    strWhere = strWhere & " AND PRIC_STEP = " & Val(txt_’i‹æ•ª)
-    strWhere = strWhere & " AND PRIC_SEQ <> " & Val(txt_˜A”Ô)
+    strWhere = strWhere & " PRIC_YCODE= " & Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰)
+    strWhere = strWhere & " AND PRIC_USAGE = " & Val(cmb_ç”¨é€”)
+    strWhere = strWhere & " AND PRIC_SIZE = " & Val(txt_å®Ÿå¸–)
+    strWhere = strWhere & " AND PRIC_STEP = " & Val(txt_æ®µåŒºåˆ†)
+    strWhere = strWhere & " AND PRIC_SEQ <> " & Val(txt_é€£ç•ª)
 
-    '‘¶İ‚·‚éê‡‚ÍTrue‚ğ•Ô‹p‚·‚é
+    'å­˜åœ¨ã™ã‚‹å ´åˆã¯Trueã‚’è¿”å´ã™ã‚‹
     valYcode = DLookup("PRIC_YCODE", "FKS440_W02", strWhere)
     If Nz(valYcode, "") <> "" Then
         CHK_PRIC_EXIST = True
@@ -551,37 +551,37 @@ End Function
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰¿Ši_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰¿Ši_AfterUpdate
+'        MODULE_NAME      :txt_ä¾¡æ ¼_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_ä¾¡æ ¼_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰¿Ši_AfterUpdate()
+Private Sub txt_ä¾¡æ ¼_AfterUpdate()
     Me.Parent.blnDataUpdate = True
     
     ' 2019/0708 M.HONDA UPD
     ' INSERT START 2018/08/20 K.WADA
-    'If cmb_‰‰ñG”ï‹æ•ª2 = 63 Then  ' DELETE 2018/08/28 K.WADA
-    'If cmb_‰‰ñG”ï‹æ•ª2 = 63 And Nz(txt_‰‰ñG”ï2, "") = "" Then  ' INSERT 2018/08/28 K.WADA
-    If cmb_‰‰ñG”ï‹æ•ª2 = 63 Then
-        txt_‰‰ñG”ï2 = fncGetInitZappi(63)
+    'If cmb_åˆå›é›‘è²»åŒºåˆ†2 = 63 Then  ' DELETE 2018/08/28 K.WADA
+    'If cmb_åˆå›é›‘è²»åŒºåˆ†2 = 63 And Nz(txt_åˆå›é›‘è²»2, "") = "" Then  ' INSERT 2018/08/28 K.WADA
+    If cmb_åˆå›é›‘è²»åŒºåˆ†2 = 63 Then
+        txt_åˆå›é›‘è²»2 = fncGetInitZappi(63)
     End If
     ' INSERT END 2018/08/20 K.WADA
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰¿Ši_BeforeUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰¿Ši_BeforeUpdate
+'        MODULE_NAME      :txt_ä¾¡æ ¼_BeforeUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_ä¾¡æ ¼_BeforeUpdate
 '        CREATE_DATE      :2005/12/17
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰¿Ši_BeforeUpdate(Cancel As Integer)
+Private Sub txt_ä¾¡æ ¼_BeforeUpdate(Cancel As Integer)
 
-    If Me.Parent.fncTxtInputCheck(Me.txt_‰¿Ši, pcsglMoneyMaxValue, 9) = False Then
-        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+    If Me.Parent.fncTxtInputCheck(Me.txt_ä¾¡æ ¼, pcsglMoneyMaxValue, 9) = False Then
+        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
@@ -589,65 +589,65 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰¿Ši_GotFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰¿Ši_GotFocus
+'        MODULE_NAME      :txt_ä¾¡æ ¼_GotFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_ä¾¡æ ¼_GotFocus
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰¿Ši_GotFocus()
-    Me.txt_‰¿Ši.Format = pcstrfmtFIXED  ' ‘®FŒÅ’è(ƒJƒ“ƒ}•ÒW‚È‚µ)
+Private Sub txt_ä¾¡æ ¼_GotFocus()
+    Me.txt_ä¾¡æ ¼.Format = pcstrfmtFIXED  ' æ›¸å¼ï¼šå›ºå®š(ã‚«ãƒ³ãƒç·¨é›†ãªã—)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰¿Ši_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰¿Ši_KeyPress
+'        MODULE_NAME      :txt_ä¾¡æ ¼_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_ä¾¡æ ¼_KeyPress
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰¿Ši_KeyPress(KeyAscii As Integer)
-    ' Œ…”ƒ`ƒFƒbƒN
-    Call CmKeyPress_For_Num1(Me.txt_‰¿Ši, KeyAscii, 9)
+Private Sub txt_ä¾¡æ ¼_KeyPress(KeyAscii As Integer)
+    ' æ¡æ•°ãƒã‚§ãƒƒã‚¯
+    Call CmKeyPress_For_Num1(Me.txt_ä¾¡æ ¼, KeyAscii, 9)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰¿Ši_LostFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰¿Ši_LostFocus
+'        MODULE_NAME      :txt_ä¾¡æ ¼_LostFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_ä¾¡æ ¼_LostFocus
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰¿Ši_LostFocus()
-    Me.txt_‰¿Ši.Format = pcstrfmtSTANDARD  ' ‘®F•W€(ƒJƒ“ƒ}•ÒW‚ ‚è)
+Private Sub txt_ä¾¡æ ¼_LostFocus()
+    Me.txt_ä¾¡æ ¼.Format = pcstrfmtSTANDARD  ' æ›¸å¼ï¼šæ¨™æº–(ã‚«ãƒ³ãƒç·¨é›†ã‚ã‚Š)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_À’Ÿ_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_À’Ÿ_AfterUpdate
+'        MODULE_NAME      :txt_å®Ÿå¸–_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_å®Ÿå¸–_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_À’Ÿ_AfterUpdate()
+Private Sub txt_å®Ÿå¸–_AfterUpdate()
     Me.Parent.blnDataUpdate = True
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_À’Ÿ_BeforeUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_À’Ÿ_BeforeUpdate
+'        MODULE_NAME      :txt_å®Ÿå¸–_BeforeUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_å®Ÿå¸–_BeforeUpdate
 '        CREATE_DATE      :2005/12/15
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_À’Ÿ_BeforeUpdate(Cancel As Integer)
+Private Sub txt_å®Ÿå¸–_BeforeUpdate(Cancel As Integer)
 
-    If Me.Parent.fncTxtInputCheck(Me.txt_À’Ÿ, pcsglSizeMaxValue, 5) = False Then
-        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+    If Me.Parent.fncTxtInputCheck(Me.txt_å®Ÿå¸–, pcsglSizeMaxValue, 5) = False Then
+        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
@@ -655,60 +655,60 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_À’Ÿ_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_À’Ÿ_KeyPress
+'        MODULE_NAME      :txt_å®Ÿå¸–_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_å®Ÿå¸–_KeyPress
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_À’Ÿ_KeyPress(KeyAscii As Integer)
+Private Sub txt_å®Ÿå¸–_KeyPress(KeyAscii As Integer)
     On Error Resume Next
 
 ' 2005/12/15 ADD T.SUZUKI Start
     If KeyAscii = pcintMINUS Then KeyAscii = 0: Exit Sub
 
-    If Me.Parent.fncTxtInputCheck(Me.txt_À’Ÿ, pcsglSizeMaxValue, 5) = False Then
+    If Me.Parent.fncTxtInputCheck(Me.txt_å®Ÿå¸–, pcsglSizeMaxValue, 5) = False Then
         KeyAscii = 0: Exit Sub
     End If
 ' 2005/12/15 ADD T.SUZUKI End
 
-    ' Œ…”ƒ`ƒFƒbƒN
-    Call ETC_CUREN_RTN(Me.txt_À’Ÿ, 3, 2, KeyAscii)
+    ' æ¡æ•°ãƒã‚§ãƒƒã‚¯
+    Call ETC_CUREN_RTN(Me.txt_å®Ÿå¸–, 3, 2, KeyAscii)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï_AfterUpdate
+'        MODULE_NAME      :txt_åˆå›é›‘è²»_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï_AfterUpdate()
+Private Sub txt_åˆå›é›‘è²»_AfterUpdate()
     Me.Parent.blnDataUpdate = True
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï_BeforeUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï_BeforeUpdate
+'        MODULE_NAME      :txt_åˆå›é›‘è²»_BeforeUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»_BeforeUpdate
 '        CREATE_DATE      :2005/12/17
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï_BeforeUpdate(Cancel As Integer)
+Private Sub txt_åˆå›é›‘è²»_BeforeUpdate(Cancel As Integer)
 
 ' 2006/03/18 ADD T.SUZUKI Start
-'    MsgBox Me.cmb_‰‰ñG”ï‹æ•ª
-    If Me.cmb_‰‰ñG”ï‹æ•ª = 0 And Nz(Me.txt_‰‰ñG”ï, 0) > 0 Then
+'    MsgBox Me.cmb_åˆå›é›‘è²»åŒºåˆ†
+    If Me.cmb_åˆå›é›‘è²»åŒºåˆ† = 0 And Nz(Me.txt_åˆå›é›‘è²», 0) > 0 Then
         MsgBox pcstrZAPPI_ErrMsg_F, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
 ' 2006/03/18 ADD T.SUZUKI End
 
-    If Me.Parent.fncTxtInputCheck(Me.txt_‰‰ñG”ï, pcsglMoneyMaxValue, 9) = False Then
-        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+    If Me.Parent.fncTxtInputCheck(Me.txt_åˆå›é›‘è²», pcsglMoneyMaxValue, 9) = False Then
+        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
@@ -716,70 +716,70 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï_GotFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï_GotFocus
+'        MODULE_NAME      :txt_åˆå›é›‘è²»_GotFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»_GotFocus
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï_GotFocus()
-    Me.txt_‰‰ñG”ï.Format = pcstrfmtFIXED  ' ‘®FŒÅ’è(ƒJƒ“ƒ}•ÒW‚È‚µ)
+Private Sub txt_åˆå›é›‘è²»_GotFocus()
+    Me.txt_åˆå›é›‘è²».Format = pcstrfmtFIXED  ' æ›¸å¼ï¼šå›ºå®š(ã‚«ãƒ³ãƒç·¨é›†ãªã—)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï_KeyPress
+'        MODULE_NAME      :txt_åˆå›é›‘è²»_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»_KeyPress
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï_KeyPress(KeyAscii As Integer)
+Private Sub txt_åˆå›é›‘è²»_KeyPress(KeyAscii As Integer)
     On Error Resume Next
-    ' Œ…”ƒ`ƒFƒbƒN
-    Call CmKeyPress_For_Num1(Me.txt_‰‰ñG”ï, KeyAscii, 9)
+    ' æ¡æ•°ãƒã‚§ãƒƒã‚¯
+    Call CmKeyPress_For_Num1(Me.txt_åˆå›é›‘è²», KeyAscii, 9)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï_LostFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï_LostFocus
+'        MODULE_NAME      :txt_åˆå›é›‘è²»_LostFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»_LostFocus
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï_LostFocus()
-    Me.txt_‰‰ñG”ï.Format = pcstrfmtSTANDARD  ' ‘®F•W€(ƒJƒ“ƒ}•ÒW‚ ‚è)
+Private Sub txt_åˆå›é›‘è²»_LostFocus()
+    Me.txt_åˆå›é›‘è²».Format = pcstrfmtSTANDARD  ' æ›¸å¼ï¼šæ¨™æº–(ã‚«ãƒ³ãƒç·¨é›†ã‚ã‚Š)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï2_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï2_AfterUpdate
+'        MODULE_NAME      :txt_åˆå›é›‘è²»2_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»2_AfterUpdate
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï2_AfterUpdate()
+Private Sub txt_åˆå›é›‘è²»2_AfterUpdate()
     Me.Parent.blnDataUpdate = True
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï2_BeforeUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï2_BeforeUpdate
+'        MODULE_NAME      :txt_åˆå›é›‘è²»2_BeforeUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»2_BeforeUpdate
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï2_BeforeUpdate(Cancel As Integer)
-    If Me.cmb_‰‰ñG”ï‹æ•ª2 = 0 And Nz(Me.txt_‰‰ñG”ï2, 0) > 0 Then
+Private Sub txt_åˆå›é›‘è²»2_BeforeUpdate(Cancel As Integer)
+    If Me.cmb_åˆå›é›‘è²»åŒºåˆ†2 = 0 And Nz(Me.txt_åˆå›é›‘è²»2, 0) > 0 Then
         MsgBox pcstrZAPPI2_ErrMsg_F, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
-    If Me.Parent.fncTxtInputCheck(Me.txt_‰‰ñG”ï2, pcsglMoneyMaxValue, 9) = False Then
-        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+    If Me.Parent.fncTxtInputCheck(Me.txt_åˆå›é›‘è²»2, pcsglMoneyMaxValue, 9) = False Then
+        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
@@ -787,75 +787,75 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï2_GotFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï2_GotFocus
+'        MODULE_NAME      :txt_åˆå›é›‘è²»2_GotFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»2_GotFocus
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï2_GotFocus()
-    Me.txt_‰‰ñG”ï2.Format = pcstrfmtFIXED  ' ‘®FŒÅ’è(ƒJƒ“ƒ}•ÒW‚È‚µ)
+Private Sub txt_åˆå›é›‘è²»2_GotFocus()
+    Me.txt_åˆå›é›‘è²»2.Format = pcstrfmtFIXED  ' æ›¸å¼ï¼šå›ºå®š(ã‚«ãƒ³ãƒç·¨é›†ãªã—)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï2_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï2_KeyPress
+'        MODULE_NAME      :txt_åˆå›é›‘è²»2_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»2_KeyPress
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï2_KeyPress(KeyAscii As Integer)
+Private Sub txt_åˆå›é›‘è²»2_KeyPress(KeyAscii As Integer)
     On Error Resume Next
-    ' Œ…”ƒ`ƒFƒbƒN
-    Call CmKeyPress_For_Num1(Me.txt_‰‰ñG”ï2, KeyAscii, 9)
+    ' æ¡æ•°ãƒã‚§ãƒƒã‚¯
+    Call CmKeyPress_For_Num1(Me.txt_åˆå›é›‘è²»2, KeyAscii, 9)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_‰‰ñG”ï2_LostFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_‰‰ñG”ï2_LostFocus
+'        MODULE_NAME      :txt_åˆå›é›‘è²»2_LostFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_åˆå›é›‘è²»2_LostFocus
 '        CREATE_DATE      :2018/08/20
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_‰‰ñG”ï2_LostFocus()
-    Me.txt_‰‰ñG”ï2.Format = pcstrfmtSTANDARD  ' ‘®F•W€(ƒJƒ“ƒ}•ÒW‚ ‚è)
+Private Sub txt_åˆå›é›‘è²»2_LostFocus()
+    Me.txt_åˆå›é›‘è²»2.Format = pcstrfmtSTANDARD  ' æ›¸å¼ï¼šæ¨™æº–(ã‚«ãƒ³ãƒç·¨é›†ã‚ã‚Š)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_–ˆŒG”ï_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_–ˆŒG”ï_AfterUpdate
+'        MODULE_NAME      :txt_æ¯æœˆé›‘è²»_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_æ¯æœˆé›‘è²»_AfterUpdate
 '        CREATE_DATE      :2005/11/21
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_–ˆŒG”ï_AfterUpdate()
+Private Sub txt_æ¯æœˆé›‘è²»_AfterUpdate()
     Me.Parent.blnDataUpdate = True
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_–ˆŒG”ï_BeforeUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_–ˆŒG”ï_BeforeUpdate
+'        MODULE_NAME      :txt_æ¯æœˆé›‘è²»_BeforeUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_æ¯æœˆé›‘è²»_BeforeUpdate
 '        CREATE_DATE      :2005/12/17
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_–ˆŒG”ï_BeforeUpdate(Cancel As Integer)
+Private Sub txt_æ¯æœˆé›‘è²»_BeforeUpdate(Cancel As Integer)
 
 ' 2006/03/18 ADD T.SUZUKI Start
-'    MsgBox Me.cmb_‰‰ñG”ï‹æ•ª
-    If Me.cmb_–ˆŒG”ï‹æ•ª = 0 And Nz(Me.txt_–ˆŒG”ï, 0) > 0 Then
+'    MsgBox Me.cmb_åˆå›é›‘è²»åŒºåˆ†
+    If Me.cmb_æ¯æœˆé›‘è²»åŒºåˆ† = 0 And Nz(Me.txt_æ¯æœˆé›‘è²», 0) > 0 Then
         MsgBox pcstrZAPPI_ErrMsg_M, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
 ' 2006/03/18 ADD T.SUZUKI End
 
-    If Me.Parent.fncTxtInputCheck(Me.txt_–ˆŒG”ï, pcsglMoneyMaxValue, 9) = False Then
-        MsgBox strMSGŒ…”ƒI[ƒo[, vbInformation, strMsg_err
+    If Me.Parent.fncTxtInputCheck(Me.txt_æ¯æœˆé›‘è²», pcsglMoneyMaxValue, 9) = False Then
+        MsgBox strMSGæ¡æ•°ã‚ªãƒ¼ãƒãƒ¼, vbInformation, strMsg_err
         Cancel = True
         SendKeys "{ESC}"
     End If
@@ -863,45 +863,45 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_–ˆŒG”ï_GotFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_–ˆŒG”ï_GotFocus
+'        MODULE_NAME      :txt_æ¯æœˆé›‘è²»_GotFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_æ¯æœˆé›‘è²»_GotFocus
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_–ˆŒG”ï_GotFocus()
-    Me.txt_–ˆŒG”ï.Format = pcstrfmtFIXED  ' ‘®FŒÅ’è(ƒJƒ“ƒ}•ÒW‚È‚µ)
+Private Sub txt_æ¯æœˆé›‘è²»_GotFocus()
+    Me.txt_æ¯æœˆé›‘è²».Format = pcstrfmtFIXED  ' æ›¸å¼ï¼šå›ºå®š(ã‚«ãƒ³ãƒç·¨é›†ãªã—)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_–ˆŒG”ï_KeyPress ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_–ˆŒG”ï_KeyPress
+'        MODULE_NAME      :txt_æ¯æœˆé›‘è²»_KeyPress ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_æ¯æœˆé›‘è²»_KeyPress
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_–ˆŒG”ï_KeyPress(KeyAscii As Integer)
+Private Sub txt_æ¯æœˆé›‘è²»_KeyPress(KeyAscii As Integer)
     On Error Resume Next
-    ' Œ…”ƒ`ƒFƒbƒN
-    Call CmKeyPress_For_Num1(Me.txt_–ˆŒG”ï, KeyAscii, 9)
+    ' æ¡æ•°ãƒã‚§ãƒƒã‚¯
+    Call CmKeyPress_For_Num1(Me.txt_æ¯æœˆé›‘è²», KeyAscii, 9)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :txt_–ˆŒG”ï_LostFocus ƒCƒxƒ“ƒg
-'        MODULE_ID        :txt_–ˆŒG”ï_LostFocus
+'        MODULE_NAME      :txt_æ¯æœˆé›‘è²»_LostFocus ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :txt_æ¯æœˆé›‘è²»_LostFocus
 '        CREATE_DATE      :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub txt_–ˆŒG”ï_LostFocus()
-    Me.txt_–ˆŒG”ï.Format = pcstrfmtSTANDARD  ' ‘®F•W€(ƒJƒ“ƒ}•ÒW‚ ‚è)
+Private Sub txt_æ¯æœˆé›‘è²»_LostFocus()
+    Me.txt_æ¯æœˆé›‘è²».Format = pcstrfmtSTANDARD  ' æ›¸å¼ï¼šæ¨™æº–(ã‚«ãƒ³ãƒç·¨é›†ã‚ã‚Š)
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :•K{ƒ`ƒFƒbƒN
+'        MODULE_NAME      :å¿…é ˆãƒã‚§ãƒƒã‚¯
 '        MODULE_ID        :RequireCheck
 '        CREATE_DATE      :
 '
@@ -911,24 +911,24 @@ Private Function RequireCheck() As Boolean
 
     RequireCheck = False
     
-    If Nz(cmb_—p“r) = "" Then
-        MsgBox strMSG“ü—Í•s³, vbInformation, strMsg_err
-'        MsgBox strMSG“ü—Í•s³, , strMsg_err
-        cmb_—p“r.SetFocus
+    If Nz(cmb_ç”¨é€”) = "" Then
+        MsgBox strMSGå…¥åŠ›ä¸æ­£, vbInformation, strMsg_err
+'        MsgBox strMSGå…¥åŠ›ä¸æ­£, , strMsg_err
+        cmb_ç”¨é€”.SetFocus
         Exit Function
     End If
 
-    If Nz(txt_À’Ÿ) = "" Then
-        MsgBox strMSG“ü—Í•s³, vbInformation, strMsg_err
-'        MsgBox strMSG“ü—Í•s³, , strMsg_err
-        txt_À’Ÿ.SetFocus
+    If Nz(txt_å®Ÿå¸–) = "" Then
+        MsgBox strMSGå…¥åŠ›ä¸æ­£, vbInformation, strMsg_err
+'        MsgBox strMSGå…¥åŠ›ä¸æ­£, , strMsg_err
+        txt_å®Ÿå¸–.SetFocus
         Exit Function
     End If
     
-    If Nz(txt_‰¿Ši) = "" Then
-        MsgBox strMSG“ü—Í•s³, vbInformation, strMsg_err
-'        MsgBox strMSG“ü—Í•s³, , strMsg_err
-        txt_‰¿Ši.SetFocus
+    If Nz(txt_ä¾¡æ ¼) = "" Then
+        MsgBox strMSGå…¥åŠ›ä¸æ­£, vbInformation, strMsg_err
+'        MsgBox strMSGå…¥åŠ›ä¸æ­£, , strMsg_err
+        txt_ä¾¡æ ¼.SetFocus
         Exit Function
     End If
 
@@ -938,38 +938,38 @@ End Function
 ' 2008/10/15 ADD iizuka Start
 '==============================================================================*
 '
-'        MODULE_NAME      :chk_Š„ˆø‘ÎÛŠO_AfterUpdate ƒCƒxƒ“ƒg
-'        MODULE_ID        :chk_Š„ˆø‘ÎÛŠO_AfterUpdate
+'        MODULE_NAME      :chk_å‰²å¼•å¯¾è±¡å¤–_AfterUpdate ã‚¤ãƒ™ãƒ³ãƒˆ
+'        MODULE_ID        :chk_å‰²å¼•å¯¾è±¡å¤–_AfterUpdate
 '        CREATE_DATE      :2008/10/15
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub chk_Š„ˆø‘ÎÛŠO_AfterUpdate()
+Private Sub chk_å‰²å¼•å¯¾è±¡å¤–_AfterUpdate()
     On Error GoTo ErrorHandler
     
-    If (Nz(cmb_—p“r) <> "" And Nz(txt_À’Ÿ) <> "") Then                 'INSERT 2008/11/14 K.KINEBUCHI
+    If (Nz(cmb_ç”¨é€”) <> "" And Nz(txt_å®Ÿå¸–) <> "") Then                 'INSERT 2008/11/14 K.KINEBUCHI
     
-        If chk_Š„ˆø‘ÎÛŠO.VALUE Then
-            'ƒ`ƒFƒbƒN•t‚¯‚½‚¾‚¯ˆ—‚ğs‚¤
+        If chk_å‰²å¼•å¯¾è±¡å¤–.VALUE Then
+            'ãƒã‚§ãƒƒã‚¯ä»˜ã‘ãŸæ™‚ã ã‘å‡¦ç†ã‚’è¡Œã†
     
             blnCheckSkip = True
             
-            '“ü—Í’†‚ÌƒŒƒR[ƒh‚ğ‚¢‚Á‚½‚ñ•Û‘¶‚·‚é
+            'å…¥åŠ›ä¸­ã®ãƒ¬ã‚³ãƒ¼ãƒ‰ã‚’ã„ã£ãŸã‚“ä¿å­˜ã™ã‚‹
             On Error Resume Next
             doCmd.RunCommand acCmdSaveRecord
             On Error GoTo ErrorHandler
             
             blnCheckSkip = False
             
-            Call Me.Parent.setNebikiOnOff(Val(txt_ƒ„[ƒhƒR[ƒh), Val(txt_’i‹æ•ª), _
-                                          Val(cmb_—p“r), Val(txt_À’Ÿ.VALUE), chk_Š„ˆø‘ÎÛŠO.VALUE)
+            Call Me.Parent.setNebikiOnOff(Val(txt_ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰), Val(txt_æ®µåŒºåˆ†), _
+                                          Val(cmb_ç”¨é€”), Val(txt_å®Ÿå¸–.VALUE), chk_å‰²å¼•å¯¾è±¡å¤–.VALUE)
         End If
     End If                                                              'INSERT 2008/11/14 K.KINEBUCHI
 
     Exit Sub
     
 ErrorHandler:
-    Call MSZZ024_M00("chk_Š„ˆø‘ÎÛŠO_AfterUpdate", True)
+    Call MSZZ024_M00("chk_å‰²å¼•å¯¾è±¡å¤–_AfterUpdate", True)
 
 End Sub
 ' 2008/10/15 ADD iizuka End

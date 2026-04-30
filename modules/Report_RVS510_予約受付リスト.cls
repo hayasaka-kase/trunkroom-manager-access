@@ -2,7 +2,7 @@ VERSION 1.0 CLASS
 BEGIN
   MultiUse = -1  'True
 END
-Attribute VB_Name = "Report_RVS510_—\–ñó•tƒŠƒXƒg"
+Attribute VB_Name = "Report_RVS510_äºˆç´„å—ä»˜ãƒªã‚¹ãƒˆ"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = True

@@ -10,10 +10,10 @@ Attribute VB_Exposed = False
 '****************************  strat or program ********************************
 '==============================================================================*
 '
-'        SYSTEM_NAME     : ‰Á£ƒVƒXƒeƒ€
-'        SUB_SYSTEM_NAME : ƒRƒ“ƒeƒiŠÇ—ƒVƒXƒeƒ€
+'        SYSTEM_NAME     : åŠ ç€¬ã‚·ã‚¹ãƒ†ãƒ 
+'        SUB_SYSTEM_NAME : ã‚³ãƒ³ãƒ†ãƒŠç®¡ç†ã‚·ã‚¹ãƒ†ãƒ 
 '
-'        PROGRAM_NAME    : ƒNƒŒƒWƒbƒgƒJ[ƒh“o˜^ƒ[ƒ‹‘—M
+'        PROGRAM_NAME    : ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã‚«ãƒ¼ãƒ‰ç™»éŒ²ãƒ¡ãƒ¼ãƒ«é€ä¿¡
 '        PROGRAM_ID      : FVS300
 '
 '        CREATE          : 2011/02/23
@@ -23,78 +23,78 @@ Attribute VB_Exposed = False
 '        UPDATE          : 2011/07/02
 '        UPDATER         : M.RYU
 '        Ver             : V0.1
-'                        : ŒŸõğŒ’Ç‰Á@Ë@•ÛØ‰ïĞƒR[ƒhA•ÛØ‰ïĞ‹æ•ª
+'                        : æ¤œç´¢æ¡ä»¶è¿½åŠ ã€€â‡’ã€€ä¿è¨¼ä¼šç¤¾ã‚³ãƒ¼ãƒ‰ã€ä¿è¨¼ä¼šç¤¾åŒºåˆ†
 '
 '        UPDATE          : 2011/08/30
 '        UPDATER         : M.RYU
 '        Ver             : V0.2
-'                        : ŒŸõğŒ‚ğ’Ç‰ÁËƒJ[ƒhx•¥ŠJnŒE‰‰ñƒJ[ƒhx•¥‘ÎÛ’Šo
-'                        : ’ŠoSQL‚ğC³
+'                        : æ¤œç´¢æ¡ä»¶ã‚’è¿½åŠ â‡’ã‚«ãƒ¼ãƒ‰æ”¯æ‰•é–‹å§‹æœˆãƒ»åˆå›ã‚«ãƒ¼ãƒ‰æ”¯æ‰•å¯¾è±¡æŠ½å‡º
+'                        : æŠ½å‡ºSQLã‚’ä¿®æ­£
 '
 '        UPDATE          : 2011/09/28
 '        UPDATER         : M.RYU
 '        Ver             : V0.3
-'                        : ƒNƒŒƒWƒbƒgEŒûÀU‘Ö‚Ìê‡Aƒ[ƒ‹‘—Mƒ{ƒ^ƒ“—LŒø
+'                        : ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆãƒ»å£åº§æŒ¯æ›¿ã®å ´åˆã€ãƒ¡ãƒ¼ãƒ«é€ä¿¡ãƒœã‚¿ãƒ³æœ‰åŠ¹
 '
 '        UPDATE          : 2011/10/03
 '        UPDATER         : M.RYU
 '        Ver             : V0.4
-'                        : ŒûÀU‘Öƒ[ƒ‹‘—Mƒ{ƒ^ƒ“‚ğ’Ç‰Á
+'                        : å£åº§æŒ¯æ›¿ãƒ¡ãƒ¼ãƒ«é€ä¿¡ãƒœã‚¿ãƒ³ã‚’è¿½åŠ 
 '
 '        UPDATE          : 2011/11/11
 '        UPDATER         : M.RYU
 '        Ver             : V0.5
-'                        : ƒ[ƒ‹‘—Mƒ{ƒ^ƒ“‚Ì•\¦ğŒ‚ğŠO‚·
+'                        : ãƒ¡ãƒ¼ãƒ«é€ä¿¡ãƒœã‚¿ãƒ³ã®è¡¨ç¤ºæ¡ä»¶ã‚’å¤–ã™
 '
 '        UPDATE          : 2012/01/05
 '        UPDATER         : M.RYU
 '        Ver             : V0.6
-'                        : FVS300_W01‚ÉŒÚ‹qƒJƒi€–Ú‚ğ’Ç‰Á
+'                        : FVS300_W01ã«é¡§å®¢ã‚«ãƒŠé …ç›®ã‚’è¿½åŠ 
 '
 '        UPDATE          : 2012/07/07
 '        UPDATER         : M.HONDA
 '        Ver             : V0.7
-'                        : ƒTƒCƒY‚Ì¬”“_‘Î‰
+'                        : ã‚µã‚¤ã‚ºã®å°æ•°ç‚¹å¯¾å¿œ
 '
 '        UPDATE          : 2013/06/03
 '        UPDATER         : M.HONDA
 '        Ver             : V0.8
-'                        : I—¹ƒƒbƒZ[ƒW‚ğ•\¦‚³‚¹‚È‚¢‚æ‚¤‚ÉC³
+'                        : çµ‚äº†ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤ºã•ã›ãªã„ã‚ˆã†ã«ä¿®æ­£
 '
 '==============================================================================*
 Option Compare Database
 Option Explicit
 
 '==============================================================================*
-'   •Ï”éŒ¾
+'   å¤‰æ•°å®£è¨€
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-' Ú‘±•”–å
+' æ¥ç¶šéƒ¨é–€
 Private strBUMOC        As String
 Private strKASE         As String
 
-'Ú‘±‚c‚aƒIƒuƒWƒFƒNƒg
+'æ¥ç¶šï¼¤ï¼¢ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ
 Private dbAccess        As Database
 
-'Ú‘±‚c‚a–¼
+'æ¥ç¶šï¼¤ï¼¢å
 Private strSqlserver    As String
 
-'Ú‘±•¶š—ñ
+'æ¥ç¶šæ–‡å­—åˆ—
 Private strConnect      As String
 
-'XVŒ ŒÀæ“¾
+'æ›´æ–°æ¨©é™å–å¾—
 Public bAuthority      As Boolean
 
 
 
 '==============================================================================*
-'   ’è”éŒ¾
+'   å®šæ•°å®£è¨€
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Const P_KAKUNIN             As String = "Šm”F"
-Private Const P_ERROR               As String = "ƒGƒ‰["
+Private Const P_KAKUNIN             As String = "ç¢ºèª"
+Private Const P_ERROR               As String = "ã‚¨ãƒ©ãƒ¼"
 
 Private Const P_WORK_TABLE          As String = "FVS300_W01"
 Private Const P_SUB_FORM            As String = "FVS300_S01"
@@ -102,7 +102,7 @@ Private Const P_SUB_FORM            As String = "FVS300_S01"
 '==============================================================================*
 '
 '        MODULE_NAME      :cmd_excel_Click
-'        ‹@”\             :ŒŸõƒ{ƒ^ƒ“ƒNƒŠƒbƒNˆ—
+'        æ©Ÿèƒ½             :æ¤œç´¢ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯å‡¦ç†
 '        IN               :
 '        OUT              :
 '
@@ -110,7 +110,7 @@ Private Const P_SUB_FORM            As String = "FVS300_S01"
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Private Sub cmd_excel_Click()
 On Error GoTo err_rtn
-    'ƒ[ƒNƒe[ƒuƒ‹ì¬
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     If Not MakeWork(True) Then
         Exit Sub
     End If
@@ -126,55 +126,55 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmd_ŒŸõ_Click
-'        ‹@”\             :ŒŸõƒ{ƒ^ƒ“ƒNƒŠƒbƒNˆ—
+'        MODULE_NAME      :cmd_æ¤œç´¢_Click
+'        æ©Ÿèƒ½             :æ¤œç´¢ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯å‡¦ç†
 '        IN               :
 '        OUT              :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_ŒŸõ_Click()
+Private Sub cmd_æ¤œç´¢_Click()
     
     Dim strYM As String
-    '“ü—Íƒ`ƒFƒbƒN
+    'å…¥åŠ›ãƒã‚§ãƒƒã‚¯
     With SubCondition.Form       'INSERT 2011/08/30 M.RYU---<S>
         If .chk_CardObj.VALUE = True Then
             strYM = Nz(.txt_CardReqFrom)
             If strYM = "" Then
-                MsgBox "ƒJ[ƒhx•¥ŠJnŒ‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B", vbOKOnly, Me.NAME
+                MsgBox "ã‚«ãƒ¼ãƒ‰æ”¯æ‰•é–‹å§‹æœˆã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚", vbOKOnly, Me.NAME
                 Exit Sub
             End If
             If Len(strYM) <> 6 Then
-                MsgBox "ƒJ[ƒhx•¥ŠJnŒ‚ğ6Œ…‚ÌuYYYYMMv‚Å“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B", vbOKOnly, Me.NAME
+                MsgBox "ã‚«ãƒ¼ãƒ‰æ”¯æ‰•é–‹å§‹æœˆã‚’6æ¡ã®ã€ŒYYYYMMã€ã§å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚", vbOKOnly, Me.NAME
                 Exit Sub
             End If
             If Right(strYM, 2) > 12 Or Right(strYM, 2) < 1 Then
-                MsgBox "ƒJ[ƒhx•¥ŠJnŒ‚ğ³‚µ‚­“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B", vbOKOnly, Me.NAME
+                MsgBox "ã‚«ãƒ¼ãƒ‰æ”¯æ‰•é–‹å§‹æœˆã‚’æ­£ã—ãå…¥åŠ›ã—ã¦ãã ã•ã„ã€‚", vbOKOnly, Me.NAME
                 Exit Sub
             End If
         End If                  'INSERT 2011/08/30 M.RYU---<E>
     End With
     
-    '“ü—Í’l‚ğŒŸõğŒ‚É‚µ‚Äƒ[ƒNƒe[ƒuƒ‹ì¬
+    'å…¥åŠ›å€¤ã‚’æ¤œç´¢æ¡ä»¶ã«ã—ã¦ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     Call subFormReload
 
 End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :cmd_I—¹_Click
-'        ‹@”\             :I—¹ƒ{ƒ^ƒ“ƒNƒŠƒbƒNˆ—
+'        MODULE_NAME      :cmd_çµ‚äº†_Click
+'        æ©Ÿèƒ½             :çµ‚äº†ãƒœã‚¿ãƒ³ã‚¯ãƒªãƒƒã‚¯å‡¦ç†
 '        IN               :
 '        OUT              :
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub cmd_I—¹_Click()
+Private Sub cmd_çµ‚äº†_Click()
 
     '' 2013/06/03 M.HONDA START
 '    On Error Resume Next
-'    'I—¹ƒƒbƒZ[ƒW‚ğ•\¦
-'    If MsgBox("I—¹‚µ‚Ü‚·B‚æ‚ë‚µ‚¢‚Å‚·‚©H", vbQuestion + vbYesNo + vbDefaultButton1, P_KAKUNIN) = vbYes Then
+'    'çµ‚äº†ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º
+'    If MsgBox("çµ‚äº†ã—ã¾ã™ã€‚ã‚ˆã‚ã—ã„ã§ã™ã‹ï¼Ÿ", vbQuestion + vbYesNo + vbDefaultButton1, P_KAKUNIN) = vbYes Then
 '        doCmd.Close acForm, Me.FormName
 '    End If
     '' 2013/06/03 M.HONDA END
@@ -186,7 +186,7 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :Form_Activate
-'        ‹@”\             :Form_ActivateƒCƒxƒ“ƒg
+'        æ©Ÿèƒ½             :Form_Activateã‚¤ãƒ™ãƒ³ãƒˆ
 '        IN               :
 '        OUT              :
 '
@@ -201,7 +201,7 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :Form_KeyDown
-'        ‹@”\             :Form_KeyDownƒCƒxƒ“ƒg
+'        æ©Ÿèƒ½             :Form_KeyDownã‚¤ãƒ™ãƒ³ãƒˆ
 '        IN               :
 '        OUT              :
 '
@@ -210,14 +210,14 @@ End Sub
 Public Sub Form_KeyDown(KeyCode As Integer, Shift As Integer)
 On Error Resume Next
 
-    'F1=uI—¹v F2=uŒŸõv
+    'F1=ã€Œçµ‚äº†ã€ F2=ã€Œæ¤œç´¢ã€
     Select Case KeyCode
         Case vbKeyF1
             KeyCode = 0
-            Me.cmd_I—¹.SetFocus
+            Me.cmd_çµ‚äº†.SetFocus
         Case vbKeyF2
             KeyCode = 0
-            Me.cmd_ŒŸõ.SetFocus
+            Me.cmd_æ¤œç´¢.SetFocus
         Case vbKeyF3, vbKeyF5 To vbKeyF12
             KeyCode = 0
     End Select
@@ -227,7 +227,7 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :Form_Load
-'        ‹@”\             :Form LoadƒCƒxƒ“ƒg
+'        æ©Ÿèƒ½             :Form Loadã‚¤ãƒ™ãƒ³ãƒˆ
 '        IN               :
 '        OUT              :
 '
@@ -245,27 +245,27 @@ Private Sub Form_Load()
     strKOMS = DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB='ODBC_DATABASE_NAME_" & strBUMOC & "'")
 
     If strKOMS = "" Then
-        Call MSZZ024_M10("SelectSetuTabl", "SETU_TABL‚ÉŠY“–•”–å(" & strBUMOC & ")‚Ìƒf[ƒ^‚ª‘¶İ‚µ‚Ü‚¹‚ñB")
+        Call MSZZ024_M10("SelectSetuTabl", "SETU_TABLã«è©²å½“éƒ¨é–€(" & strBUMOC & ")ã®ãƒ‡ãƒ¼ã‚¿ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚")
     End If
 
-    'KASEÚ‘±æƒf[ƒ^ƒx[ƒX–¼æ“¾
+    'KASEæ¥ç¶šå…ˆãƒ‡ãƒ¼ã‚¿ãƒ™ãƒ¼ã‚¹åå–å¾—
     strKASE = DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB='ODBC_DATABASE_NAME'")
     
-    'ƒ[ƒNƒNƒŠƒA
+    'ãƒ¯ãƒ¼ã‚¯ã‚¯ãƒªã‚¢
     If Not ClearWork(P_WORK_TABLE) Then
         doCmd.Close acForm, Me.FormName
         Exit Sub
     End If
 
-   'XVŒ ŒÀæ“¾
+   'æ›´æ–°æ¨©é™å–å¾—
     bAuthority = isAuthority
     
-    ' ƒRƒ“ƒ{ƒ{ƒbƒNƒX‚Ì‰Šú’lİ’è
+    ' ã‚³ãƒ³ãƒœãƒœãƒƒã‚¯ã‚¹ã®åˆæœŸå€¤è¨­å®š
     With SubCondition.Form
-        .cmb_W‹à‹æ•ª.VALUE = "07"
-        .cmb_–ˆŒ‰ñû‹æ•ª.VALUE = "02"
-        .txt_W‹à‹æ•ª = "ƒRƒ“ƒrƒj"
-        .txt_–ˆŒ‰ñû‹æ•ª = "ƒNƒŒƒWƒbƒgƒJ[ƒh"
+        .cmb_é›†é‡‘åŒºåˆ†.VALUE = "07"
+        .cmb_æ¯æœˆå›ååŒºåˆ†.VALUE = "02"
+        .txt_é›†é‡‘åŒºåˆ† = "ã‚³ãƒ³ãƒ“ãƒ‹"
+        .txt_æ¯æœˆå›ååŒºåˆ† = "ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆã‚«ãƒ¼ãƒ‰"
         .cmd_Mail.Enabled = False
         .chk_CardObj.VALUE = False          'INSERT 2011/08/30 M.RYU
         .txt_CardReqFrom.Enabled = False    'INSERT 2011/08/30 M.RYU
@@ -276,8 +276,8 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :SubFormReload
-'        ‹@”\             :ˆê——Ä•\¦
-'        IN               :True=ŠY“–ƒf[ƒ^–³‚µƒƒbƒZ[ƒW‚ğ•\¦ False=•\¦‚µ‚È‚¢
+'        æ©Ÿèƒ½             :ä¸€è¦§å†è¡¨ç¤º
+'        IN               :True=è©²å½“ãƒ‡ãƒ¼ã‚¿ç„¡ã—ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º False=è¡¨ç¤ºã—ãªã„
 '        OUT              :
 '
 '==============================================================================*
@@ -286,7 +286,7 @@ Private Function subFormReload(Optional blnNotFoundMsg As Boolean = True) As Boo
 
     subFormReload = False
     
-    'ƒ[ƒNƒe[ƒuƒ‹ì¬
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     If Not MakeWork(blnNotFoundMsg) Then
         Exit Function
     End If
@@ -300,7 +300,7 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :ClearWork
-'        ‹@”\             :ƒ[ƒNƒe[ƒuƒ‹ƒNƒŠƒA
+'        æ©Ÿèƒ½             :ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã‚¯ãƒªã‚¢
 '        IN               :
 '        OUT              :
 '
@@ -322,12 +322,12 @@ On Error GoTo err_rtn
         
     SubForm.SourceObject = ""
     
-    'ƒ[ƒNƒe[ƒuƒ‹íœ
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«å‰Šé™¤
     If TableExist(strTable) Then
         Call dbAccess.TableDefs.Delete(strTable)
     End If
 
-    'ƒ[ƒNƒe[ƒuƒ‹ì¬
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
     Set tdfNew = dbAccess.CreateTableDef(strTable)
     Call FieldAppend(tdfNew)
     Call dbAccess.TableDefs.Append(tdfNew)
@@ -337,7 +337,7 @@ On Error GoTo err_rtn
     GoTo Exit_rtn
     
 err_rtn:
-    MsgBox "´×°”Ô†" & Err.Number & vbCrLf & Err.Description
+    MsgBox "ï½´ï¾—ï½°ç•ªå·" & Err.Number & vbCrLf & Err.Description
     Err.Clear
 
 Exit_rtn:
@@ -354,7 +354,7 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :FieldAppend
-'        ‹@”\             :ƒ[ƒNƒe[ƒuƒ‹—ñì¬
+'        æ©Ÿèƒ½             :ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«åˆ—ä½œæˆ
 '        IN               :
 '        OUT              :
 '
@@ -367,40 +367,40 @@ Private Sub FieldAppend(tdfNew As TableDef)
 
     With tdfNew
  
-        Call .Fields.Append(.CreateField("SEND", DataTypeEnum.dbLong))          '' ƒ[ƒ‹‘—Mƒtƒ‰ƒO
-        Call .Fields.Append(.CreateField("BUMOC", DataTypeEnum.dbText, 2))      '' •”–å
-        Call .Fields.Append(.CreateField("UCODE", DataTypeEnum.dbLong))         '' ŒÚ‹qƒR[ƒh
-        Call .Fields.Append(.CreateField("USER", DataTypeEnum.dbText, 36))      '' ŒÚ‹q–¼Ì
-        Call .Fields.Append(.CreateField("USERKANA", DataTypeEnum.dbText, 18))  '' ŒÚ‹qƒJƒi     'INSERT 20120105 M.RYU
-        Call .Fields.Append(.CreateField("RENKBN", DataTypeEnum.dbText, 20))    '' ˜A—‹æ•ª
-        Call .Fields.Append(.CreateField("TEL", DataTypeEnum.dbText, 15))       '' “d˜b”Ô†
-        Call .Fields.Append(.CreateField("MAIL", DataTypeEnum.dbText, 60))      '' ƒ[ƒ‹ƒAƒhƒŒƒX
-        Call .Fields.Append(.CreateField("YOUKTGENKBN", DataTypeEnum.dbLong))   '' \‹æ•ª
-        Call .Fields.Append(.CreateField("GENKBN", DataTypeEnum.dbText, 20))    '' \–¼Ì
-        Call .Fields.Append(.CreateField("RCPTKAIHI", DataTypeEnum.dbLong))     '' –ˆŒx•¥•û–@‹æ•ª
-        Call .Fields.Append(.CreateField("KAIHI", DataTypeEnum.dbText, 20))     '' –ˆŒx•¥•û–@–¼Ì
-        Call .Fields.Append(.CreateField("USERSKBN", DataTypeEnum.dbLong))      '' W‹à‹æ•ª
-        Call .Fields.Append(.CreateField("SKBN", DataTypeEnum.dbText, 20))      '' W‹à–¼Ì
-        Call .Fields.Append(.CreateField("YOUKTYUKBN", DataTypeEnum.dbLong))    '' Œ_–ñ‹æ•ª
-        Call .Fields.Append(.CreateField("YUKBN", DataTypeEnum.dbText, 20))     '' Œ_–ñ–¼Ì
-        Call .Fields.Append(.CreateField("YOUKTUKDATE", DataTypeEnum.dbDate))   '' —\–ñ“ú
-        Call .Fields.Append(.CreateField("RCPTUKDATE", DataTypeEnum.dbDate))    '' ó•t“ú
-        Call .Fields.Append(.CreateField("KEYSENDDATE", DataTypeEnum.dbDate))   '' Œ®‘—•t“ú
-        Call .Fields.Append(.CreateField("SENDD", DataTypeEnum.dbDate))         '' \‘‘—M“ú
-        Call .Fields.Append(.CreateField("CONTN", DataTypeEnum.dbText, 240))    '' ƒRƒƒ“ƒg
-        Call .Fields.Append(.CreateField("ESENDD", DataTypeEnum.dbDate))        '' “o˜^“ú
-        Call .Fields.Append(.CreateField("ECONTN", DataTypeEnum.dbText, 240))   '' “o˜^“úƒRƒƒ“ƒg
-        Call .Fields.Append(.CreateField("YCODE", DataTypeEnum.dbLong))         '' ƒ„[ƒh
-        Call .Fields.Append(.CreateField("NAME", DataTypeEnum.dbText, 36))      '' ƒ„[ƒh–¼Ì
-        Call .Fields.Append(.CreateField("ADDR", DataTypeEnum.dbText, 72))      '' ZŠ
-        Call .Fields.Append(.CreateField("CNO", DataTypeEnum.dbLong))           '' •”‰®”Ô†
-        Call .Fields.Append(.CreateField("STEP", DataTypeEnum.dbText, 20))      '' ’i
-        Call .Fields.Append(.CreateField("USAGE", DataTypeEnum.dbText, 20))     '' g—p—p“r
+        Call .Fields.Append(.CreateField("SEND", DataTypeEnum.dbLong))          '' ãƒ¡ãƒ¼ãƒ«é€ä¿¡ãƒ•ãƒ©ã‚°
+        Call .Fields.Append(.CreateField("BUMOC", DataTypeEnum.dbText, 2))      '' éƒ¨é–€
+        Call .Fields.Append(.CreateField("UCODE", DataTypeEnum.dbLong))         '' é¡§å®¢ã‚³ãƒ¼ãƒ‰
+        Call .Fields.Append(.CreateField("USER", DataTypeEnum.dbText, 36))      '' é¡§å®¢åç§°
+        Call .Fields.Append(.CreateField("USERKANA", DataTypeEnum.dbText, 18))  '' é¡§å®¢ã‚«ãƒŠ     'INSERT 20120105 M.RYU
+        Call .Fields.Append(.CreateField("RENKBN", DataTypeEnum.dbText, 20))    '' é€£çµ¡åŒºåˆ†
+        Call .Fields.Append(.CreateField("TEL", DataTypeEnum.dbText, 15))       '' é›»è©±ç•ªå·
+        Call .Fields.Append(.CreateField("MAIL", DataTypeEnum.dbText, 60))      '' ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹
+        Call .Fields.Append(.CreateField("YOUKTGENKBN", DataTypeEnum.dbLong))   '' ç”³è¾¼åŒºåˆ†
+        Call .Fields.Append(.CreateField("GENKBN", DataTypeEnum.dbText, 20))    '' ç”³è¾¼åç§°
+        Call .Fields.Append(.CreateField("RCPTKAIHI", DataTypeEnum.dbLong))     '' æ¯æœˆæ”¯æ‰•æ–¹æ³•åŒºåˆ†
+        Call .Fields.Append(.CreateField("KAIHI", DataTypeEnum.dbText, 20))     '' æ¯æœˆæ”¯æ‰•æ–¹æ³•åç§°
+        Call .Fields.Append(.CreateField("USERSKBN", DataTypeEnum.dbLong))      '' é›†é‡‘åŒºåˆ†
+        Call .Fields.Append(.CreateField("SKBN", DataTypeEnum.dbText, 20))      '' é›†é‡‘åç§°
+        Call .Fields.Append(.CreateField("YOUKTYUKBN", DataTypeEnum.dbLong))    '' å¥‘ç´„åŒºåˆ†
+        Call .Fields.Append(.CreateField("YUKBN", DataTypeEnum.dbText, 20))     '' å¥‘ç´„åç§°
+        Call .Fields.Append(.CreateField("YOUKTUKDATE", DataTypeEnum.dbDate))   '' äºˆç´„æ—¥
+        Call .Fields.Append(.CreateField("RCPTUKDATE", DataTypeEnum.dbDate))    '' å—ä»˜æ—¥
+        Call .Fields.Append(.CreateField("KEYSENDDATE", DataTypeEnum.dbDate))   '' éµé€ä»˜æ—¥
+        Call .Fields.Append(.CreateField("SENDD", DataTypeEnum.dbDate))         '' ç”³è¾¼æ›¸é€ä¿¡æ—¥
+        Call .Fields.Append(.CreateField("CONTN", DataTypeEnum.dbText, 240))    '' ã‚³ãƒ¡ãƒ³ãƒˆ
+        Call .Fields.Append(.CreateField("ESENDD", DataTypeEnum.dbDate))        '' ç™»éŒ²æ—¥
+        Call .Fields.Append(.CreateField("ECONTN", DataTypeEnum.dbText, 240))   '' ç™»éŒ²æ—¥ã‚³ãƒ¡ãƒ³ãƒˆ
+        Call .Fields.Append(.CreateField("YCODE", DataTypeEnum.dbLong))         '' ãƒ¤ãƒ¼ãƒ‰
+        Call .Fields.Append(.CreateField("NAME", DataTypeEnum.dbText, 36))      '' ãƒ¤ãƒ¼ãƒ‰åç§°
+        Call .Fields.Append(.CreateField("ADDR", DataTypeEnum.dbText, 72))      '' ä½æ‰€
+        Call .Fields.Append(.CreateField("CNO", DataTypeEnum.dbLong))           '' éƒ¨å±‹ç•ªå·
+        Call .Fields.Append(.CreateField("STEP", DataTypeEnum.dbText, 20))      '' æ®µ
+        Call .Fields.Append(.CreateField("USAGE", DataTypeEnum.dbText, 20))     '' ä½¿ç”¨ç”¨é€”
         '' 2012/07/07 M.HONDA START
-        '' Call .Fields.Append(.CreateField("SIZE", DataTypeEnum.dbDouble))      '' ƒTƒCƒY
-        Call .Fields.Append(.CreateField("SIZE", DataTypeEnum.dbDouble))          '' ƒTƒCƒY
+        '' Call .Fields.Append(.CreateField("SIZE", DataTypeEnum.dbDouble))      '' ã‚µã‚¤ã‚º
+        Call .Fields.Append(.CreateField("SIZE", DataTypeEnum.dbDouble))          '' ã‚µã‚¤ã‚º
         '' 2012/07/07 M.HONDA END
-        Call .Fields.Append(.CreateField("RENTKG", DataTypeEnum.dbLong))        '' ŒŠz
+        Call .Fields.Append(.CreateField("RENTKG", DataTypeEnum.dbLong))        '' æœˆé¡
     
         For intCount = 0 To .Fields.Count - 1
             If .Fields(intCount).Type = dbText Then
@@ -415,8 +415,8 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :MakeWork
-'        ‹@”\             :ƒ[ƒNƒe[ƒuƒ‹ì¬
-'        IN               :True=ŠY“–ƒf[ƒ^–³‚µƒƒbƒZ[ƒW‚ğ•\¦ False=•\¦‚µ‚È‚¢
+'        æ©Ÿèƒ½             :ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ä½œæˆ
+'        IN               :True=è©²å½“ãƒ‡ãƒ¼ã‚¿ç„¡ã—ãƒ¡ãƒƒã‚»ãƒ¼ã‚¸ã‚’è¡¨ç¤º False=è¡¨ç¤ºã—ãªã„
 '        OUT              :
 '
 '==============================================================================*
@@ -424,7 +424,7 @@ End Sub
 Public Function MakeWork(blnNotFoundMsg As Boolean) As Boolean
 On Error GoTo err_rtn
     
-    Dim objCon          As Object       'ƒRƒlƒNƒVƒ‡ƒ“
+    Dim objCon          As Object       'ã‚³ãƒã‚¯ã‚·ãƒ§ãƒ³
     Dim rsSqlServer     As Object
     Dim rsAccess        As Recordset
 
@@ -432,21 +432,21 @@ On Error GoTo err_rtn
     
     doCmd.Hourglass True
 
-    'SQLƒT[ƒo[Ú‘±
+    'SQLã‚µãƒ¼ãƒãƒ¼æ¥ç¶š
     Set objCon = ADODB_Connection(strBUMOC)
     
-    'ƒ[ƒNƒe[ƒuƒ‹‚ÌŒ³ƒlƒ^æ“¾
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã®å…ƒãƒã‚¿å–å¾—
     Set rsSqlServer = ADODB_Recordset(MakeMailSql(strKASE), objCon)
 
-    'ACCESSÚ‘±
+    'ACCESSæ¥ç¶š
     Set dbAccess = CurrentDb
         
-    'ƒ[ƒNƒe[ƒuƒ‹ƒNƒŠƒA
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ã‚¯ãƒªã‚¢
     If Not ClearWork(P_WORK_TABLE) Then
         GoTo Exit_rtn
     End If
 
-    'ƒ[ƒNƒe[ƒuƒ‹ƒŒƒR[ƒh’Ç‰Á
+    'ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«ãƒ¬ã‚³ãƒ¼ãƒ‰è¿½åŠ 
     Set rsAccess = dbAccess.OpenRecordset(P_WORK_TABLE, dbOpenDynaset, dbAppendOnly)
 
     Dim strTemp As String
@@ -458,13 +458,13 @@ On Error GoTo err_rtn
 
     If rsSqlServer.RecordCount = 0 Then
         If blnNotFoundMsg Then
-            MsgBox "ŠY“–ƒf[ƒ^‚ª‘¶İ‚µ‚Ü‚¹‚ñB", vbInformation, P_KAKUNIN
+            MsgBox "è©²å½“ãƒ‡ãƒ¼ã‚¿ãŒå­˜åœ¨ã—ã¾ã›ã‚“ã€‚", vbInformation, P_KAKUNIN
         End If
         MakeWork = False
         GoTo Exit_rtn
     Else
         If bAuthority = True Then
-'            If SubCondition.Form.cmb_–ˆŒ‰ñû‹æ•ª = "02" Or SubCondition.Form.cmb_–ˆŒ‰ñû‹æ•ª = "03" Then  'ƒNƒŒƒWƒbƒgEŒûÀU‘Ö 'INSERT 2011/09/28 M.RYU 'DELETE 2011/11/11 M.RYU
+'            If SubCondition.Form.cmb_æ¯æœˆå›ååŒºåˆ† = "02" Or SubCondition.Form.cmb_æ¯æœˆå›ååŒºåˆ† = "03" Then  'ã‚¯ãƒ¬ã‚¸ãƒƒãƒˆãƒ»å£åº§æŒ¯æ›¿ 'INSERT 2011/09/28 M.RYU 'DELETE 2011/11/11 M.RYU
             SubCondition.Form.cmd_Mail.Enabled = True
             SubCondition.Form.cmd_Kouza.Enabled = True      'INSERT 2011/10/03 M.RYU
 '            End If         'DELETE 2011/11/11 M.RYU
@@ -491,9 +491,9 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :TableExist
-'        ‹@”\             :ACCESSƒe[ƒuƒ‹‘¶İƒ`ƒFƒbƒN
-'        IN               :ƒe[ƒuƒ‹–¼
-'        OUT              :True=‘¶İ‚·‚é False=‘¶İ‚µ‚È‚¢
+'        æ©Ÿèƒ½             :ACCESSãƒ†ãƒ¼ãƒ–ãƒ«å­˜åœ¨ãƒã‚§ãƒƒã‚¯
+'        IN               :ãƒ†ãƒ¼ãƒ–ãƒ«å
+'        OUT              :True=å­˜åœ¨ã™ã‚‹ False=å­˜åœ¨ã—ãªã„
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -515,9 +515,9 @@ End Function
 '''==============================================================================*
 '''
 '''        MODULE_NAME      :MakeYoukSql
-'''        ‹@”\             :—\–ñƒgƒ‰ƒ“ŒŸõSQL•¶ì¬
+'''        æ©Ÿèƒ½             :äºˆç´„ãƒˆãƒ©ãƒ³æ¤œç´¢SQLæ–‡ä½œæˆ
 '''        IN               :
-'''        OUT              :SQL•¶
+'''        OUT              :SQLæ–‡
 '''--------------------------DELETE 2011/08/30 M.RYU------------------------------
 '''==============================================================================*
 '''---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -666,9 +666,9 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :MakeYoukSql
-'        ‹@”\             :—\–ñƒgƒ‰ƒ“ŒŸõSQL•¶ì¬
+'        æ©Ÿèƒ½             :äºˆç´„ãƒˆãƒ©ãƒ³æ¤œç´¢SQLæ–‡ä½œæˆ
 '        IN               :
-'        OUT              :SQL•¶
+'        OUT              :SQLæ–‡
 '        CREAT            :2011/08/30 M.RYU
 '
 '==============================================================================*
@@ -748,8 +748,8 @@ Private Function MakeMailSql(strKASE As String) As String
             strSQL = strSQL & "     SELECT DISTINCT KAIST_KOKYC FROM " & strKASE & ".dbo.KAIS_TRAN KAIST        "
             strSQL = strSQL & "      WHERE KAIST.KAIST_BUMOC = DTBL.BUMOC AND KAIST.KAIST_KAISI = '6' "
             strSQL = strSQL & "      AND KAIST_KAYMD <= " & .txt_CardReqFrom & ")"
-            strSQL = strSQL & "   AND DTBL.SEIKIKAN < " & .txt_CardReqFrom & "   "  '¿‹ŠúŠÔ
-            strSQL = strSQL & "   AND DTBL.ESENDD   < " & .txt_CardReqFrom & "   "  'ƒJ[ƒh“o˜^“ú
+            strSQL = strSQL & "   AND DTBL.SEIKIKAN < " & .txt_CardReqFrom & "   "  'è«‹æ±‚æœŸé–“
+            strSQL = strSQL & "   AND DTBL.ESENDD   < " & .txt_CardReqFrom & "   "  'ã‚«ãƒ¼ãƒ‰ç™»éŒ²æ—¥
             
         End If
     End With
@@ -762,7 +762,7 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :MakeWhere
-'        ‹@”\             :Where‹åì¬
+'        æ©Ÿèƒ½             :Whereå¥ä½œæˆ
 '        IN               :
 '        OUT              :
 '
@@ -779,46 +779,46 @@ Private Function MakeWhere() As String
             strWhere = strWhere & " AND USER_SKBN = '04'                        "           'INSERT 2011/08/30 M.RYU
             strWhere = strWhere & " AND ISNULL(YOUKT_YUKBN,0) IN ('10' , '20')  "           'INSERT 2011/08/30 M.RYU
         Else
-            ' W‹à‹æ•ª
-            If Nz(.cmb_W‹à‹æ•ª) <> "" Then
-                strWhere = strWhere & " AND USER_SKBN = '" & .cmb_W‹à‹æ•ª & "' "
+            ' é›†é‡‘åŒºåˆ†
+            If Nz(.cmb_é›†é‡‘åŒºåˆ†) <> "" Then
+                strWhere = strWhere & " AND USER_SKBN = '" & .cmb_é›†é‡‘åŒºåˆ† & "' "
             End If
             
-            ' –ˆŒ‰ñû‹æ•ª
-            If Nz(.cmb_–ˆŒ‰ñû‹æ•ª) <> "" Then
-                strWhere = strWhere & " AND ISNULL(RCPT_KAIHI,1) = '" & .cmb_–ˆŒ‰ñû‹æ•ª & "' "
+            ' æ¯æœˆå›ååŒºåˆ†
+            If Nz(.cmb_æ¯æœˆå›ååŒºåˆ†) <> "" Then
+                strWhere = strWhere & " AND ISNULL(RCPT_KAIHI,1) = '" & .cmb_æ¯æœˆå›ååŒºåˆ† & "' "
             End If
             
-            ' ó•tí•Ê
-            If Nz(.cmb_ó•tí•Ê) <> "" Then
-                strWhere = strWhere & " AND ISNULL(YOUKT_GENKBN,0) = '" & .cmb_ó•tí•Ê & "' "
+            ' å—ä»˜ç¨®åˆ¥
+            If Nz(.cmb_å—ä»˜ç¨®åˆ¥) <> "" Then
+                strWhere = strWhere & " AND ISNULL(YOUKT_GENKBN,0) = '" & .cmb_å—ä»˜ç¨®åˆ¥ & "' "
             End If
             
-            ' ó‘Ô
+            ' çŠ¶æ…‹
             If Nz(.cmb_YukbnFrom) <> "" Then
                 strWhere = strWhere & " AND ISNULL(YOUKT_YUKBN,0) = '" & .cmb_YukbnFrom & "' "
             Else
                 strWhere = strWhere & " AND ISNULL(YOUKT_YUKBN,0) IN ('10' , '20') "        'INSERT 2011/08/30 M.RYU
             End If
     
-            'ŒÚ‹qƒR[ƒh
+            'é¡§å®¢ã‚³ãƒ¼ãƒ‰
             If Nz(.cmb_Ucode) <> "" Then
-                'ŒÚ‹qƒR[ƒh‚ª“ü—Í‚³‚ê‚Ä‚¢‚éê‡‚Í‚»‚ê‚Åˆê’vğŒBƒJƒi‚Í–³‹B
+                'é¡§å®¢ã‚³ãƒ¼ãƒ‰ãŒå…¥åŠ›ã•ã‚Œã¦ã„ã‚‹å ´åˆã¯ãã‚Œã§ä¸€è‡´æ¡ä»¶ã€‚ã‚«ãƒŠã¯ç„¡è¦–ã€‚
                 strWhere = strWhere & MakeEqual("YOUKT_UCODE", Nz(.cmb_Ucode))
             End If
             
-            ' —\–ñ“ú
+            ' äºˆç´„æ—¥
             strWhere = strWhere & MakeBetween("YOUKT_KUDATE", Nz(.txt_UkdateFrom), Nz(.txt_UkdateTo))
             
-            ' Œ®‘—•t“ú
+            ' éµé€ä»˜æ—¥
             strWhere = strWhere & MakeBetween("RCPT_KEY_SEND_DATE", Nz(.txt_KeySendDateFrom), Nz(.txt_KeySendDateTo))
             
-            '•ÛØ‰ïĞ
+            'ä¿è¨¼ä¼šç¤¾
             If Nz(.cmb_HosyId) <> "" Then                                                       'INSERT 2011/07/02 M.RYU
                 strWhere = strWhere & " AND CARG_FILE.CARG_HOSYICD = " & .cmb_HosyId            'INSERT 2011/07/02 M.RYU
             End If
             
-            '•ÛØ‰ïĞ
+            'ä¿è¨¼ä¼šç¤¾
             If Nz(.cmb_HosyC) <> "" Then                                                        'INSERT 2011/07/02 M.RYU
                 strWhere = strWhere & MakeEqual("CARG_FILE.CARG_HOSYO_CD", .cmb_HosyC)          'INSERT 2011/07/02 M.RYU
             End If
@@ -834,10 +834,10 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :MakeEqual
-'        ‹@”\             :ˆê’vğŒì¬
-'        IN               :‘æˆêˆø”|‘ÎÛƒe[ƒuƒ‹‚ÌƒJƒ‰ƒ€–¼
-'                         :‘æ“ñˆø”|ğŒ’l
-'        OUT              :ğŒ•¶
+'        æ©Ÿèƒ½             :ä¸€è‡´æ¡ä»¶ä½œæˆ
+'        IN               :ç¬¬ä¸€å¼•æ•°ï¼å¯¾è±¡ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚«ãƒ©ãƒ å
+'                         :ç¬¬äºŒå¼•æ•°ï¼æ¡ä»¶å€¤
+'        OUT              :æ¡ä»¶æ–‡
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -846,7 +846,7 @@ Private Function MakeEqual(strColName As String, strCond As String) As String
     MakeEqual = ""
     
     If strCond <> "" Then
-        'w’è‚³‚ê‚½ƒJƒ‰ƒ€–¼‚Æhh‚ÅğŒ’l‚ğ‚­‚Á‚Â‚¯‚é
+        'æŒ‡å®šã•ã‚ŒãŸã‚«ãƒ©ãƒ åã¨â€ï¼â€ã§æ¡ä»¶å€¤ã‚’ãã£ã¤ã‘ã‚‹
         MakeEqual = " AND " & strColName & " = '" & strCond & "' "
     End If
             
@@ -855,11 +855,11 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :MakeBetween
-'        ‹@”\             :”ÍˆÍğŒì¬
-'        IN               :‘æˆêˆø”|‘ÎÛƒe[ƒuƒ‹‚ÌƒJƒ‰ƒ€–¼
-'                         :‘æ“ñˆø”|”ÍˆÍğŒ’lFROM
-'                         :‘æOˆø”|”ÍˆÍğŒ’lTO
-'        OUT              :ğŒ•¶
+'        æ©Ÿèƒ½             :ç¯„å›²æ¡ä»¶ä½œæˆ
+'        IN               :ç¬¬ä¸€å¼•æ•°ï¼å¯¾è±¡ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚«ãƒ©ãƒ å
+'                         :ç¬¬äºŒå¼•æ•°ï¼ç¯„å›²æ¡ä»¶å€¤FROM
+'                         :ç¬¬ä¸‰å¼•æ•°ï¼ç¯„å›²æ¡ä»¶å€¤TO
+'        OUT              :æ¡ä»¶æ–‡
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -870,19 +870,19 @@ Private Function MakeBetween(strColName As String, strfrom As String, strTo As S
     strTemp = ""
     
     If strfrom <> "" And strTo <> "" Then
-        '‹¤‚É‹ó”’‚Å‚Í‚È‚¢ê‡A
+        'å…±ã«ç©ºç™½ã§ã¯ãªã„å ´åˆã€
         If strfrom = strTo Then
-            'FROM‚ÆTO‚ª“¯ˆê‚Ìê‡Aˆê’vğŒ
+            'FROMã¨TOãŒåŒä¸€ã®å ´åˆã€ä¸€è‡´æ¡ä»¶
             strTemp = MakeEqual(strColName, strfrom)
         Else
-            'FROM‚ÆTO‚ªˆÙ‚È‚éê‡ABETWEENğŒ
+            'FROMã¨TOãŒç•°ãªã‚‹å ´åˆã€BETWEENæ¡ä»¶
             strTemp = " AND " & strColName & " BETWEEN '" & strfrom & "' AND '" & strTo & "' "
         End If
     ElseIf strfrom <> "" Then
-        'FROM‚Ì‚İ‚Ìê‡A‚»‚êˆÈã‚Å‚ ‚é‚±‚Æ‚ªğŒ
+        'FROMã®ã¿ã®å ´åˆã€ãã‚Œä»¥ä¸Šã§ã‚ã‚‹ã“ã¨ãŒæ¡ä»¶
         strTemp = " AND " & strColName & " >= '" & strfrom & "' "
     ElseIf strTo <> "" Then
-        'TO‚Ì‚İ‚Ìê‡A‚»‚êˆÈ‰º‚Å‚ ‚é‚±‚Æ‚ªğŒ
+        'TOã®ã¿ã®å ´åˆã€ãã‚Œä»¥ä¸‹ã§ã‚ã‚‹ã“ã¨ãŒæ¡ä»¶
         strTemp = " AND " & strColName & " <= '" & strTo & "' "
     End If
     
@@ -893,7 +893,7 @@ End Function
 '==============================================================================*
 '
 '        MODULE_NAME      :AddWork
-'        ‹@”\             :ì‹Æƒe[ƒuƒ‹’Ç‰Á
+'        æ©Ÿèƒ½             :ä½œæ¥­ãƒ†ãƒ¼ãƒ–ãƒ«è¿½åŠ 
 '        IN               :
 '        OUT              :
 '
@@ -904,37 +904,37 @@ Private Sub AddWork(rsSource As Object, rsDestination As Recordset)
     With rsDestination
         .AddNew
  
-        .Fields("SEND") = 0                                                     '' ‘—Mƒtƒ‰ƒO
-        .Fields("BUMOC") = rsSource.Fields("BUMOC")                             '' •”–åƒR[ƒh
-        .Fields("UCODE") = rsSource.Fields("YOUKT_UCODE")                       '' ŒÚ‹qƒR[ƒh
-        .Fields("USER") = rsSource.Fields("USER_NAME")                          '' ŒÚ‹q–¼
-        .Fields("USERKANA") = rsSource.Fields("USER_KANA")                      '' ŒÚ‹qƒJƒi         'INSERT 20120105 M.RYU
-        .Fields("RENKBN") = rsSource.Fields("RENKBN")                           '' ˜A—‹æ•ª
-        .Fields("TEL") = rsSource.Fields("TELNO")                               '' “d˜b”Ô†
-        .Fields("MAIL") = rsSource.Fields("USER_MAIL")                          '' ƒ[ƒ‹ƒAƒhƒŒƒX
-        .Fields("YOUKTGENKBN") = rsSource.Fields("YOUKT_GENKBN")                '' \‹æ•ª
-        .Fields("GENKBN") = rsSource.Fields("GENKBN")                           '' \–¼Ì
-        .Fields("RCPTKAIHI") = rsSource.Fields("RCPT_KAIHI")                    '' –ˆŒx•¥•û–@
-        .Fields("KAIHI") = rsSource.Fields("KAIHI")                             '' –ˆŒx•¥•û–@–¼Ì
-        .Fields("USERSKBN") = rsSource.Fields("USER_SKBN")                      '' W‹à‹æ•ª
-        .Fields("SKBN") = rsSource.Fields("SKBN")                               '' W‹à‹æ•ª–¼Ì
-        .Fields("YOUKTYUKBN") = rsSource.Fields("YOUKT_YUKBN")                  '' Œ_–ñ‹æ•ª
-        .Fields("YUKBN") = rsSource.Fields("YUKBN")                             '' Œ_–ñ–¼Ì
-        .Fields("YOUKTUKDATE") = rsSource.Fields("YOUKT_UKDATE")                '' —\–ñ“ú
-        .Fields("RCPTUKDATE") = rsSource.Fields("RCPT_UKDATE")                  '' ó•t“ú
-        .Fields("KEYSENDDATE") = rsSource.Fields("RCPT_KEY_SEND_DATE")          '' Œ®‘—•t“ú
-        .Fields("SENDD") = rsSource.Fields("SENDD")                             '' \‘‘—M“ú
-        .Fields("CONTN") = rsSource.Fields("CONTN")                             '' ƒRƒƒ“ƒg
-        .Fields("ESENDD") = rsSource.Fields("ESENDD")                           '' “o˜^“ú
-        .Fields("ECONTN") = rsSource.Fields("ECONTN")                           '' “o˜^“úƒRƒƒ“ƒg
-        .Fields("YCODE") = rsSource.Fields("YOUKT_YCODE")                       '' ƒ„[ƒhƒR[ƒh
-        .Fields("NAME") = rsSource.Fields("YARD_NAME")                          '' ƒ„[ƒh–¼Ì
-        .Fields("ADDR") = rsSource.Fields("YARD_ADDR")                          '' ZŠ
-        .Fields("CNO") = rsSource.Fields("YOUKT_NO")                            '' •”‰®”Ô†
-        .Fields("STEP") = rsSource.Fields("STEP")                               '' ’i
-        .Fields("USAGE") = rsSource.Fields("USAGE")                             '' g—p—p“r
-        .Fields("SIZE") = rsSource.Fields("CNTA_SIZE")                          '' ƒTƒCƒY
-        .Fields("RENTKG") = rsSource.Fields("RCPT_RENTKG")                      '' ŒŠz
+        .Fields("SEND") = 0                                                     '' é€ä¿¡ãƒ•ãƒ©ã‚°
+        .Fields("BUMOC") = rsSource.Fields("BUMOC")                             '' éƒ¨é–€ã‚³ãƒ¼ãƒ‰
+        .Fields("UCODE") = rsSource.Fields("YOUKT_UCODE")                       '' é¡§å®¢ã‚³ãƒ¼ãƒ‰
+        .Fields("USER") = rsSource.Fields("USER_NAME")                          '' é¡§å®¢å
+        .Fields("USERKANA") = rsSource.Fields("USER_KANA")                      '' é¡§å®¢ã‚«ãƒŠ         'INSERT 20120105 M.RYU
+        .Fields("RENKBN") = rsSource.Fields("RENKBN")                           '' é€£çµ¡åŒºåˆ†
+        .Fields("TEL") = rsSource.Fields("TELNO")                               '' é›»è©±ç•ªå·
+        .Fields("MAIL") = rsSource.Fields("USER_MAIL")                          '' ãƒ¡ãƒ¼ãƒ«ã‚¢ãƒ‰ãƒ¬ã‚¹
+        .Fields("YOUKTGENKBN") = rsSource.Fields("YOUKT_GENKBN")                '' ç”³è¾¼åŒºåˆ†
+        .Fields("GENKBN") = rsSource.Fields("GENKBN")                           '' ç”³è¾¼åç§°
+        .Fields("RCPTKAIHI") = rsSource.Fields("RCPT_KAIHI")                    '' æ¯æœˆæ”¯æ‰•æ–¹æ³•
+        .Fields("KAIHI") = rsSource.Fields("KAIHI")                             '' æ¯æœˆæ”¯æ‰•æ–¹æ³•åç§°
+        .Fields("USERSKBN") = rsSource.Fields("USER_SKBN")                      '' é›†é‡‘åŒºåˆ†
+        .Fields("SKBN") = rsSource.Fields("SKBN")                               '' é›†é‡‘åŒºåˆ†åç§°
+        .Fields("YOUKTYUKBN") = rsSource.Fields("YOUKT_YUKBN")                  '' å¥‘ç´„åŒºåˆ†
+        .Fields("YUKBN") = rsSource.Fields("YUKBN")                             '' å¥‘ç´„åç§°
+        .Fields("YOUKTUKDATE") = rsSource.Fields("YOUKT_UKDATE")                '' äºˆç´„æ—¥
+        .Fields("RCPTUKDATE") = rsSource.Fields("RCPT_UKDATE")                  '' å—ä»˜æ—¥
+        .Fields("KEYSENDDATE") = rsSource.Fields("RCPT_KEY_SEND_DATE")          '' éµé€ä»˜æ—¥
+        .Fields("SENDD") = rsSource.Fields("SENDD")                             '' ç”³è¾¼æ›¸é€ä¿¡æ—¥
+        .Fields("CONTN") = rsSource.Fields("CONTN")                             '' ã‚³ãƒ¡ãƒ³ãƒˆ
+        .Fields("ESENDD") = rsSource.Fields("ESENDD")                           '' ç™»éŒ²æ—¥
+        .Fields("ECONTN") = rsSource.Fields("ECONTN")                           '' ç™»éŒ²æ—¥ã‚³ãƒ¡ãƒ³ãƒˆ
+        .Fields("YCODE") = rsSource.Fields("YOUKT_YCODE")                       '' ãƒ¤ãƒ¼ãƒ‰ã‚³ãƒ¼ãƒ‰
+        .Fields("NAME") = rsSource.Fields("YARD_NAME")                          '' ãƒ¤ãƒ¼ãƒ‰åç§°
+        .Fields("ADDR") = rsSource.Fields("YARD_ADDR")                          '' ä½æ‰€
+        .Fields("CNO") = rsSource.Fields("YOUKT_NO")                            '' éƒ¨å±‹ç•ªå·
+        .Fields("STEP") = rsSource.Fields("STEP")                               '' æ®µ
+        .Fields("USAGE") = rsSource.Fields("USAGE")                             '' ä½¿ç”¨ç”¨é€”
+        .Fields("SIZE") = rsSource.Fields("CNTA_SIZE")                          '' ã‚µã‚¤ã‚º
+        .Fields("RENTKG") = rsSource.Fields("RCPT_RENTKG")                      '' æœˆé¡
         .UPDATE
 
     End With
@@ -944,7 +944,7 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :Form_Open
-'        ‹@”\             :Form_OpenƒCƒxƒ“ƒg
+'        æ©Ÿèƒ½             :Form_Openã‚¤ãƒ™ãƒ³ãƒˆ
 '        IN               :
 '        OUT              :
 '
@@ -959,7 +959,7 @@ End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :Form_Unload
-'        ‹@”\             :Form_UnloadƒCƒxƒ“ƒg
+'        æ©Ÿèƒ½             :Form_Unloadã‚¤ãƒ™ãƒ³ãƒˆ
 '        IN               :
 '        OUT              :
 '
@@ -968,7 +968,7 @@ End Sub
 Private Sub Form_Unload(Cancel As Integer)
     On Error Resume Next
     
-    'Access‘¤ƒ[ƒNƒe[ƒuƒ‹íœ
+    'Accesså´ãƒ¯ãƒ¼ã‚¯ãƒ†ãƒ¼ãƒ–ãƒ«å‰Šé™¤
     Call ClearWork(P_WORK_TABLE)
 
 End Sub
@@ -976,7 +976,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :ŠO•”‚©‚çÄ•\¦‚³‚¹‚é
+'        MODULE_NAME      :å¤–éƒ¨ã‹ã‚‰å†è¡¨ç¤ºã•ã›ã‚‹
 '        MODULE_ID        :subReload
 '        CREATE_DATE      :2005/07/19
 '
@@ -1002,7 +1002,7 @@ End Sub
 
 '==============================================================================*
 '
-'        MODULE_NAME      :€–Úg—p‰Â•s‰Âİ’è
+'        MODULE_NAME      :é …ç›®ä½¿ç”¨å¯ä¸å¯è¨­å®š
 '        MODULE_ID        :FormEnable
 '        CREATE_DATE      :2005/07/19
 '
@@ -1011,19 +1011,19 @@ End Sub
 Public Sub FormEnable(blnEnable As Boolean)
 
     SubCondition.Enabled = blnEnable
-    cmd_I—¹.Enabled = blnEnable
-    cmd_ŒŸõ.Enabled = blnEnable
+    cmd_çµ‚äº†.Enabled = blnEnable
+    cmd_æ¤œç´¢.Enabled = blnEnable
 
 
 End Sub
 '==============================================================================*
 '
 '        MODULE_NAME      :MakeDateTimeBetween
-'        ‹@”\             :“ú‚ğl—¶‚µ‚½”ÍˆÍğŒì¬
-'        IN               :‘æˆêˆø”|‘ÎÛƒe[ƒuƒ‹‚ÌƒJƒ‰ƒ€–¼
-'                         :‘æ“ñˆø”|”ÍˆÍğŒ’lFROM
-'                         :‘æOˆø”|”ÍˆÍğŒ’lTO
-'        OUT              :ğŒ•¶
+'        æ©Ÿèƒ½             :æ—¥æ™‚ã‚’è€ƒæ…®ã—ãŸç¯„å›²æ¡ä»¶ä½œæˆ
+'        IN               :ç¬¬ä¸€å¼•æ•°ï¼å¯¾è±¡ãƒ†ãƒ¼ãƒ–ãƒ«ã®ã‚«ãƒ©ãƒ å
+'                         :ç¬¬äºŒå¼•æ•°ï¼ç¯„å›²æ¡ä»¶å€¤FROM
+'                         :ç¬¬ä¸‰å¼•æ•°ï¼ç¯„å›²æ¡ä»¶å€¤TO
+'        OUT              :æ¡ä»¶æ–‡
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
@@ -1037,10 +1037,10 @@ Private Function MakeDateTimeBetween(strColName As String, strfrom As String, st
             strTemp = " AND " & strColName & " BETWEEN '" & strfrom & " 00:00:00' AND '" & _
                                                               strTo & " 23:59:59' "
     ElseIf strfrom <> "" Then
-        'FROM‚Ì‚İ‚Ìê‡A‚»‚êˆÈã‚Å‚ ‚é‚±‚Æ‚ªğŒ
+        'FROMã®ã¿ã®å ´åˆã€ãã‚Œä»¥ä¸Šã§ã‚ã‚‹ã“ã¨ãŒæ¡ä»¶
         strTemp = " AND " & strColName & " >= '" & strfrom & " 00:00:00' "
     ElseIf strTo <> "" Then
-        'TO‚Ì‚İ‚Ìê‡A‚»‚êˆÈ‰º‚Å‚ ‚é‚±‚Æ‚ªğŒ
+        'TOã®ã¿ã®å ´åˆã€ãã‚Œä»¥ä¸‹ã§ã‚ã‚‹ã“ã¨ãŒæ¡ä»¶
         strTemp = " AND " & strColName & " <= '" & strTo & " 23:59:59' "
     End If
     
@@ -1049,12 +1049,12 @@ End Function
 
 '==============================================================================*
 '
-'        MODULE_NAME      :ƒ[ƒ‹Œ ŒÀ‰Â”Û
+'        MODULE_NAME      :ãƒ¡ãƒ¼ãƒ«æ¨©é™å¯å¦
 '        MODULE_ID        :IsAuthority
-'        Parameter        :‘æ1ˆø”(dao.DataBase) = SqlServer‚ÉDAOÚ‘±‚µ‚½DataBase
-'                         :‘æ2ˆø”(String) = ƒ†[ƒUID
-'        –ß‚è’l           : True...XV‰Â
-'                         : False...XV•s‰Â
+'        Parameter        :ç¬¬1å¼•æ•°(dao.DataBase) = SqlServerã«DAOæ¥ç¶šã—ãŸDataBase
+'                         :ç¬¬2å¼•æ•°(String) = ãƒ¦ãƒ¼ã‚¶ID
+'        æˆ»ã‚Šå€¤           : True...æ›´æ–°å¯
+'                         : False...æ›´æ–°ä¸å¯
 '        CREATE_DATE      :
 '        UPDATE_DATE      :
 '==============================================================================*
@@ -1070,11 +1070,11 @@ Public Function isAuthority() As Boolean
     
     On Error GoTo Exception
     
-    'ƒ†[ƒUî•ñæ“¾
+    'ãƒ¦ãƒ¼ã‚¶æƒ…å ±å–å¾—
     userId = MSZZ000.LsGetUserName()
 
   
-    'ADOÚ‘±Object¶¬
+    'ADOæ¥ç¶šObjectç”Ÿæˆ
     Set adoDbConnection = MSZZ025.ADODB_Connection()
 
     sqlText = "SELECT * "
@@ -1086,7 +1086,7 @@ Public Function isAuthority() As Boolean
     Set rsData = MSZZ025.ADODB_Recordset(sqlText, adoDbConnection, adoReadOnly)
     
     Do Until rsData.EOF
-        ' ƒ{ƒ^ƒ“‚Ìg—p‰Â”Û‚ğİ’è‚·‚é
+        ' ãƒœã‚¿ãƒ³ã®ä½¿ç”¨å¯å¦ã‚’è¨­å®šã™ã‚‹
         If (Nz(rsData.Fields("ONLET_ACCEI"), "")) = 1 Then
             isAuthority = True
         Else
