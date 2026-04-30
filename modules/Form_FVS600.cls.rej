@@ -1,0 +1,9 @@
+diff a/modules/Form_FVS600.cls b/modules/Form_FVS600.cls	(rejected hunks)
+@@ -7370,6 +7370,7 @@
+         .txt_�a��ۏ؋� = 0
+ 
+         .txt_�_����l = Null
++        .txt_FaceAuth = Null
+         
+         
+         .txt_RCPT_BIKE_NUMBER = Null
