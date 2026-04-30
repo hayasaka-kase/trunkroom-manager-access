@@ -14324,7 +14324,7 @@ Private Function sel_ENTER_TRAN_row( _
         Call MSZZ003_M80(objDoc.XML)
         
         If InStr(1, LCase(strResponseXml), LCase("charset=EUC-JP"), vbTextCompare) > 0 Then
-            strFile = CurrentProject.Path & "\" & PROG_ID & "_" & Format(Now, "yyyymmdd_hhnnss") & "_ErrorLog.html"
+            strFile = CurrentProject.path & "\" & PROG_ID & "_" & Format(Now, "yyyymmdd_hhnnss") & "_ErrorLog.html"
             Call EUCSave(strFile, strResponseXml)
             strResponseXml = "結果は外部ファイル[" & strFile & "]を参照してください。"
         End If
@@ -14507,7 +14507,7 @@ Private Sub send_table(iniFile As Collection, objDoc As Object, strTbl As String
     Call MSZZ003_M80(objDoc.XML)
                                                                                 
     If InStr(1, LCase(strResponseXml), LCase("charset=EUC-JP"), vbTextCompare) > 0 Then
-        strFile = CurrentProject.Path & "\" & PROG_ID & "_" & Format(Now, "yyyymmdd_hhnnss") & "_ErrorLog.html"
+        strFile = CurrentProject.path & "\" & PROG_ID & "_" & Format(Now, "yyyymmdd_hhnnss") & "_ErrorLog.html"
         Call EUCSave(strFile, strResponseXml)
         strResponseXml = "結果は外部ファイル[" & strFile & "]を参照してください。"
     End If

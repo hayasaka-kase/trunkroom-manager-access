@@ -1086,7 +1086,7 @@ End Function
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Function makeComment(UserCode As String, strBUMOC As String) As String
+Private Function makeComment(userCode As String, strBUMOC As String) As String
     
     Dim strSQL       As String
 
@@ -1115,7 +1115,7 @@ Private Function makeComment(UserCode As String, strBUMOC As String) As String
     strSQL = strSQL & " KOTOT_INSUB  "
     strSQL = strSQL & " ) VALUES ( "
     strSQL = strSQL & "'" & strBUMOC & "', "
-    strSQL = strSQL & "'" & UserCode & "', "
+    strSQL = strSQL & "'" & userCode & "', "
     strSQL = strSQL & " '999', "
     strSQL = strSQL & " '999', "
     strSQL = strSQL & Format$(DATE, "YYYYMMDD") & ", "

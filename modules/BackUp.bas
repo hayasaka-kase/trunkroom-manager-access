@@ -39,13 +39,13 @@ Public fileName As String
 
 'コモンダイアログの表示
 Property Let Action(new_Action As Integer)
-    Dim Res As String
+    Dim res As String
     
     '実際は内部プロシージャにて実行
-    Res = doCmd(new_Action)
+    res = doCmd(new_Action)
     
     'FileNameプロパティのセット
-    fileName = Res
+    fileName = res
 
 End Property
 

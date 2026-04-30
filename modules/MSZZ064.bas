@@ -136,7 +136,7 @@ Public Function getPuttyPath() As String                                        
     Const C_PUTTY_PATH      As String = "PuttyTool\"                            'INSERT 2012/06/29 K.ISHIZAKA
     On Error GoTo ErrorHandler
     
-    strPath = Application.CurrentProject.Path & "\" & C_PUTTY_PATH              'INSERT START 2012/06/29 K.ISHIZAKA
+    strPath = Application.CurrentProject.path & "\" & C_PUTTY_PATH              'INSERT START 2012/06/29 K.ISHIZAKA
     If Dir(strPath, vbDirectory) <> "" Then
         getPuttyPath = strPath
         Exit Function
