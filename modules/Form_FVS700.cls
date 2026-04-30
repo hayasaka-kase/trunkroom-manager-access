@@ -3707,6 +3707,12 @@ On Error GoTo DB_AccessMain_Err
     '20051002 SHIBAZAKI トランザクション処理追加
     objWs.CommitTrans
     
+    ' cmb_ContractState(現在の入力)が 09 かつ、
+    ' strExistingStatus(DBから読み込んだ時の値)が 09 以外の場合のみ実行
+    If cmb_ContractState = P_STATUS_COMPLETE And strExistingStatus <> P_STATUS_COMPLETE Then
+        Call CallRoomReleaseAPI
+    End If
+    
     objDb.Close
     Set objDb = Nothing
     
@@ -6283,3 +6289,81 @@ Public Sub SubReloadfromFVS90n()
     Call DispReprInfo
 End Sub
 '****************************  ended of program ********************************
+
+
+'==============================================================================*
+'
+'        MODULE_NAME      : CallRoomReleaseAPI
+'        機能             : 部屋解除API（顔認証データ等の削除）を呼び出す
+'        IN               : なし（画面のcmb_Yard, cmb_CntaNoを利用）
+'        OUT              : True=成功(204,404), False=失敗
+'
+'==============================================================================*
+'---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
+Private Function CallRoomReleaseAPI() As Boolean
+    On Error GoTo Exception
+
+    Dim objRequest As Object
+    Dim strUrl     As String
+    Dim strApiKey  As String
+    Dim strJson    As String
+    Dim intStatus  As Integer
+    Dim StrYard    As String
+    Dim strRoom    As String
+
+    CallRoomReleaseAPI = False
+
+    ' --------------------------------------------------------
+    ' テスト環境用
+    ' --------------------------------------------------------
+    strUrl = "https://dev-facekey-admin.kase3535.com//api/v1/external/system/rooms"
+    strApiKey = "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
+
+    ' 画面の値をそのまま取得
+    StrYard = Nz(Me.cmb_Yard.VALUE, "")
+    strRoom = Nz(Me.cmb_CntaNo.VALUE, "")
+
+    ' JSONボディの作成
+    strJson = "{""yard_code"":""" & StrYard & """, ""room_code"":""" & strRoom & """}"
+
+    ' XMLHTTPオブジェクトの作成 (遅延バインディング)
+    Set objRequest = CreateObject("MSXML2.ServerXMLHTTP.6.0")
+    
+    ' APIリクエストの設定
+    objRequest.Open "DELETE", strUrl, False
+    objRequest.setRequestHeader "Content-Type", "application/json"
+    objRequest.setRequestHeader "X-API-Key", strApiKey
+
+    ' リクエスト送信
+    objRequest.send strJson
+
+    ' ステータスコードの判定
+    intStatus = objRequest.Status
+    Select Case intStatus
+        Case 204
+            CallRoomReleaseAPI = True
+        Case 404
+            ' 顔認証未導入の部屋などの場合は404が返るため、エラーとせず無視する
+            CallRoomReleaseAPI = True
+        Case 401
+            MsgBox "【API連携エラー】" & vbCrLf & "APIキーが未指定、または無効です。(401)", vbExclamation, P_ERROR
+        Case 403
+            MsgBox "【API連携エラー】" & vbCrLf & "IP制限によりアクセスが拒否されました。(403)", vbExclamation, P_ERROR
+        Case 422
+            MsgBox "【API連携エラー】" & vbCrLf & "リクエストの形式が正しくありません。(422)", vbExclamation, P_ERROR
+        Case 500
+            MsgBox "【API連携エラー】" & vbCrLf & "サーバー内部エラーが発生しました。(500)", vbExclamation, P_ERROR
+        Case Else
+            MsgBox "【API連携エラー】" & vbCrLf & "予期せぬエラーが発生しました。(HTTP " & intStatus & ")", vbExclamation, P_ERROR
+    End Select
+
+    GoTo Finally
+
+Exception:
+    MsgBox "APIの呼び出し中にシステムエラーが発生しました。" & vbCrLf & _
+           "ｴﾗｰ番号: " & Err.Number & vbCrLf & Err.Description, vbCritical, P_ERROR
+
+Finally:
+    If Not objRequest Is Nothing Then Set objRequest = Nothing
+End Function
+
