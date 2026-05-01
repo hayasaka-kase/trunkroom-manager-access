@@ -6311,29 +6311,29 @@ Private Function CallRoomReleaseAPI() As Boolean
     Dim strApiKey  As String
     Dim strJson    As String
     Dim intStatus  As Integer
-    Dim StrYard    As String
+    Dim strYard    As String
     Dim strRoom    As String
 
     CallRoomReleaseAPI = False
 
-    ' SETU_TABLから設定値を取得
-    strUrl = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_BASE_URL'"), "https://dev-facekey-admin.kase3535.com")
+    ' SETU_TABLから設定値を取得（フルURLを取得）
+    strUrl = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'face_auth_api_base_url'"), "https://dev-facekey-admin.kase3535.com")
     If Right(strUrl, 1) = "/" Then strUrl = Left(strUrl, Len(strUrl) - 1)
     strUrl = strUrl & "/api/v1/external/system/rooms"
     
-    strApiKey = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_KEY'"), "")
+    strApiKey = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'face_auth_api_key'"), "")
 
     ' 画面の値をそのまま取得し、空白を除去
-    StrYard = Trim(Nz(Me.cmb_Yard.VALUE, ""))
+    strYard = Trim(Nz(Me.cmb_Yard.VALUE, ""))
     strRoom = Trim(Nz(Me.cmb_CntaNo.VALUE, ""))
     
     ' JSONボディの作成
-    strJson = "{""yard_code"":""" & StrYard & """, ""room_code"":""" & strRoom & """}"
+    strJson = "{""yard_code"":""" & strYard & """, ""room_code"":""" & strRoom & """}"
 
     ' XMLHTTPオブジェクトの作成 (遅延バインディング)
     Set objRequest = CreateObject("MSXML2.ServerXMLHTTP.6.0")
     ' setTimeouts(resolve, connect, send, receive) - ミリ秒指定
-    objRequest.setTimeouts 2000, 2000, 2000, 2000
+    objRequest.setTimeouts 5000, 5000, 5000, 5000
     
     ' APIリクエストの設定
     objRequest.Open "DELETE", strUrl, False

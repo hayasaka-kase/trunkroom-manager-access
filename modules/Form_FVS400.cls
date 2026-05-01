@@ -16435,7 +16435,7 @@ End Function
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Private Function fncUpdateCargFile(objDb As Database, _
-                                   ByVal StrYard As String, _
+                                   ByVal strYard As String, _
                                    ByVal strCno As String, _
                                    ByVal strUserID As String) As Boolean
     Dim blnError                As Boolean
@@ -16452,7 +16452,7 @@ On Error GoTo ErrorHandler
     strSQL = strSQL & ",            CARG_NO" & vbCrLf
     strSQL = strSQL & ",            CARG_KEY_CHGRIYUCD" & vbCrLf
     strSQL = strSQL & "FROM         CARG_FILE" & vbCrLf
-    strSQL = strSQL & "WHERE        CARG_YCODE = " & Nz(StrYard) & vbCrLf
+    strSQL = strSQL & "WHERE        CARG_YCODE = " & Nz(strYard) & vbCrLf
     strSQL = strSQL & "AND          CARG_NO =" & Nz(strCno) & vbCrLf
 
     Set rsCarg = objDb.OpenRecordset(strSQL, dbOpenDynaset)
@@ -16500,7 +16500,7 @@ End Function
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Private Function fncInsAkknTran(objDb As Database, _
-                                ByVal StrYard As String, _
+                                ByVal strYard As String, _
                                 ByVal strCno As String, _
                                 ByVal strKagiiCd As String, _
                                 ByVal strUserID) As Boolean
@@ -16540,13 +16540,13 @@ On Error GoTo ErrorHandler
     If MSZZ070_KaiKey(txtYardTihoKbn, Nz(rsName.Fields("NAME_VALUE_FROM"))) = "1" Then
 '↑ UPDATE 2016/05/17 SUGIMURA
         '新解除番号の発番
-        strNewKaiNo = MSZZ070_M00(strBumonCode, Nz(StrYard), Nz(strCno), Nz(strKagiiCd))
+        strNewKaiNo = MSZZ070_M00(strBumonCode, Nz(strYard), Nz(strCno), Nz(strKagiiCd))
 
         '自動鍵解除番号発番トランの登録
         strSQL = ""
         strSQL = strSQL & "SELECT      *" & vbCrLf
         strSQL = strSQL & "FROM        AKKN_TRAN" & vbCrLf
-        strSQL = strSQL & "WHERE       AKKNT_YARD = " & Nz(StrYard) & vbCrLf
+        strSQL = strSQL & "WHERE       AKKNT_YARD = " & Nz(strYard) & vbCrLf
         strSQL = strSQL & "AND         AKKNT_CTNO = " & Nz(strCno) & vbCrLf
         strSQL = strSQL & "AND         AKKNT_KTYPE = '" & Nz(strKagiiCd) & "'" & vbCrLf
         strSQL = strSQL & "AND         AKKNT_STYPE = '4'" 'insert 2021/06/02 EGL
@@ -16556,7 +16556,7 @@ On Error GoTo ErrorHandler
         With rsAkkn
             .AddNew
 
-            .Fields("AKKNT_YARD") = Nz(StrYard)                                                 ' ヤードコード
+            .Fields("AKKNT_YARD") = Nz(strYard)                                                 ' ヤードコード
             .Fields("AKKNT_CTNO") = Nz(strCno)                                                  ' コンテナ番号
             .Fields("AKKNT_KTYPE") = Nz(strKagiiCd)                                             ' 鍵区分
             .Fields("AKKNT_STYPE") = "4"                                                        ' 鍵区分(4桁) insert 2021/06/02 EGL
@@ -16579,14 +16579,14 @@ On Error GoTo ErrorHandler
         strSQL = ""
         strSQL = strSQL & "SELECT      *" & vbCrLf
         strSQL = strSQL & "FROM        AKKN_TRAN" & vbCrLf
-        strSQL = strSQL & "WHERE       AKKNT_YARD = " & Nz(StrYard) & vbCrLf
+        strSQL = strSQL & "WHERE       AKKNT_YARD = " & Nz(strYard) & vbCrLf
         strSQL = strSQL & "AND         AKKNT_CTNO = " & Nz(strCno) & vbCrLf
         strSQL = strSQL & "AND         AKKNT_KTYPE = '" & Nz(strKagiiCd) & "'" & vbCrLf
         strSQL = strSQL & "AND         AKKNT_STYPE = '6'"
         Set rsAkkn = ADODB_Recordset(strSQL, dbSQLServer, adoAppendOnly)
         With rsAkkn
             .AddNew
-            .Fields("AKKNT_YARD") = Nz(StrYard)                                                 ' ヤードコード
+            .Fields("AKKNT_YARD") = Nz(strYard)                                                 ' ヤードコード
             .Fields("AKKNT_CTNO") = Nz(strCno)                                                  ' コンテナ番号
             .Fields("AKKNT_KTYPE") = Nz(strKagiiCd)                                             ' 鍵区分
             .Fields("AKKNT_STYPE") = "6"                                                        ' 鍵区分(6桁)
@@ -20780,18 +20780,18 @@ Private Function SendFaceAuthRequest(method As String, path As String, Optional 
     On Error GoTo ErrHandler
     
     ' SETU_TABLから設定値を取得
-    url = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_BASE_URL'"), "https://dev-facekey-admin.kase3535.com")
+    url = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'face_auth_api_base_url'"), "https://dev-facekey-admin.kase3535.com")
     If Right(url, 1) = "/" Then url = Left(url, Len(url) - 1)
     url = url & path
     
     ' ServerXMLHTTPを使用してタイムアウトを設定
     Set req = CreateObject("MSXML2.ServerXMLHTTP.6.0")
     ' setTimeouts(resolve, connect, send, receive) - ミリ秒指定
-    req.setTimeouts 2000, 2000, 2000, 2000
+    req.setTimeouts 5000, 5000, 5000, 5000
     
     req.Open method, url, False
     req.setRequestHeader "Content-Type", "application/json"
-    req.setRequestHeader "x-api-key", Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_KEY'"), "")
+    req.setRequestHeader "x-api-key", Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'face_auth_api_key'"), "")
     
     req.send body
     

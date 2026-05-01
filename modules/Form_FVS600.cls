@@ -1043,7 +1043,7 @@ Private Sub Form_Load()
 
     pblnOpenFlag_FVS600 = True  ' フォーム読込フラグON
     
-    ' 顔認証欄の表示制御（コンテナシステムの場合のみ表示）
+    ' 顔認証欄の表示制御（トランクシステムの場合のみ表示）
     If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") <> "8" Then
         On Error Resume Next
         Me.Controls("txt_FaceAuth").Visible = False
@@ -2334,22 +2334,22 @@ Private Sub cmb_コンテナ番号_AfterUpdate()
 ' 2019/04/23 ADD TAKENOUCHI End
 ' 2023/05/02 M.HODNA
 
-    ' 顔認証ステータス表示（コンテナシステムの場合のみ）
+    ' 顔認証ステータス表示（トランクシステムの場合のみ）
     If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") = "8" Then
-        If Nz(Me.cmb_ヤードコード, "") <> "" And Nz(vCode, "") <> "" Then
-            Me.txt_FaceAuth.VALUE = GetFaceAuthStatus(CStr(Me.cmb_ヤードコード), CStr(vCode))
-        Else
-            Me.txt_FaceAuth.VALUE = ""
-        End If
-        Me.txt_FaceAuth.Visible = True
         On Error Resume Next
-        Me.lbl_FaceAuth.Visible = True
+        If Nz(Me.cmb_ヤードコード, "") <> "" And Nz(vCode, "") <> "" Then
+            Me.Controls("txt_FaceAuth").VALUE = GetFaceAuthStatus(CStr(Me.cmb_ヤードコード), CStr(vCode))
+        Else
+            Me.Controls("txt_FaceAuth").VALUE = ""
+        End If
+        Me.Controls("txt_FaceAuth").Visible = True
+        Me.Controls("lbl_FaceAuth").Visible = True
         On Error GoTo err_rtn
     Else
-        Me.txt_FaceAuth.VALUE = ""
-        Me.txt_FaceAuth.Visible = False
         On Error Resume Next
-        Me.lbl_FaceAuth.Visible = False
+        Me.Controls("txt_FaceAuth").VALUE = ""
+        Me.Controls("txt_FaceAuth").Visible = False
+        Me.Controls("lbl_FaceAuth").Visible = False
         On Error GoTo err_rtn
     End If
 
@@ -14790,21 +14790,25 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
     
     GetFaceAuthStatus = "" ' 初期値
     
-    ' API URLの組み立て（SETU_TABLから取得）
-    url = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_BASE_URL'"), "https://dev-facekey-admin.kase3535.com")
-    If Right(url, 1) = "/" Then url = Left(url, Len(url) - 1) ' 末尾のスラッシュを削除
+    ' API URLの組み立て
+    url = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'face_auth_api_base_url'"), "https://dev-facekey-admin.kase3535.com")
+    
+
+    If Right(url, 1) = "/" Then url = Left(url, Len(url) - 1)
     url = url & "/api/v1/external/system/rooms/detail?yard_code=" & yardCode & "&room_code=" & roomCode
+    
+    Debug.Print "FaceAuth URL: " & url
     
     ' HTTPリクエスト送信 (タイムアウト設定可能なServerXMLHTTPを使用)
     Set req = CreateObject("MSXML2.ServerXMLHTTP.6.0")
     ' setTimeouts(resolve, connect, send, receive) - ミリ秒指定
-    req.setTimeouts 2000, 2000, 2000, 2000
+    req.setTimeouts 5000, 5000, 5000, 5000
     
     req.Open "GET", url, False
     req.setRequestHeader "Content-Type", "application/json"
     
-    ' APIキーをヘッダーにセット
-    req.setRequestHeader "x-api-key", Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_KEY'"), "")
+    ' APIキーをヘッダーにセット（SETU_TABLから取得）
+    req.setRequestHeader "x-api-key", Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'face_auth_api_key'"), "")
     
     req.send
     
@@ -14829,8 +14833,8 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
             ' 部屋情報がない場合は未登録
             GetFaceAuthStatus = "未登録"
         Case Else
-            ' APIエラー（500, 401等）の場合は取得エラー
-            GetFaceAuthStatus = "取得エラー"
+            ' APIエラー（500, 401等）の場合はステータスを表示
+            GetFaceAuthStatus = "取得エラー(" & req.Status & ")"
     End Select
     
     Set req = Nothing
@@ -14839,7 +14843,7 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
 
 ErrHandler:
     ' 通信エラー等のハンドリング
-    GetFaceAuthStatus = "取得エラー"
+    GetFaceAuthStatus = "取得エラー(Err:" & Err.Number & ")"
     Set req = Nothing
     Set regEx = Nothing
 End Function
