@@ -14790,8 +14790,10 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
     
     GetFaceAuthStatus = "" ' 初期値
     
-    ' API URLの組み立て
-    url = "https://dev-facekey-admin.kase3535.com/api/v1/external/system/rooms/detail?yard_code=" & yardCode & "&room_code=" & roomCode
+    ' API URLの組み立て（SETU_TABLから取得）
+    url = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_BASE_URL'"), "https://dev-facekey-admin.kase3535.com")
+    If Right(url, 1) = "/" Then url = Left(url, Len(url) - 1) ' 末尾のスラッシュを削除
+    url = url & "/api/v1/external/system/rooms/detail?yard_code=" & yardCode & "&room_code=" & roomCode
     
     ' HTTPリクエスト送信 (タイムアウト設定可能なServerXMLHTTPを使用)
     Set req = CreateObject("MSXML2.ServerXMLHTTP.6.0")
@@ -14802,7 +14804,7 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
     req.setRequestHeader "Content-Type", "application/json"
     
     ' APIキーをヘッダーにセット
-    req.setRequestHeader "x-api-key", "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
+    req.setRequestHeader "x-api-key", Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_KEY'"), "")
     
     req.send
     

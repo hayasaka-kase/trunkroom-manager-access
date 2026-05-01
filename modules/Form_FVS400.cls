@@ -20779,7 +20779,10 @@ Private Function SendFaceAuthRequest(method As String, path As String, Optional 
     
     On Error GoTo ErrHandler
     
-    url = "https://dev-facekey-admin.kase3535.com" & path
+    ' SETU_TABLから設定値を取得
+    url = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_BASE_URL'"), "https://dev-facekey-admin.kase3535.com")
+    If Right(url, 1) = "/" Then url = Left(url, Len(url) - 1)
+    url = url & path
     
     ' ServerXMLHTTPを使用してタイムアウトを設定
     Set req = CreateObject("MSXML2.ServerXMLHTTP.6.0")
@@ -20788,7 +20791,7 @@ Private Function SendFaceAuthRequest(method As String, path As String, Optional 
     
     req.Open method, url, False
     req.setRequestHeader "Content-Type", "application/json"
-    req.setRequestHeader "x-api-key", "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
+    req.setRequestHeader "x-api-key", Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_KEY'"), "")
     
     req.send body
     

@@ -6316,11 +6316,12 @@ Private Function CallRoomReleaseAPI() As Boolean
 
     CallRoomReleaseAPI = False
 
-    ' --------------------------------------------------------
-    ' テスト環境用
-    ' --------------------------------------------------------
-    strUrl = "https://dev-facekey-admin.kase3535.com/api/v1/external/system/rooms"
-    strApiKey = "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
+    ' SETU_TABLから設定値を取得
+    strUrl = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_BASE_URL'"), "https://dev-facekey-admin.kase3535.com")
+    If Right(strUrl, 1) = "/" Then strUrl = Left(strUrl, Len(strUrl) - 1)
+    strUrl = strUrl & "/api/v1/external/system/rooms"
+    
+    strApiKey = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'FACE_API_KEY'"), "")
 
     ' 画面の値をそのまま取得し、空白を除去
     StrYard = Trim(Nz(Me.cmb_Yard.VALUE, ""))
