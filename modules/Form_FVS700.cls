@@ -3710,7 +3710,10 @@ On Error GoTo DB_AccessMain_Err
     ' cmb_ContractState(現在の入力)が 09 かつ、
     ' strExistingStatus(DBから読み込んだ時の値)が 09 以外の場合のみ実行
     If cmb_ContractState = P_STATUS_COMPLETE And strExistingStatus <> P_STATUS_COMPLETE Then
-        Call CallRoomReleaseAPI
+        ' コンテナシステム（CONT_BUMOC="8"）の場合のみ顔認証API連携を行う
+        If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") = "8" Then
+            Call CallRoomReleaseAPI
+        End If
     End If
     
     objDb.Close
@@ -6316,18 +6319,20 @@ Private Function CallRoomReleaseAPI() As Boolean
     ' --------------------------------------------------------
     ' テスト環境用
     ' --------------------------------------------------------
-    strUrl = "https://dev-facekey-admin.kase3535.com//api/v1/external/system/rooms"
+    strUrl = "https://dev-facekey-admin.kase3535.com/api/v1/external/system/rooms"
     strApiKey = "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
 
-    ' 画面の値をそのまま取得
-    StrYard = Nz(Me.cmb_Yard.VALUE, "")
-    strRoom = Nz(Me.cmb_CntaNo.VALUE, "")
-
+    ' 画面の値をそのまま取得し、空白を除去
+    StrYard = Trim(Nz(Me.cmb_Yard.VALUE, ""))
+    strRoom = Trim(Nz(Me.cmb_CntaNo.VALUE, ""))
+    
     ' JSONボディの作成
     strJson = "{""yard_code"":""" & StrYard & """, ""room_code"":""" & strRoom & """}"
 
     ' XMLHTTPオブジェクトの作成 (遅延バインディング)
     Set objRequest = CreateObject("MSXML2.ServerXMLHTTP.6.0")
+    ' setTimeouts(resolve, connect, send, receive) - ミリ秒指定
+    objRequest.setTimeouts 2000, 2000, 2000, 2000
     
     ' APIリクエストの設定
     objRequest.Open "DELETE", strUrl, False

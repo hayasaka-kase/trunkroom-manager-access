@@ -1042,7 +1042,14 @@ Private Sub Form_Load()
     End Select
 
     pblnOpenFlag_FVS600 = True  ' フォーム読込フラグON
-
+    
+    ' 顔認証欄の表示制御（コンテナシステムの場合のみ表示）
+    If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") <> "8" Then
+        Me.txt_FaceAuth.Visible = False
+        On Error Resume Next
+        Me.lbl_FaceAuth.Visible = False
+        On Error GoTo 0
+    End If
     ' 変更フラグ初期化
     pblnUpdateFlg = False       ' 2006/01/05 ADD T.SUZUKI
    
@@ -2327,10 +2334,23 @@ Private Sub cmb_コンテナ番号_AfterUpdate()
 ' 2019/04/23 ADD TAKENOUCHI End
 ' 2023/05/02 M.HODNA
 
-    If Nz(Me.cmb_ヤードコード, "") <> "" And Nz(vCode, "") <> "" Then
-        Me.txt_FaceAuth.VALUE = GetFaceAuthStatus(CStr(Me.cmb_ヤードコード), CStr(vCode))
+    ' 顔認証ステータス表示（コンテナシステムの場合のみ）
+    If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") = "8" Then
+        If Nz(Me.cmb_ヤードコード, "") <> "" And Nz(vCode, "") <> "" Then
+            Me.txt_FaceAuth.VALUE = GetFaceAuthStatus(CStr(Me.cmb_ヤードコード), CStr(vCode))
+        Else
+            Me.txt_FaceAuth.VALUE = ""
+        End If
+        Me.txt_FaceAuth.Visible = True
+        On Error Resume Next
+        Me.lbl_FaceAuth.Visible = True
+        On Error GoTo err_rtn
     Else
         Me.txt_FaceAuth.VALUE = ""
+        Me.txt_FaceAuth.Visible = False
+        On Error Resume Next
+        Me.lbl_FaceAuth.Visible = False
+        On Error GoTo err_rtn
     End If
 
 
@@ -14760,6 +14780,10 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
     Dim resText As String
     Dim regEx As Object
     
+    ' 空白を除去
+    yardCode = Trim(yardCode)
+    roomCode = Trim(roomCode)
+    
     On Error GoTo ErrHandler
     
     GetFaceAuthStatus = "" ' 初期値
@@ -14767,36 +14791,43 @@ Private Function GetFaceAuthStatus(yardCode As String, roomCode As String) As St
     ' API URLの組み立て
     url = "https://dev-facekey-admin.kase3535.com/api/v1/external/system/rooms/detail?yard_code=" & yardCode & "&room_code=" & roomCode
     
-    ' HTTPリクエスト送信 (遅延バインディング)
-    Set req = CreateObject("MSXML2.XMLHTTP")
+    ' HTTPリクエスト送信 (タイムアウト設定可能なServerXMLHTTPを使用)
+    Set req = CreateObject("MSXML2.ServerXMLHTTP.6.0")
+    ' setTimeouts(resolve, connect, send, receive) - ミリ秒指定
+    req.setTimeouts 2000, 2000, 2000, 2000
+    
     req.Open "GET", url, False
     req.setRequestHeader "Content-Type", "application/json"
     
-    ' APIキーをヘッダーにセット（※API側の仕様に合わせてヘッダー名は調整してください）
+    ' APIキーをヘッダーにセット
     req.setRequestHeader "x-api-key", "ff246566d3981d6d571f0011cbc1668f15172d6e73d6a65b827e681b6c6de492"
     
     req.send
     
     ' レスポンスの確認
-    If req.Status = 200 Then
-        resText = req.responseText
-        
-        ' 正規表現で "has_face": true を検索
-        Set regEx = CreateObject("VBScript.RegExp")
-        regEx.Global = True
-        regEx.IgnoreCase = True
-        regEx.Pattern = """has_face""\s*:\s*true"
-        
-        ' 1つでも true が見つかった場合、登録済みと判定
-        If regEx.test(resText) Then
-            GetFaceAuthStatus = "登録済み"
-        Else
+    Select Case req.Status
+        Case 200
+            resText = req.responseText
+            
+            ' 正規表現で "has_face": true を検索
+            Set regEx = CreateObject("VBScript.RegExp")
+            regEx.Global = True
+            regEx.IgnoreCase = True
+            regEx.Pattern = """has_face""\s*:\s*true"
+            
+            ' 1つでも true が見つかった場合、登録済みと判定
+            If regEx.test(resText) Then
+                GetFaceAuthStatus = "登録済み"
+            Else
+                GetFaceAuthStatus = "未登録"
+            End If
+        Case 404
+            ' 部屋情報がない場合は未登録
             GetFaceAuthStatus = "未登録"
-        End If
-    Else
-        ' 部屋情報がない、APIエラーなどの場合
-        GetFaceAuthStatus = "未登録"
-    End If
+        Case Else
+            ' APIエラー（500, 401等）の場合は取得エラー
+            GetFaceAuthStatus = "取得エラー"
+    End Select
     
     Set req = Nothing
     Set regEx = Nothing

@@ -14516,11 +14516,13 @@ Public Function fncDataSave(intMode As Integer, blnConfirm As Boolean, Optional 
         objWs.CommitTrans
     Set objWs = Nothing
     
-        ' 顔認証連携でエラーが発生していた場合は画面表示
+    ' 顔認証連携でエラーが発生していた場合は画面表示（コンテナシステムのみ）
     If mstrFaceAuthError <> "" Then
-        MsgBox "顔認証システムの連携でエラーが発生しました。" & vbCrLf & _
-               "お手数ですが、管理者へ連絡してください。" & vbCrLf & vbCrLf & _
-               "【エラー内容】" & vbCrLf & mstrFaceAuthError, vbExclamation, "顔認証連携エラー"
+        If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") = "8" Then
+            MsgBox "顔認証システムの連携でエラーが発生しました。" & vbCrLf & _
+                   "お手数ですが、管理者へ連絡してください。" & vbCrLf & vbCrLf & _
+                   "【エラー内容】" & vbCrLf & mstrFaceAuthError, vbExclamation, "顔認証連携エラー"
+        End If
         mstrFaceAuthError = ""
     End If
     
@@ -20637,12 +20639,24 @@ Private Function PerformFaceAuthTransferFlow(sourceYard As String, sourceRoom As
     Dim blnExists As Boolean
     Dim blnSuccess As Boolean
     
+    ' 空白を除去（422エラー防止）
+    sourceYard = Trim(sourceYard)
+    sourceRoom = Trim(sourceRoom)
+    destYard = Trim(destYard)
+    destRoom = Trim(destRoom)
+    userCode = Trim(userCode)
+    
     On Error GoTo ErrHandler
     
     ' 1. 存在確認 (GET /check)
     blnExists = CallRoomCheckAPI(destYard, destRoom, strError)
     If strError <> "" Then
-        PerformFaceAuthTransferFlow = "存在確認失敗: " & strError
+        If strError = "404" Then
+            ' 404の場合は顔認証未導入とみなし、メッセージを出さずに正常終了
+            PerformFaceAuthTransferFlow = ""
+        Else
+            PerformFaceAuthTransferFlow = "存在確認失敗: " & strError
+        End If
         Exit Function
     End If
     
@@ -20655,14 +20669,23 @@ Private Function PerformFaceAuthTransferFlow(sourceYard As String, sourceRoom As
     End If
     
     If Not blnSuccess Then
-        PerformFaceAuthTransferFlow = "部屋登録/更新失敗: " & strError
+        If strError = "404" Then
+            PerformFaceAuthTransferFlow = ""
+        Else
+            PerformFaceAuthTransferFlow = "部屋登録/更新失敗: " & strError
+        End If
         Exit Function
     End If
     
     ' 3. 移動実行 (POST /transfer)
     blnSuccess = CallRoomTransferAPI_New(sourceYard, sourceRoom, destYard, destRoom, userCode, strError)
     If Not blnSuccess Then
-        PerformFaceAuthTransferFlow = "部屋移動実行失敗: " & strError
+        If strError = "404" Then
+            ' 移行元または移行先がシステムに存在しない場合はスキップ
+            PerformFaceAuthTransferFlow = ""
+        Else
+            PerformFaceAuthTransferFlow = "部屋移動実行失敗: " & strError
+        End If
         Exit Function
     End If
     
@@ -20691,7 +20714,7 @@ Private Function CallRoomCheckAPI(yardCode As String, roomCode As String, ByRef 
         CallRoomCheckAPI = regEx.test(res)
         Set regEx = Nothing
     Else
-        strErr = "HTTP Status " & res
+        strErr = CStr(res) ' 数値（ステータスコード）を文字列として返す
         CallRoomCheckAPI = False
     End If
 End Function
@@ -20706,7 +20729,7 @@ Private Function CallRoomRegisterAPI(yardCode As String, roomCode As String, use
     If VarType(res) = vbString Then
         CallRoomRegisterAPI = True
     Else
-        strErr = "HTTP Status " & res
+        strErr = CStr(res)
         CallRoomRegisterAPI = False
     End If
 End Function
@@ -20722,7 +20745,7 @@ Private Function CallRoomUpdateAPI(yardCode As String, roomCode As String, userC
     If VarType(res) = vbString Then
         CallRoomUpdateAPI = True
     Else
-        strErr = "HTTP Status " & res
+        strErr = CStr(res)
         CallRoomUpdateAPI = False
     End If
 End Function
@@ -20743,7 +20766,7 @@ Private Function CallRoomTransferAPI_New(sourceYard As String, sourceRoom As Str
     If VarType(res) = vbString Then
         CallRoomTransferAPI_New = True
     Else
-        strErr = "HTTP Status " & res
+        strErr = CStr(res)
         CallRoomTransferAPI_New = False
     End If
 End Function
@@ -20782,6 +20805,8 @@ ErrHandler:
     SendFaceAuthRequest = "Error: " & Err.Description
     Set req = Nothing
 End Function
+
+
 
 '****************************  ended of program ********************************
 
