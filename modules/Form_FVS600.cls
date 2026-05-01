@@ -1045,9 +1045,9 @@ Private Sub Form_Load()
     
     ' 顔認証欄の表示制御（コンテナシステムの場合のみ表示）
     If DLookup("CONT_BUMOC", "dbo_CONT_MAST", "CONT_KEY = 1") <> "8" Then
-        Me.txt_FaceAuth.Visible = False
         On Error Resume Next
-        Me.lbl_FaceAuth.Visible = False
+        Me.Controls("txt_FaceAuth").Visible = False
+        Me.Controls("lbl_FaceAuth").Visible = False
         On Error GoTo 0
     End If
     ' 変更フラグ初期化
@@ -7390,7 +7390,9 @@ Private Sub CLR_RTN()
         .txt_預り保証金 = 0
 
         .txt_契約備考 = Null
-        .txt_FaceAuth = Null
+        On Error Resume Next
+        Me.Controls("txt_FaceAuth").VALUE = Null
+        On Error GoTo 0
         
         
         .txt_RCPT_BIKE_NUMBER = Null
