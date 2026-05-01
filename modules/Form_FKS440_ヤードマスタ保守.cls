@@ -8530,7 +8530,7 @@ End Function
 Private Function WRI_AKKN_TRAN(ByVal intMode As Integer) As Boolean
 
     Dim strSQL          As String
-    Dim StrYard         As Variant
+    Dim strYard         As Variant
 
     Dim intCount        As Integer      ' カウンター
     Dim objRsWk         As Recordset    ' ワークテーブルレコードセット
@@ -8550,9 +8550,9 @@ Private Function WRI_AKKN_TRAN(ByVal intMode As Integer) As Boolean
     WRI_AKKN_TRAN = False
 
     ' 対象ヤードコード設定
-    StrYard = Val(Nz(Me.cmb_ヤードコード, ""))
+    strYard = Val(Nz(Me.cmb_ヤードコード, ""))
 
-    If StrYard = "" Then Exit Function
+    If strYard = "" Then Exit Function
 
     'SQLサーバー接続
     Set dbSQLServer = ADODB_Connection(pstrBumoCD)  '2021/06/02 insert EGL
@@ -8566,7 +8566,7 @@ Private Function WRI_AKKN_TRAN(ByVal intMode As Integer) As Boolean
         strSQL = ""
         strSQL = strSQL & "SELECT      *" & Chr(13)
         strSQL = strSQL & "FROM        AKKN_TRAN" & Chr(13)
-        strSQL = strSQL & "WHERE       AKKNT_YARD = " & StrYard & Chr(13)
+        strSQL = strSQL & "WHERE       AKKNT_YARD = " & strYard & Chr(13)
         strSQL = strSQL & "AND         AKKNT_STYPE = '4'" & Chr(13) 'insert EGL 2021/06/02 ★副種別を指定
         strSQL = strSQL & "ORDER BY    AKKNT_YARD" & Chr(13)
         strSQL = strSQL & ",           AKKNT_CTNO" & Chr(13)
@@ -8590,7 +8590,7 @@ Private Function WRI_AKKN_TRAN(ByVal intMode As Integer) As Boolean
         strSQL = strSQL & ",           AKKNT_KAINO" & Chr(13)
         strSQL = strSQL & ",           AKKNT_KAINO_CHANGE" & Chr(13)
         strSQL = strSQL & "FROM        ヤード上ＷＫ" & Chr(13)
-        strSQL = strSQL & "WHERE       CNTA_CODE = " & StrYard & Chr(13)        ' ヤードコード
+        strSQL = strSQL & "WHERE       CNTA_CODE = " & strYard & Chr(13)        ' ヤードコード
         strSQL = strSQL & "AND         CNTA_STEP = " & pcintUpSide & Chr(13)    ' 段区分(0：上段)
         strSQL = strSQL & "AND         CNTA_NO  IS NOT NULL" & Chr(13)
         strSQL = strSQL & "AND         CNTA_SYU IS NOT NULL" & Chr(13)
@@ -8605,7 +8605,7 @@ Private Function WRI_AKKN_TRAN(ByVal intMode As Integer) As Boolean
         strSQL = strSQL & ",           AKKNT_KAINO" & Chr(13)
         strSQL = strSQL & ",           AKKNT_KAINO_CHANGE" & Chr(13)
         strSQL = strSQL & "FROM        ヤード下ＷＫ" & Chr(13)
-        strSQL = strSQL & "WHERE       CNTA_CODE = " & StrYard & Chr(13)        ' ヤードコード
+        strSQL = strSQL & "WHERE       CNTA_CODE = " & strYard & Chr(13)        ' ヤードコード
         strSQL = strSQL & "AND         CNTA_STEP = " & pcintDownSide & Chr(13)  ' 段区分(1：下段)
         strSQL = strSQL & "AND         CNTA_NO  IS NOT NULL" & Chr(13)
         strSQL = strSQL & "AND         CNTA_SYU IS NOT NULL" & Chr(13)
@@ -8798,7 +8798,7 @@ End Function
 Private Function WRI_AKKN_TRAN_QR(ByVal intMode As Integer) As Boolean
 
     Dim strSQL          As String
-    Dim StrYard         As Variant
+    Dim strYard         As Variant
 
     Dim intCount        As Integer      ' カウンター
     Dim objRsWk         As Recordset    ' ワークテーブルレコードセット
@@ -8818,9 +8818,9 @@ Private Function WRI_AKKN_TRAN_QR(ByVal intMode As Integer) As Boolean
     Erase pvarAKKNData: Erase pvarAKKNDelData
     
     ' 対象ヤードコード設定
-    StrYard = Val(Nz(Me.cmb_ヤードコード, ""))
+    strYard = Val(Nz(Me.cmb_ヤードコード, ""))
 
-    If StrYard = "" Then Exit Function
+    If strYard = "" Then Exit Function
 
     'SQLサーバー接続
     Set dbSQLServer = ADODB_Connection(pstrBumoCD)
@@ -8834,7 +8834,7 @@ Private Function WRI_AKKN_TRAN_QR(ByVal intMode As Integer) As Boolean
         strSQL = ""
         strSQL = strSQL & " SELECT      *" & Chr(13)
         strSQL = strSQL & " FROM        AKKN_TRAN" & Chr(13)
-        strSQL = strSQL & " WHERE       AKKNT_YARD  = " & StrYard & Chr(13)
+        strSQL = strSQL & " WHERE       AKKNT_YARD  = " & strYard & Chr(13)
         strSQL = strSQL & " AND         AKKNT_STYPE = '6'" & Chr(13)            '★副種別を指定
         strSQL = strSQL & " ORDER BY    AKKNT_YARD" & Chr(13)
         strSQL = strSQL & " ,           AKKNT_CTNO" & Chr(13)
@@ -8859,7 +8859,7 @@ Private Function WRI_AKKN_TRAN_QR(ByVal intMode As Integer) As Boolean
         strSQL = strSQL & ",           AKKNT_KAINO" & Chr(13)
         strSQL = strSQL & ",           AKKNT_KAINO_CHANGE" & Chr(13)
         strSQL = strSQL & "FROM        ヤード上ＷＫ" & Chr(13)
-        strSQL = strSQL & "WHERE       CNTA_CODE = " & StrYard & Chr(13)        ' ヤードコード
+        strSQL = strSQL & "WHERE       CNTA_CODE = " & strYard & Chr(13)        ' ヤードコード
         strSQL = strSQL & "AND         CNTA_STEP = " & pcintUpSide & Chr(13)    ' 段区分(0：上段)
         strSQL = strSQL & "AND         CNTA_NO  IS NOT NULL" & Chr(13)
         strSQL = strSQL & "AND         CNTA_SYU IS NOT NULL" & Chr(13)
@@ -8876,7 +8876,7 @@ Private Function WRI_AKKN_TRAN_QR(ByVal intMode As Integer) As Boolean
         strSQL = strSQL & ",           AKKNT_KAINO" & Chr(13)
         strSQL = strSQL & ",           AKKNT_KAINO_CHANGE" & Chr(13)
         strSQL = strSQL & "FROM        ヤード下ＷＫ" & Chr(13)
-        strSQL = strSQL & "WHERE       CNTA_CODE = " & StrYard & Chr(13)        ' ヤードコード
+        strSQL = strSQL & "WHERE       CNTA_CODE = " & strYard & Chr(13)        ' ヤードコード
         strSQL = strSQL & "AND         CNTA_STEP = " & pcintDownSide & Chr(13)  ' 段区分(1：下段)
         strSQL = strSQL & "AND         CNTA_NO  IS NOT NULL" & Chr(13)
         strSQL = strSQL & "AND         CNTA_SYU IS NOT NULL" & Chr(13)

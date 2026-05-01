@@ -178,7 +178,7 @@ Private Sub Auto_cmd_Click()
     Dim strSQL         As String
     Dim lngCnt         As Long
     Dim lngYCnt        As Long
-    Dim StrYard        As String
+    Dim strYard        As String
     
     Dim BUMON          As String
     Dim strErr         As String
@@ -233,7 +233,7 @@ Private Sub Auto_cmd_Click()
          'コンテナマスタ更新
          Call fncUPD_CNTA_MAST(objRst.Fields("CARG_YCODE"), objRst.Fields("CARG_NO"), BUMON, objRst.Fields("CARG_ACPTNO"), objCon)
        
-         StrYard = objRst.Fields("CARG_YCODE")
+         strYard = objRst.Fields("CARG_YCODE")
          
          lngCnt = lngCnt + 1
          objRst.MoveNext

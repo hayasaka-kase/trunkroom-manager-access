@@ -72,19 +72,19 @@ Private Const C_GREEN_COLOR         As Long = 8454016                           
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
 Private Sub cmd_詳細_Click()
     Dim strKey              As String                                           'INSERT 2009/12/02 K.ISHIZAKA
-    Dim StrYard             As String                                           'INSERT 2009/12/02 K.ISHIZAKA
+    Dim strYard             As String                                           'INSERT 2009/12/02 K.ISHIZAKA
     
     strKey = Me.txt_Key.VALUE                                                   'INSERT 2009/12/02 K.ISHIZAKA
-    StrYard = Format(Val(Me.txt_ヤードコード.VALUE))                            'INSERT 2009/12/02 K.ISHIZAKA
+    strYard = Format(Val(Me.txt_ヤードコード.VALUE))                            'INSERT 2009/12/02 K.ISHIZAKA
     '一覧の指定ヤードだけ最新に更新
 '    If Parent.Reload(Me.txt_ヤードコード, "") = False Then                     'DELETE 2009/12/02 K.ISHIZAKA
-    If Parent.Reload(strKey, StrYard, "") = False Then                          'INSERT 2009/12/02 K.ISHIZAKA
+    If Parent.Reload(strKey, strYard, "") = False Then                          'INSERT 2009/12/02 K.ISHIZAKA
         Exit Sub
     End If
 '    If Val(Me.txt_空合計) > 0 Then                                             'DELETE 2009/12/02 K.ISHIZAKA
-    If Val(DLookup("SUM_AKI", "WK_FVS011_TEMP", "KEY='" & strKey & "' AND YARD_CODE=" & StrYard)) > 0 Then  'INSERT 2009/12/02 K.ISHIZAKA
+    If Val(DLookup("SUM_AKI", "WK_FVS011_TEMP", "KEY='" & strKey & "' AND YARD_CODE=" & strYard)) > 0 Then  'INSERT 2009/12/02 K.ISHIZAKA
 '        Call Parent.ShowFVS021(Me.txt_ヤードコード)                            'DELETE 2009/12/02 K.ISHIZAKA
-        Call Parent.ShowFVS021(strKey, StrYard)                                 'INSERT 2009/12/02 K.ISHIZAKA
+        Call Parent.ShowFVS021(strKey, strYard)                                 'INSERT 2009/12/02 K.ISHIZAKA
     Else
         MsgBox "空きがなくなりました。", vbOKOnly, "確認"
     End If

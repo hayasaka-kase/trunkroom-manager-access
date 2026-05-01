@@ -199,7 +199,7 @@ Private Const C_USAGE_バイクコンテナ = "39"
 
 'UPDATE 2011/08/25 M.RYU 'strRcptUkDate受付日を追加
 'Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045割引情報, strYard As String, strNO As String, lngPrice As Long, lngPriceTrue As Long, strKisanDate As String, strDCStDate As String, strBumonCode As String, lngDCMax As Long, intUsePeriod As Integer, blnネット予約 As Boolean) As Boolean
-Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045割引情報, StrYard As String, _
+Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045割引情報, strYard As String, _
                       strNO As String, lngPrice As Long, lngPriceTrue As Long, strRcptUkDate As String, _
                       strKisanDate As String, strDCStDate As String, strBumonCode As String, lngDCMax As Long, _
                       intUsePeriod As Integer, blnネット予約 As Boolean, _
@@ -238,7 +238,7 @@ Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045�
     strRcptUkDate = Replace(strRcptUkDate, "/", "")     'INSERT 2011/08/25 M.RYU
     strKisanDate = Replace(strKisanDate, "/", "")
     strDCStDate = Replace(strDCStDate, "/", "")
-    If StrYard = "" Or strNO = "" Or Len(strKisanDate) <> 8 Or Len(strDCStDate) <> 6 Then
+    If strYard = "" Or strNO = "" Or Len(strKisanDate) <> 8 Or Len(strDCStDate) <> 6 Then
         Exit Function
     End If
     '2009/06/30 INS <S> 割引マスタ KASE_DBへ移動
@@ -246,13 +246,13 @@ Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045�
     strKaseSqlSvr = Nz(DLookup("SETUT_SETUN", "SETU_TABL", "SETUT_SETUB = 'ODBC_DATA_SOURCE_NAME'"))
     '2009/06/30 INS <E>
     '数値に変換
-    lngYARD = CLng(StrYard)
+    lngYARD = CLng(strYard)
     lngNo = CLng(strNO)
 
     'コンテナマスタを読込み、コンテナ情報（段区分、実帖、用途）取得
     strSQL = ""
     strSQL = strSQL & "SELECT * FROM CNTA_MAST "
-    strSQL = strSQL + "WHERE CNTA_CODE           = " & CLng(StrYard)
+    strSQL = strSQL + "WHERE CNTA_CODE           = " & CLng(strYard)
     strSQL = strSQL + "  AND CNTA_NO             = " & CLng(strNO)
     strSQL = strSQL + "  AND CNTA_NEBIKI_DISABLE = 0"
     Set objAdoDbConnection = MSZZ025.ADODB_Connection(strBumonCode)
@@ -284,7 +284,7 @@ Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045�
             strSQL = ""
             strSQL = strSQL + "SELECT *,"
             strSQL = strSQL + "'" & strBumonCode & "' as RLDNT_BUMOC, "
-            strSQL = strSQL + "'" & StrYard & "' as RLDNT_YCODE, "
+            strSQL = strSQL + "'" & strYard & "' as RLDNT_YCODE, "
             strSQL = strSQL + "'000009' as RLDNT_NO, "
             strSQL = strSQL + "'1' as RLDNT_ENABLE, "
             strSQL = strSQL + "'1' as RLDNT_ORDER, "
@@ -313,7 +313,7 @@ Public Function MSZZ045_fncGetNebikiData(ByRef aMSZZ045割引情報 As MSZZ045�
             strSQL = strSQL + ",YARD_MAST "
             '2015/09/30 M.HONDA INS
             strSQL = strSQL + " WHERE RLDN_TRAN.RLDNT_BUMOC  =  '" & strBumonCode & "'"
-            strSQL = strSQL + "   AND RLDN_TRAN.RLDNT_YCODE  =  '" & StrYard & "'"
+            strSQL = strSQL + "   AND RLDN_TRAN.RLDNT_YCODE  =  '" & strYard & "'"
     '        strSQL = strSQL + "   AND RLDN_TRAN.RLDNT_FROM   <= '" & strKisanDate & "'"    'DELETE 2011/08/25 M.RYU
     '        strSQL = strSQL + "   AND RLDN_TRAN.RLDNT_TO     >= '" & strKisanDate & "'"    'DELETE 2011/08/25 M.RYU
             strSQL = strSQL + "   AND RLDN_TRAN.RLDNT_FROM   <= " & strRcptUkDate           'INSERT 2011/08/25 M.RYU

@@ -1345,7 +1345,7 @@ Private Function fncAllResetNYAR_MAST(ByVal strBUMOC As String) As Boolean
     Dim strSQL              As String
     Dim dbSQLServer         As Object       'ADODB.Connection
     Dim dblKiro             As Double
-    Dim StrYard             As String
+    Dim strYard             As String
     Dim dblIdo              As Double
     Dim dblKeido            As Double
     On Error GoTo ErrorHandler
@@ -1361,20 +1361,20 @@ Private Function fncAllResetNYAR_MAST(ByVal strBUMOC As String) As Boolean
     strSQL = fncCreateTempTable()
     dbSQLServer.Execute strSQL, adCmdText
     'ヤードマスタの取得
-    StrYard = ""
-    While fncSelectTopYard(dbSQLServer, StrYard, dblIdo, dblKeido)
-        strSQL = fncInsertTempTable(StrYard, dblIdo, dblKeido, dblKiro)
+    strYard = ""
+    While fncSelectTopYard(dbSQLServer, strYard, dblIdo, dblKeido)
+        strSQL = fncInsertTempTable(strYard, dblIdo, dblKeido, dblKiro)
         If fncUpdate_TEMP_KIRO(dbSQLServer, strSQL, dblIdo, dblKeido, dblKiro) > 0 Then
-            strSQL = fncUpdate_NYAR_KIRO(StrYard)
+            strSQL = fncUpdate_NYAR_KIRO(strYard)
             dbSQLServer.Execute strSQL, , adCmdText
-            strSQL = fncInsert_NYAR_KIRO(StrYard)
+            strSQL = fncInsert_NYAR_KIRO(strYard)
             dbSQLServer.Execute strSQL, , adCmdText
             strSQL = "TRUNCATE TABLE " & WK_TABLE_NAME
             dbSQLServer.Execute strSQL, , adCmdText
         End If
-        strSQL = fncInsert_TempTable2(StrYard)
+        strSQL = fncInsert_TempTable2(strYard)
         If fncUpdate_TEMP_KIRO(dbSQLServer, strSQL, dblIdo, dblKeido, 9999) > 0 Then
-            strSQL = fncUpdate_NYAR_KIRO(StrYard)
+            strSQL = fncUpdate_NYAR_KIRO(strYard)
             dbSQLServer.Execute strSQL, , adCmdText
             strSQL = "TRUNCATE TABLE " & WK_TABLE_NAME
             dbSQLServer.Execute strSQL, , adCmdText

@@ -4802,7 +4802,7 @@ End Sub
 '
 '==============================================================================*
 '---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----8
-Private Sub SetModeConf(ByVal StrYard As String, ByVal strKont As String, ByVal strUkeNo As String)
+Private Sub SetModeConf(ByVal strYard As String, ByVal strKont As String, ByVal strUkeNo As String)
 
     Dim lngWork As Long
 
@@ -4812,7 +4812,7 @@ Private Sub SetModeConf(ByVal StrYard As String, ByVal strKont As String, ByVal 
         lngWork = P_SHU
     Else
         ' 受付番号が未入力のとき
-        If Trim$(StrYard) = "" Then
+        If Trim$(strYard) = "" Then
             'ﾒﾆｭｰ画面より
             '(※ﾒﾆｭｰ画面からの遷移の場合ﾔｰﾄﾞ、ｺﾝﾃﾅ、予約受付番号は全て空白)
             lngWork = P_SHU

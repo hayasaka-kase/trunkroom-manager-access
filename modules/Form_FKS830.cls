@@ -649,7 +649,7 @@ Private Function getSelectListData()
     Dim intKEIYAKU_CNT                  As Integer
     Dim strKaseSqlSvr                   As String
 
-    Dim StrYard                         As String       'ヤード
+    Dim strYard                         As String       'ヤード
     Dim lngYARD                         As Long         'ヤード
     Dim strTINTI(2)                     As String       '賃貸種別チェックボックス値格納用
 
@@ -876,7 +876,7 @@ On Error GoTo Exception
         While Not rsData.EOF
 
             debugCNT = debugCNT + 1
-            StrYard = Format(rsData.Fields("YARD_CODE"), "000000")
+            strYard = Format(rsData.Fields("YARD_CODE"), "000000")
             lngYARD = Trim(rsData.Fields("YARD_CODE"))
 
             strSQL = ""
@@ -886,7 +886,7 @@ On Error GoTo Exception
             rsListData.AddNew
 
             'ヤード情報設定
-            rsListData.Fields("ヤード") = StrYard
+            rsListData.Fields("ヤード") = strYard
             rsListData.Fields("名称") = rsData.Fields("YARD_NAME")
             rsListData.Fields("建築確認") = rsData.Fields("KENTIKU")
             rsListData.Fields("用途") = rsData.Fields("TINTI")
@@ -1091,7 +1091,7 @@ On Error GoTo Exception
     Exit Function
 
 Exception:
-    MsgBox "エラー発生" & vbCrLf & Err.Description & vbCrLf & debugCNT & "件目：ヤード = " & StrYard
+    MsgBox "エラー発生" & vbCrLf & Err.Description & vbCrLf & debugCNT & "件目：ヤード = " & strYard
 
     If Not rsData Is Nothing Then: rsData.Close: Set rsData = Nothing
     If Not rsListData Is Nothing Then: rsListData.Close: Set rsListData = Nothing
